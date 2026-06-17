@@ -35,6 +35,12 @@ class InterviewRound(models.Model):
     )
     round_date = models.DateField(null=True, blank=True, verbose_name=_("Round Date"))
     round_time = models.TimeField(null=True, blank=True, verbose_name=_("Round Time"))
+    interviewers = models.ManyToManyField(
+        Employee,
+        blank=True,
+        related_name="interview_rounds_as_panelist",
+        verbose_name=_("Panelists"),
+    )
 
     class Meta:
         ordering = ["round_number"]
@@ -101,13 +107,16 @@ class InterviewEvaluation(FitsModel):
         default="maybe",
         verbose_name=_("Recommendation"),
     )
+    round_number = models.PositiveIntegerField(
+        default=1, verbose_name=_("Round Number"),
+    )
     strengths = models.TextField(blank=True, verbose_name=_("Strengths"))
     weaknesses = models.TextField(blank=True, verbose_name=_("Areas for Improvement"))
     notes = models.TextField(blank=True, verbose_name=_("Interview Notes"))
     submitted_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ("interview", "panelist")
+        unique_together = ("interview", "panelist", "round_number")
         verbose_name = _("Interview Evaluation")
 
     def __str__(self):

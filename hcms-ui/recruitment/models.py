@@ -32,6 +32,32 @@ from fits_views.cbv_methods import render_template
 # Create your models here.
 
 
+# --- Post grade (A–F) classification relative to the General Manager line ---
+# Grades A/B/C are "below GM" (approval flows to HR Head only); D/E/F are
+# "above GM" (approval flows to HR Head -> CEO). Single source of truth reused
+# by the recruitment form and the approval-routing logic in views.py.
+GRADE_BELOW_GM = ("A", "B", "C")
+GRADE_ABOVE_GM = ("D", "E", "F")
+GRADE_CHOICES = [
+    ("A", _("A — Below General Manager")),
+    ("B", _("B — Below General Manager")),
+    ("C", _("C — Below General Manager")),
+    ("D", _("D — Above General Manager")),
+    ("E", _("E — Above General Manager")),
+    ("F", _("F — Above General Manager")),
+]
+
+
+def grade_level_label(grade):
+    """Return the human label for a post grade, or "" if unset/invalid."""
+    g = (grade or "").strip().upper()
+    if g in GRADE_ABOVE_GM:
+        return _("Above General Manager")
+    if g in GRADE_BELOW_GM:
+        return _("Below General Manager")
+    return ""
+
+
 def validate_mobile(value):
     """
     This method is used to validate the mobile number using regular expression
@@ -304,6 +330,16 @@ class Recruitment(FitsModel):
         verbose_name=_("Raised from Employee"),
     )
 
+    is_bulk = models.BooleanField(
+        default=False,
+        verbose_name=_("Bulk Request"),
+        help_text=_(
+            "True for the umbrella request that groups several positions under a "
+            "single approval. On approval it fans out into one published campaign "
+            "per BulkRequestLine."
+        ),
+    )
+
     justification = models.TextField(
         blank=True,
         null=True,
@@ -351,6 +387,11 @@ class Recruitment(FitsModel):
         hired candidates
         """
         return self.candidate.filter(hired=True).count()
+
+    @property
+    def grade_level_label(self):
+        """'Above General Manager' / 'Below General Manager' for this post's grade."""
+        return grade_level_label(self.grade)
 
     def __str__(self):
         title = (
@@ -443,6 +484,7 @@ class RecruitmentApproval(FitsModel):
         null=True, blank=True, verbose_name=_("Approved At")
     )
     comments = models.TextField(blank=True, null=True, verbose_name=_("Comments"))
+    signature_image = models.TextField(blank=True, verbose_name=_("Signature (base64)"))
 
     class Meta:
         ordering = ["sequence"]
@@ -451,6 +493,56 @@ class RecruitmentApproval(FitsModel):
 
     def __str__(self):
         return f"{self.recruitment} - {self.approver} ({self.get_status_display()})"
+
+
+class BulkRequestLine(FitsModel):
+    """
+    One position line inside a bulk recruitment request (e.g. "20 Electricians").
+
+    The bulk request itself is a single Recruitment with ``is_bulk=True`` and one
+    approval chain. Each line is a position + vacancy count. When the bulk request
+    is fully approved, every line fans out into its own published Recruitment
+    campaign (linked back via ``published_recruitment``) so external candidates
+    apply per role; proposals/offers then proceed per-candidate as normal.
+    """
+
+    recruitment = models.ForeignKey(
+        Recruitment,
+        on_delete=models.CASCADE,
+        related_name="bulk_lines",
+        verbose_name=_("Bulk Request"),
+    )
+    title = models.CharField(max_length=120, verbose_name=_("Position / Title"))
+    job_position = models.ForeignKey(
+        JobPosition,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        db_constraint=False,
+        related_name="bulk_request_lines",
+        verbose_name=_("Job Position"),
+    )
+    vacancy = models.PositiveIntegerField(default=1, verbose_name=_("Vacancies"))
+    published_recruitment = models.ForeignKey(
+        Recruitment,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="bulk_source_line",
+        verbose_name=_("Published Campaign"),
+        help_text=_("The campaign spawned for this line once the bulk request is approved."),
+    )
+
+    objects = FitsCompanyManager(related_company_field="recruitment__company_id")
+    default = models.manager.Manager()
+
+    class Meta:
+        ordering = ["id"]
+        verbose_name = _("Bulk Request Line")
+        verbose_name_plural = _("Bulk Request Lines")
+
+    def __str__(self):
+        return f"{self.vacancy} × {self.title}"
 
 
 class Stage(FitsModel):
@@ -1480,6 +1572,10 @@ class OfferLetter(FitsModel):
         verbose_name=_("Probation Period (Months)"),
     )
 
+    location = models.CharField(
+        max_length=200, null=True, blank=True, verbose_name=_("Work Location")
+    )
+
     # Terms and conditions
     job_description = models.TextField(
         null=True, blank=True, verbose_name=_("Job Description")
@@ -1739,6 +1835,16 @@ class CandidateScreeningProfile(models.Model):
     screened_at = models.DateTimeField(auto_now_add=True)
     ai_model = models.CharField(max_length=100, null=True, blank=True)
 
+    # ONEIC Interview Evaluation Form fields (HR&A/IAF/3.0/17)
+    scoring_breakdown = models.JSONField(default=dict, blank=True)
+    ai_reasoning = models.TextField(blank=True)
+    oneic_grand_total = models.FloatField(default=0)
+    oneic_percentage = models.FloatField(default=0)
+
+    # HR Override — set when HR manually promotes a candidate the AI marked as Reject
+    hr_override = models.BooleanField(default=False)
+    hr_override_justification = models.TextField(blank=True, null=True)
+
 
 class JobApplication(models.Model):
     recruitment = models.ForeignKey(
@@ -1844,6 +1950,8 @@ class OfferLetterApproval(models.Model):
     feedback = models.TextField(blank=True, verbose_name=_("Feedback / Rejection Reason"))
     signature_image = models.TextField(blank=True, verbose_name=_("Signature (base64)"))
     acted_at = models.DateTimeField(null=True, blank=True, verbose_name=_("Acted At"))
+    esign_provider = models.CharField(max_length=20, blank=True, null=True, verbose_name=_("E-Sign Provider"))
+    esign_reference = models.CharField(max_length=120, blank=True, null=True, verbose_name=_("E-Sign Reference"))
 
     class Meta:
         ordering = ["sequence"]
@@ -2124,3 +2232,53 @@ class CandidatePortalUpload(models.Model):
     @property
     def filename(self):
         return self.file.name.rsplit("/", 1)[-1] if self.file else ""
+
+
+class OnboardingDocument(models.Model):
+    """A document the candidate must e-sign in the portal after the offer letter
+    is fully approved internally. Batch 1 = the offer letter; batch 2 = the
+    standard onboarding documents (T&C, Code of Conduct, NDA, Data Privacy)
+    which are released only after HR approves the signed offer letter."""
+
+    STATUS_AWAITING = "awaiting_signature"
+    STATUS_SIGNED = "signed"
+    STATUS_APPROVED = "approved"
+    STATUS_CHOICES = [
+        (STATUS_AWAITING, _("Awaiting Signature")),
+        (STATUS_SIGNED, _("Signed — Awaiting HR Approval")),
+        (STATUS_APPROVED, _("Approved")),
+    ]
+
+    offer = models.ForeignKey(
+        OfferLetter,
+        on_delete=models.CASCADE,
+        related_name="sign_documents",
+        verbose_name=_("Offer Letter"),
+    )
+    doc_key = models.CharField(max_length=40, verbose_name=_("Document Key"))
+    title = models.CharField(max_length=150, verbose_name=_("Title"))
+    body_html = models.TextField(blank=True, verbose_name=_("Body"))
+    batch = models.PositiveIntegerField(default=1, verbose_name=_("Batch"))
+    sequence = models.PositiveIntegerField(default=1, verbose_name=_("Sequence"))
+    released = models.BooleanField(default=False, verbose_name=_("Released to Candidate"))
+    candidate_signature = models.TextField(blank=True, verbose_name=_("Candidate Signature"))
+    candidate_signed_at = models.DateTimeField(null=True, blank=True)
+    status = models.CharField(
+        max_length=20, choices=STATUS_CHOICES, default=STATUS_AWAITING,
+        verbose_name=_("Status"),
+    )
+    hr_note = models.TextField(blank=True, verbose_name=_("HR Note"))
+    hr_acted_by = models.ForeignKey(
+        "employee.Employee", null=True, blank=True,
+        on_delete=models.SET_NULL, related_name="+",
+    )
+    hr_acted_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["batch", "sequence"]
+        verbose_name = _("Onboarding Document")
+        verbose_name_plural = _("Onboarding Documents")
+
+    def __str__(self):
+        return f"{self.title} — {self.offer.candidate_id.name}"

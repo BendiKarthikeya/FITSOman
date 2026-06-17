@@ -189,6 +189,7 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                     <label class="oh-label" for="{{form.grade.id_for_label}}">{{form.grade.label}}</label>
                     {{form.grade}} {{form.grade.errors}}
+                    <span id="gradeLevelHint" style="font-size:12px;color:#0a7;display:block;margin-top:4px;"></span>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                     <label class="oh-label" for="{{form.band.id_for_label}}">{{form.band.label}}</label>
@@ -330,6 +331,29 @@
   }
   if (fileInput) fileInput.addEventListener("change", recompute);
   recompute();
+})();
+</script>
+
+<script>
+// Live "Above/Below General Manager" hint based on the selected post grade.
+(function () {
+  var grade = document.getElementById("id_grade");
+  var hint = document.getElementById("gradeLevelHint");
+  if (!grade || !hint) return;
+  var BELOW = ["A", "B", "C"], ABOVE = ["D", "E", "F"];
+  function update() {
+    var g = (grade.value || "").trim().toUpperCase();
+    if (ABOVE.indexOf(g) !== -1) {
+      hint.textContent = "{% trans 'Above General Manager' %} — {% trans 'approval: HR Head → CEO' %}";
+    } else if (BELOW.indexOf(g) !== -1) {
+      hint.textContent = "{% trans 'Below General Manager' %} — {% trans 'approval: HR Head only' %}";
+    } else {
+      hint.textContent = "";
+    }
+  }
+  grade.addEventListener("change", update);
+  if (window.jQuery) jQuery(grade).on("change", update);
+  update();
 })();
 </script>
 

@@ -20,6 +20,23 @@
         style="padding:7px 16px;border-radius:6px;background:#0891b2;color:#fff;text-decoration:none;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;">
         <ion-icon name="download-outline"></ion-icon> {% trans "Download PDF" %}
       </a>
+
+      {% if show_visa_btn %}
+        {% if offer.visa_status == 'in_progress' or offer.visa_status == 'cleared' %}
+        <span style="padding:7px 16px;border-radius:6px;background:#dcfce7;color:#166534;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;">
+          <ion-icon name="checkmark-circle-outline"></ion-icon> {% trans "Visa Requested" %}
+        </span>
+        {% else %}
+        <form method="post" action="{% url 'offer-request-visa' offer.id %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit"
+            style="padding:7px 16px;border-radius:6px;background:#16a34a;color:#fff;border:none;cursor:pointer;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;">
+            <ion-icon name="airplane-outline"></ion-icon> {% trans "Generate Visa" %}
+          </button>
+        </form>
+        {% endif %}
+      {% endif %}
+
       <span style="padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600;background:
       {% if offer.status == 'accepted' %}#dcfce7;color:#166534
       {% elif offer.status == 'rejected' %}#fee2e2;color:#991b1b

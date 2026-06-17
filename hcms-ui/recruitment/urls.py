@@ -824,6 +824,9 @@ urlpatterns = [
     path("offers/<int:offer_id>/reject/", recruitment.views.offer_management.offer_reject, name="offer-reject"),
     path("offers/<int:offer_id>/submit-approval/", recruitment.views.offer_management.offer_submit_approval, name="offer-submit-approval"),
     path("offers/<int:offer_id>/approval-action/", recruitment.views.offer_management.offer_approval_action, name="offer-approval-action"),
+    path("offers/<int:offer_id>/request-visa/", recruitment.views.offer_management.offer_request_visa, name="offer-request-visa"),
+    path("offers/onboarding-doc/<int:doc_id>/approve/", recruitment.views.offer_management.onboarding_doc_approve, name="onboarding-doc-approve"),
+    path("offers/onboarding-doc/<int:doc_id>/resign/", recruitment.views.offer_management.onboarding_doc_resign, name="onboarding-doc-resign"),
     path("offers/approval-inbox/", recruitment.views.offer_management.offer_approval_inbox, name="offer-approval-inbox"),
     path("offers/templates/", recruitment.views.offer_management.offer_template_list, name="offer-template-list"),
     path("offers/templates/<int:tpl_id>/delete/", recruitment.views.offer_management.offer_template_delete, name="offer-template-delete"),
@@ -833,6 +836,7 @@ urlpatterns = [
     # Candidate self-service portal (public, no login required)
     path("portal/<uuid:token>/", recruitment.views.candidate_portal.candidate_portal, name="candidate-portal"),
     path("portal/<uuid:token>/upload/", recruitment.views.candidate_portal.candidate_portal_upload, name="candidate-portal-upload"),
+    path("portal/<uuid:token>/sign/<int:doc_id>/", recruitment.views.candidate_portal.candidate_portal_sign, name="candidate-portal-sign"),
     path("portal/<uuid:token>/delete/<int:upload_id>/", recruitment.views.candidate_portal.candidate_portal_delete, name="candidate-portal-delete"),
 
     path("offer-tracking/", recruitment.views.offer_tracking.offer_tracking, name="offer-tracking"),

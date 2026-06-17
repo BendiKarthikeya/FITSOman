@@ -227,12 +227,35 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", default="")
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="noreply@example.com")
 
+# Recipient for "Send to Visa Department" onboarding hand-off + portal link base URL
+VISA_TEAM_EMAIL = env("VISA_TEAM_EMAIL", default="")
+SITE_URL = env("SITE_URL", default="https://hcmspro.net")
+
 # Gmail OAuth (Profile -> Integrations -> Connect Gmail)
 GMAIL_CLIENT_ID = env("GMAIL_CLIENT_ID", default="")
 GMAIL_CLIENT_SECRET = env("GMAIL_CLIENT_SECRET", default="")
 GMAIL_REDIRECT_URI = env(
     "GMAIL_REDIRECT_URI",
     default="http://localhost:8000/integrations/gmail/callback/",
+)
+
+# DocuSign eSignature OAuth (Integrations -> Connect DocuSign). Sandbox defaults.
+DOCUSIGN_CLIENT_ID = env("DOCUSIGN_CLIENT_ID", default="")
+DOCUSIGN_SECRET = env("DOCUSIGN_SECRET", default="")
+DOCUSIGN_ACCOUNT_ID = env("DOCUSIGN_ACCOUNT_ID", default="")
+DOCUSIGN_OAUTH_BASE = env("DOCUSIGN_OAUTH_BASE", default="https://account-d.docusign.com")
+DOCUSIGN_REDIRECT_URI = env(
+    "DOCUSIGN_REDIRECT_URI",
+    default="http://localhost:8000/integrations/docusign/callback/",
+)
+
+# Adobe Acrobat Sign OAuth (Integrations -> Connect Adobe eSign).
+ADOBE_SIGN_CLIENT_ID = env("ADOBE_SIGN_CLIENT_ID", default="")
+ADOBE_SIGN_SECRET = env("ADOBE_SIGN_SECRET", default="")
+ADOBE_SIGN_OAUTH_BASE = env("ADOBE_SIGN_OAUTH_BASE", default="https://secure.na1.adobesign.com")
+ADOBE_SIGN_REDIRECT_URI = env(
+    "ADOBE_SIGN_REDIRECT_URI",
+    default="http://localhost:8000/integrations/adobesign/callback/",
 )
 
 LOGIN_URL = "/login"

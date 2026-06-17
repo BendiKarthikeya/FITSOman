@@ -62,7 +62,30 @@ def mock_analyze_cv(cv_content, job_requirements):
         recommendation = "interview"
     else:
         recommendation = "reject"
-    
+
+    # Resume-based ONEIC scoring (document-assessable criteria only)
+    exp_score = min(10, max(1, years_experience))
+    edu_score = 7 if education and education[0].get("degree") else 5
+    skills_score = min(10, max(1, round(len(matching_skills) / max(len(required_skills), 1) * 10))) if required_skills else 6
+    progression_score = min(10, max(1, len(previous_positions) + 3))
+    achievement_score = 5  # conservative without AI
+    relevance_score = round(match_score / 10) if match_score else 5
+    doc_score = 6 if len(cv_content) > 500 else 4
+    industry_score = 6 if len(previous_positions) >= 2 else 4
+
+    scoring_breakdown = {
+        "work_experience":    {"score": exp_score,        "comment": f"Candidate has approximately {years_experience} years of experience."},
+        "qualifications":     {"score": edu_score,        "comment": f"{education[0]['degree']} in {education[0]['field']} detected." if education else "No formal qualifications detected."},
+        "technical_skills":   {"score": skills_score,     "comment": f"Matched {len(matching_skills)} of {len(required_skills)} required skills." if required_skills else "Skills extracted from document."},
+        "career_progression": {"score": progression_score,"comment": f"{len(previous_positions)} position(s) found in the CV."},
+        "achievements_impact":{"score": achievement_score,"comment": "Quantified achievements not identified in document."},
+        "role_relevance":     {"score": relevance_score,  "comment": f"Overall document match estimated at {match_score}%."},
+        "document_quality":   {"score": doc_score,        "comment": "Document is well-structured and professional." if doc_score >= 6 else "Document appears brief or incomplete."},
+        "industry_knowledge": {"score": industry_score,   "comment": "Domain experience inferred from work history."},
+    }
+    grand_total = sum(v["score"] for v in scoring_breakdown.values())
+    percentage = round(grand_total / 80 * 100, 1)
+
     return {
         "candidate_name": candidate_name,
         "skills": extracted_skills,
@@ -73,5 +96,9 @@ def mock_analyze_cv(cv_content, job_requirements):
         "matching_skills": list(set([s for s in extracted_skills if any(m in s.lower() or s.lower() in m for m in matching_skills)])),
         "missing_skills": missing_skills,
         "summary": f"Candidate with {years_experience} years of experience in {', '.join(extracted_skills[:3])}. Matches {len(matching_skills)} out of {len(required_skills)} job requirements.",
-        "recommendation": recommendation
+        "recommendation": recommendation,
+        "scoring_breakdown": scoring_breakdown,
+        "grand_total": grand_total,
+        "percentage": percentage,
+        "ai_reasoning": f"Based on the submitted documents, the candidate scores {grand_total}/80 ({percentage}%). {recommendation.replace('_', ' ').title()} based on document review.",
     }

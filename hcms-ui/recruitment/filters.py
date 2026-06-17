@@ -13,10 +13,7 @@ from django.utils.translation import gettext_lazy as _
 
 from base.filters import FilterSet
 from base.models import JobPosition
-try:
-    from project.models import Project
-except ImportError:
-    Project = None
+from project.models import Project
 from recruitment.models import (
     Candidate,
     InterviewSchedule,
@@ -780,7 +777,7 @@ class CandidateDatabaseFilter(FilterSet):
         label=_("Skills"),
     )
     project_id = django_filters.ModelChoiceFilter(
-        queryset=Project.objects.all() if Project else Project, label=_("Project")
+        queryset=Project.objects.all(), label=_("Project")
     )
     available_from = django_filters.DateFilter(
         field_name="availability_date",

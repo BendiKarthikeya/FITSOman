@@ -526,9 +526,16 @@ def advance_offer(offer, action: str, by_user, comment: str = "", signature_imag
         offer.save()
         try:
             import threading
-            from recruitment.email_utils import email_offer_approval_approved, email_offer_letter
+            from recruitment.email_utils import email_offer_approval_approved
             threading.Thread(target=email_offer_approval_approved, args=(offer,), daemon=True).start()
-            threading.Thread(target=email_offer_letter, args=(offer,), daemon=True).start()
+        except Exception:
+            pass
+        # Offer fully approved internally → create the candidate sign-documents
+        # and email the candidate their portal link (this replaces the plain
+        # offer-letter email; the portal contains the offer letter to e-sign).
+        try:
+            from recruitment.onboarding_docs import create_onboarding_documents
+            create_onboarding_documents(offer)
         except Exception:
             pass
     return True

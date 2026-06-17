@@ -485,12 +485,21 @@
               data-rec-id="{{ rec.id }}"
               data-rec-title="{{ rec.title|escapejs }}"
               data-rec-company="{{ rec.company_id.company|escapejs }}"
-              data-rec-vacancy="{% if rec.vacancy %}{{ rec.vacancy }}{% else %}{{ rec.open_positions.all|length }}{% endif %}">
-              <div class="job-desc-html" style="display:none;">{{ rec.description|linebreaksbr }}</div>
+              data-rec-vacancy="{% if rec.vacancy %}{{ rec.vacancy }}{% else %}{{ rec.open_positions.all|length }}{% endif %}"
+              data-rec-department="{{ rec.department_id.department|default:''|escapejs }}"
+              data-rec-position="{{ rec.job_position_id.job_position|default:''|escapejs }}"
+              data-rec-employment="{{ rec.get_employment_type_display|default:''|escapejs }}"
+              data-rec-location="{{ rec.location|default:''|escapejs }}"
+              data-rec-workmode="{{ rec.band|default:''|escapejs }}"
+              data-rec-priority="{{ rec.grade|default:''|escapejs }}"
+              data-rec-budget="{% if rec.budget %}${{ rec.budget|floatformat:0 }}{% endif %}">
+              <div class="job-desc-html" style="display:none;">{{ rec.description }}</div>
               <div>
                 <div class="job-meta">
                   <span>{{ rec.company_id.company }}</span>
                   <span>{{ rec.job_position_id.job_position }}</span>
+                  {% if rec.location %}<span>{{ rec.location }}</span>{% endif %}
+                  {% if rec.band %}<span>{{ rec.band }}</span>{% endif %}
                 </div>
                 <h3 class="job-title">{{ rec.title }}</h3>
                 <p class="job-description">{{ rec.description|striptags|truncatechars:150 }}</p>
@@ -662,21 +671,58 @@
 
   // ── JOB DESCRIPTION MODAL ──
   function openJobDesc(card) {
-    const id      = card.dataset.recId;
-    const title   = card.dataset.recTitle;
-    const company = card.dataset.recCompany;
-    const vacancy = card.dataset.recVacancy;
+    const id         = card.dataset.recId;
+    const title      = card.dataset.recTitle;
+    const company    = card.dataset.recCompany;
+    const vacancy    = card.dataset.recVacancy;
+    const department = card.dataset.recDepartment;
+    const position   = card.dataset.recPosition;
+    const employment = card.dataset.recEmployment;
+    const location   = card.dataset.recLocation;
+    const workmode   = card.dataset.recWorkmode;
+    const priority   = card.dataset.recPriority;
+    const budget     = card.dataset.recBudget;
 
-    const descEl  = card.querySelector('.job-desc-html');
-    const html    = descEl ? descEl.innerHTML : '';
+    const descEl = card.querySelector('.job-desc-html');
+    const raw    = descEl ? descEl.innerHTML.trim() : '';
+    const html   = raw || '<p style="color:var(--gray-500);font-style:italic;">No job description provided.</p>';
 
     document.getElementById('jobDescTitle').textContent = title;
-    document.getElementById('jobDescContent').innerHTML = html;
 
+    // Build meta badges
     const meta = document.getElementById('jobDescMeta');
     meta.innerHTML = '';
-    if (company) { const s = document.createElement('span'); s.textContent = company; meta.appendChild(s); }
-    if (vacancy)  { const s = document.createElement('span'); s.textContent = vacancy + ' positions'; meta.appendChild(s); }
+    const badges = [company, department, position, employment, location, workmode, priority ? 'Priority: ' + priority : '', budget ? 'Budget: ' + budget : '', vacancy ? vacancy + ' positions' : ''];
+    badges.forEach(function(text) {
+      if (text && text.trim()) {
+        const s = document.createElement('span');
+        s.textContent = text.trim();
+        meta.appendChild(s);
+      }
+    });
+
+    // Build detail table above JD
+    const details = [];
+    if (department)  details.push(['Department',       department]);
+    if (position)    details.push(['Position',         position]);
+    if (employment)  details.push(['Employment Type',  employment]);
+    if (location)    details.push(['Location',         location]);
+    if (workmode)    details.push(['Work Mode',        workmode]);
+    if (priority)    details.push(['Priority',         priority]);
+    if (budget)      details.push(['Budget',           budget]);
+    if (vacancy)     details.push(['Vacancies',        vacancy]);
+
+    let detailsHtml = '';
+    if (details.length) {
+      detailsHtml = '<table style="width:100%;border-collapse:collapse;margin-bottom:1.25rem;font-size:.9rem;">';
+      details.forEach(function(row) {
+        detailsHtml += '<tr><td style="padding:5px 0;color:var(--gray-500);width:40%;vertical-align:top">' + row[0] + '</td>'
+                     + '<td style="padding:5px 0;font-weight:600;color:var(--gray-700)">' + row[1] + '</td></tr>';
+      });
+      detailsHtml += '</table><hr style="border:none;border-top:1px solid var(--green-100);margin-bottom:1.25rem;">';
+    }
+
+    document.getElementById('jobDescContent').innerHTML = detailsHtml + html;
 
     document.getElementById('jobDescApplyBtn').onclick = function() {
       closeJobDesc();

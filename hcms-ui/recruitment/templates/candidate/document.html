@@ -61,6 +61,95 @@
 		</div>
 	</div>
 {% endif %}
+
+<!-- ── Onboarding Documents (E-Sign) ───────────────────────────────────────── -->
+{% if sign_documents %}
+<div class="p-3">
+	<div class="d-flex align-items-center justify-content-between mb-2">
+		<h6 class="mb-0 fw-bold">{% trans "Onboarding Documents (E-Sign)" %}</h6>
+		<form method="post" action="{% url 'offer-request-visa' candidate_offer.id %}" onsubmit="return confirm('Send this candidate to the Visa Department?');" class="mb-0">
+			{% csrf_token %}
+			<button type="submit" class="oh-btn oh-btn--secondary"
+				{% if not all_docs_approved or candidate_offer.visa_status != 'pending' %}disabled{% endif %}
+				title="{% if all_docs_approved %}{% trans 'Send to Visa Department' %}{% else %}{% trans 'Enabled once all documents are approved' %}{% endif %}">
+				<ion-icon name="paper-plane-outline" class="me-1"></ion-icon>
+				{% if candidate_offer.visa_status != 'pending' %}{% trans "Sent to Visa Dept" %}{% else %}{% trans "Send to Visa Department" %}{% endif %}
+			</button>
+		</form>
+	</div>
+	<table class="table table-sm align-middle">
+		<thead><tr>
+			<th>{% trans "Document" %}</th><th>{% trans "Status" %}</th>
+			<th>{% trans "Signature" %}</th><th class="text-end">{% trans "Action" %}</th>
+		</tr></thead>
+		<tbody>
+		{% for doc in sign_documents %}
+			<tr>
+				<td>
+					{{ doc.title }}
+					{% if not doc.released %}<span class="badge bg-secondary ms-1">{% trans "Locked" %}</span>
+					{% elif doc.batch == 1 %}<span class="badge bg-info ms-1">{% trans "Offer" %}</span>{% endif %}
+				</td>
+				<td>
+					{% if doc.status == 'approved' %}<span class="badge bg-success">{% trans "Approved" %}</span>
+					{% elif doc.status == 'signed' %}<span class="badge bg-warning text-dark">{% trans "Signed" %}</span>
+					{% else %}<span class="badge bg-light text-muted">{% trans "Awaiting Sign" %}</span>{% endif %}
+				</td>
+				<td>
+					{% if doc.candidate_signature %}
+						<img src="{{ doc.candidate_signature }}" alt="signature" style="height:34px;border:1px solid #eee;border-radius:4px;">
+					{% else %}<span class="text-muted small">—</span>{% endif %}
+				</td>
+				<td class="text-end">
+					{% if doc.status == 'signed' and perms.recruitment.change_candidate %}
+						<form method="post" action="{% url 'onboarding-doc-approve' doc.id %}" class="d-inline">
+							{% csrf_token %}
+							<button class="oh-btn oh-btn--success oh-btn--small" title="{% trans 'Approve' %}">
+								<ion-icon name="checkmark-outline"></ion-icon>
+							</button>
+						</form>
+						<button class="oh-btn oh-btn--danger oh-btn--small" title="{% trans 'Send back to re-sign' %}"
+							onclick="document.getElementById('resign-{{ doc.id }}').classList.toggle('d-none')">
+							<ion-icon name="arrow-undo-outline"></ion-icon>
+						</button>
+						<form method="post" action="{% url 'onboarding-doc-resign' doc.id %}" id="resign-{{ doc.id }}" class="d-none mt-1">
+							{% csrf_token %}
+							<input type="text" name="note" class="form-control form-control-sm d-inline" style="max-width:180px" placeholder="{% trans 'Reason (optional)' %}">
+							<button class="oh-btn oh-btn--secondary oh-btn--small">{% trans "Send to Re-Sign" %}</button>
+						</form>
+					{% elif doc.status == 'approved' %}
+						<ion-icon name="checkmark-done-outline" class="text-success"></ion-icon>
+					{% else %}
+						<span class="text-muted small">{% trans "Pending candidate" %}</span>
+					{% endif %}
+				</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+
+<!-- ── Certificates (candidate portal uploads) ─────────────────────────────── -->
+{% if portal_uploads %}
+<div class="p-3">
+	<h6 class="mb-2 fw-bold">{% trans "Certificates & Uploaded Documents" %}</h6>
+	<table class="table table-sm align-middle">
+		<thead><tr>
+			<th>{% trans "Type" %}</th><th>{% trans "File" %}</th><th>{% trans "Uploaded" %}</th>
+		</tr></thead>
+		<tbody>
+		{% for up in portal_uploads %}
+			<tr>
+				<td>{{ up.get_document_type_display }}{% if up.label %} <span class="text-muted small">({{ up.label }})</span>{% endif %}</td>
+				<td><a href="{{ up.file.url }}" target="_blank">{{ up.filename }}</a></td>
+				<td class="small text-muted">{{ up.uploaded_at|date:"d M Y, H:i" }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
 <div class="mt-2">
 	{% for document in documents %}
 		<div id="document{{document.id}}">

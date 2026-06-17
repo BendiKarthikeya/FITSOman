@@ -128,7 +128,7 @@ def email_hr_new_application(candidate, recruitment, hr_emails: list):
             f"Email     : {candidate.email}\n"
             f"Mobile    : {candidate.mobile or '—'}\n"
             f"Applied for: {recruitment.title or str(recruitment.job_position_id)}\n\n"
-            f"Review: http://127.0.0.1:8000/recruitment/candidates/dashboard/"
+            f"Review: {_site_url()}/recruitment/candidates/dashboard/"
         ),
         to=hr_emails,
     )
@@ -222,7 +222,7 @@ def email_offer_accepted(offer):
             body=(
                 f"{offer.candidate_id.name} has accepted the offer for {offer.position}.\n"
                 f"Joining Date: {offer.joining_date}\n\n"
-                f"Update clearance status: http://127.0.0.1:8000/recruitment/offer-tracking/"
+                f"Update clearance status: {_site_url()}/recruitment/offer-tracking/"
             ),
             to=emails,
         )
@@ -328,7 +328,7 @@ def email_manpower_approved(mr):
             f"Your manpower request {mr.requisition_no} for the position of "
             f"{mr.job_position or 'the requested role'} has been approved.\n\n"
             f"A recruitment campaign has been created automatically.\n"
-            f"View: http://127.0.0.1:8000/recruitment/manpower/{mr.id}/\n\n"
+            f"View: {_site_url()}/recruitment/manpower/{mr.id}/\n\n"
             f"Regards,\nHR Team"
         ),
         to=[user.email],
@@ -481,6 +481,115 @@ def email_proposal_approved(proposal, request_obj=None):
         )
     except Exception:
         pass
+
+
+def email_proposal_rejected(proposal, feedback=""):
+    """Email the proposal submitter when their proposal is rejected in the chain."""
+    try:
+        submitter = getattr(proposal, "created_by", None)
+        email = getattr(submitter, "email", None)
+        if not email:
+            return
+        cand_name = proposal.applicant_name or proposal.candidate.name
+        send_recruitment_email(
+            subject=f"[FITS] Employment Proposal Rejected – {proposal.proposal_no}",
+            body=(
+                f"Dear {submitter},\n\n"
+                f"The Employment Proposal {proposal.proposal_no} for {cand_name} "
+                f"was rejected during the approval process.\n"
+                + (f"Feedback: {feedback}\n" if feedback else "")
+                + f"\nPlease review at /recruitment/proposals/.\n\nRegards,\nFITS"
+            ),
+            to=[email],
+        )
+    except Exception:
+        pass
+
+
+def _site_url():
+    return getattr(settings, "SITE_URL", os.environ.get("SITE_URL", "https://hcmspro.net"))
+
+
+def _portal_url(offer):
+    """Absolute URL of the candidate document portal for this offer."""
+    try:
+        from django.urls import reverse
+        return f"{_site_url()}{reverse('candidate-portal', args=[str(offer.portal_token)])}"
+    except Exception:
+        return f"{_site_url()}/recruitment/portal/{offer.portal_token}/"
+
+
+def email_candidate_documents_ready(offer, batch=1):
+    """Email the candidate that documents are ready for them to e-sign in the portal."""
+    candidate = offer.candidate_id
+    if not candidate.email or "careers.local" in candidate.email:
+        return
+    if batch == 1:
+        intro = (
+            "Congratulations! Your offer has been approved. Please review and "
+            "e-sign your offer letter in your personal candidate portal."
+        )
+    else:
+        intro = (
+            "Thank you for signing your offer letter. Additional onboarding "
+            "documents are now ready for your e-signature in your portal."
+        )
+    send_recruitment_email(
+        subject=f"Action Required: Documents to E-Sign – {offer.position}",
+        body=(
+            f"Dear {candidate.name},\n\n"
+            f"{intro}\n\n"
+            f"Open your portal (no login needed — this link is unique to you):\n"
+            f"  {_portal_url(offer)}\n\n"
+            f"In the portal you can e-sign the documents and upload your "
+            f"certificates (academic, experience, medical, passport, ID).\n\n"
+            f"Regards,\nHR Team"
+        ),
+        to=[candidate.email],
+    )
+
+
+def email_candidate_resign_request(doc):
+    """Email the candidate to re-sign a document HR sent back."""
+    offer = doc.offer
+    candidate = offer.candidate_id
+    if not candidate.email or "careers.local" in candidate.email:
+        return
+    send_recruitment_email(
+        subject=f"Action Required: Please Re-Sign '{doc.title}'",
+        body=(
+            f"Dear {candidate.name},\n\n"
+            f"HR has requested that you re-sign the document '{doc.title}'.\n"
+            + (f"Note from HR: {doc.hr_note}\n" if doc.hr_note else "")
+            + f"\nPlease open your portal and e-sign it again:\n"
+            f"  {_portal_url(offer)}\n\n"
+            f"Regards,\nHR Team"
+        ),
+        to=[candidate.email],
+    )
+
+
+def email_visa_team(offer):
+    """Notify the visa team that a candidate's onboarding documents are complete."""
+    to = getattr(settings, "VISA_TEAM_EMAIL", os.environ.get("VISA_TEAM_EMAIL", ""))
+    if not to:
+        return
+    candidate = offer.candidate_id
+    send_recruitment_email(
+        subject=f"Visa Processing Request – {candidate.name} ({offer.position})",
+        body=(
+            f"All onboarding documents for the following new hire have been "
+            f"signed and approved. Please initiate visa processing.\n\n"
+            f"Candidate : {candidate.name}\n"
+            f"Email     : {candidate.email}\n"
+            f"Position  : {offer.position}\n"
+            f"Department: {offer.department or '—'}\n"
+            f"Joining   : {offer.joining_date}\n"
+            f"Offer Ref : {offer.offer_no}\n\n"
+            f"Regards,\nHR Team"
+        ),
+        to=[to],
+    )
 
 
 def email_sla_escalation(overdue_items: list):

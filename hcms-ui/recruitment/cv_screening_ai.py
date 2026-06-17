@@ -19,24 +19,43 @@ from recruitment.models import Candidate, CandidateScreeningProfile
 # ── Shared extraction prompt ──────────────────────────────────────────────────
 
 def _build_prompt(cv_content, job_requirements):
-    return f"""Analyze the following CV and extract structured information.
+    return f"""You are a senior HR evaluator scoring a candidate's submitted documents (CV, resume, cover letter) against a job requirement using the ONEIC Document Evaluation Form (HR&A/IAF/3.0/17).
 
-CV Content:
+Submitted Documents:
 {cv_content}
 
 Job Requirements:
 {job_requirements}
 
-Return ONLY valid JSON with this exact structure:
+STEP 1 — Extract all facts from the submitted documents (CV, resume, cover letter, portfolio, or any other uploaded materials).
+STEP 2 — Score the candidate on each of the 8 ONEIC criteria based ONLY on what is observable in the documents (1–10 each, max total = 80):
+  1. work_experience: Relevance and depth of work history, years of experience, industry alignment, job stability
+  2. qualifications: Academic degrees, professional certifications, training courses relevant to the role
+  3. technical_skills: Hard skills match with job requirements — tools, technologies, domain-specific competencies
+  4. career_progression: Growth trajectory visible in the CV — promotions, expanding scope/seniority, increasing responsibility over time
+  5. achievements_impact: Quantified accomplishments, measurable results, notable projects, awards, or recognitions listed in the documents
+  6. role_relevance: Overall alignment of the candidate's background with the specific job description and requirements
+  7. document_quality: Clarity, structure, and professionalism of the CV and cover letter — how well the candidate presents themselves on paper
+  8. industry_knowledge: Evidence of domain expertise, sector-specific knowledge, or industry experience relevant to the role
+
+STEP 3 — Compute grand_total (sum of all 8) and percentage (grand_total/80*100).
+STEP 4 — Apply ONEIC thresholds:
+  - percentage >= 70  → recommendation = "auto-shortlist"  (Suitable)
+  - percentage >= 60  → recommendation = "interview"       (Standby)
+  - percentage < 60   → recommendation = "reject"          (Rejected)
+
+For years_experience: carefully count total years across ALL previous_positions. Sum durations. Do NOT return 0 unless the candidate has no work history at all.
+
+Return ONLY valid JSON:
 {{
-    "candidate_name": "extracted full name or empty string",
-    "nationality": "nationality/country of the candidate or empty string",
-    "present_employer": "current or most recent employer name or empty string",
+    "candidate_name": "full name or empty string",
+    "nationality": "nationality or empty string",
+    "present_employer": "current/most recent employer or empty string",
     "marital_status": "single/married/divorced/widowed or empty string",
-    "date_of_birth": "YYYY-MM-DD format or null",
-    "place_of_birth": "city or country of birth or empty string",
-    "qualification_academic": "highest academic qualification e.g. Bachelor of Engineering or empty string",
-    "qualification_professional": "professional/technical certifications or skills summary or empty string",
+    "date_of_birth": "YYYY-MM-DD or null",
+    "place_of_birth": "city or country or empty string",
+    "qualification_academic": "highest academic degree e.g. Bachelor of Engineering",
+    "qualification_professional": "professional certifications or empty string",
     "experience_local_years": null,
     "experience_overseas_years": null,
     "lang_arabic": false,
@@ -45,16 +64,29 @@ Return ONLY valid JSON with this exact structure:
     "driving_license": "light/heavy/both/none",
     "skills": ["skill1", "skill2"],
     "years_experience": 0,
-    "education": [{{"degree": "Bachelor", "field": "Computer Science", "institution": "University Name"}}],
+    "education": [{{"degree": "Bachelor", "field": "Computer Science", "institution": "University"}}],
     "previous_positions": [{{"title": "Engineer", "company": "Acme", "duration": "2 years"}}],
     "matching_score": 0,
     "matching_skills": [],
     "missing_skills": [],
-    "summary": "brief summary",
-    "recommendation": "auto-shortlist/interview/reject"
+    "summary": "2-3 sentence overall assessment based on the submitted documents",
+    "recommendation": "auto-shortlist/interview/reject",
+    "scoring_breakdown": {{
+        "work_experience":    {{"score": 0, "comment": "one sentence based on CV/resume"}},
+        "qualifications":     {{"score": 0, "comment": "one sentence based on CV/resume"}},
+        "technical_skills":   {{"score": 0, "comment": "one sentence based on CV/resume"}},
+        "career_progression": {{"score": 0, "comment": "one sentence based on CV/resume"}},
+        "achievements_impact":{{"score": 0, "comment": "one sentence based on CV/resume"}},
+        "role_relevance":     {{"score": 0, "comment": "one sentence based on CV/resume"}},
+        "document_quality":   {{"score": 0, "comment": "one sentence based on CV/cover letter"}},
+        "industry_knowledge": {{"score": 0, "comment": "one sentence based on CV/resume"}}
+    }},
+    "grand_total": 0,
+    "percentage": 0.0,
+    "ai_reasoning": "2-3 sentences explaining the final recommendation decision based on the submitted documents"
 }}
 
-For fields you cannot determine from the CV use empty string or null. Return JSON only — no markdown, no explanation."""
+Return JSON only — no markdown, no explanation."""
 
 
 # ── Tier 1: Groq ─────────────────────────────────────────────────────────────
@@ -225,22 +257,93 @@ def screen_candidate_cv(candidate_id, job_requirements):
     if not merged:
         return None
 
-    composite_score = float(merged.get("matching_score", 0))
+    # ── Derive composite score from ONEIC grand_total if available ────────────
+    # The prompt now returns grand_total (/80) and percentage (/100).
+    # Fall back to matching_score if those fields are missing (older cached results).
+    percentage = float(merged.get("percentage", 0))
+    grand_total = float(merged.get("grand_total", 0))
+
+    if percentage > 0:
+        composite_score = round(percentage)
+    elif grand_total > 0:
+        composite_score = round(grand_total / 80 * 100)
+    else:
+        composite_score = float(merged.get("matching_score", 0))
+
+    # Derive from signals when AI returned 0
+    if composite_score == 0:
+        rec = str(merged.get("recommendation", "")).lower().replace("-", "_")
+        matching = merged.get("matching_skills") or []
+        missing = merged.get("missing_skills") or []
+        extracted = merged.get("skills") or []
+        total = len(matching) + len(missing)
+        if total > 0:
+            composite_score = round(len(matching) / total * 100)
+        elif rec in ("auto_shortlist", "auto-shortlist"):
+            composite_score = 75.0
+        elif rec == "interview":
+            composite_score = 64.0
+        elif rec == "reject":
+            composite_score = 45.0
+        elif extracted:
+            composite_score = 55.0
+
+    # ── Apply ONEIC thresholds to set recommendation ───────────────────────
+    if composite_score >= 70:
+        derived_rec = "auto_shortlist"
+    elif composite_score >= 60:
+        derived_rec = "interview"
+    else:
+        derived_rec = "reject"
+
+    # Prefer AI recommendation if it already matches thresholds; override if not
+    ai_rec = str(merged.get("recommendation", "")).lower().replace("-", "_").replace(" ", "_")
+    if ai_rec in ("auto_shortlist", "interview", "reject"):
+        # Use ONEIC-threshold-derived value since the prompt already applies them
+        recommendation = derived_rec
+    else:
+        recommendation = derived_rec
 
     from datetime import datetime
 
+    # ── Fix experience: sum previous_positions durations if AI returned 0 ──
+    years_exp = int(merged.get("years_experience") or 0)
+    if years_exp == 0:
+        positions = merged.get("previous_positions") or []
+        total_months = 0
+        dur_re = re.compile(r'(\d+(?:\.\d+)?)\s*(year|yr|month|mo)', re.I)
+        for pos in positions:
+            dur = str(pos.get("duration", ""))
+            for num, unit in dur_re.findall(dur):
+                n = float(num)
+                if "month" in unit.lower() or "mo" in unit.lower():
+                    total_months += n
+                else:
+                    total_months += n * 12
+        if total_months > 0:
+            years_exp = max(1, round(total_months / 12))
+
     profile, _ = CandidateScreeningProfile.objects.get_or_create(candidate=candidate)
     profile.extracted_skills = merged.get("skills", [])
-    profile.years_experience = merged.get("years_experience", 0)
+    profile.years_experience = years_exp
     profile.education = merged.get("education", [])
     profile.previous_positions = merged.get("previous_positions", [])
     profile.matching_score = composite_score
     profile.matching_skills = merged.get("matching_skills", [])
     profile.missing_skills = merged.get("missing_skills", [])
     profile.summary = merged.get("summary", "")
-    profile.recommendation = merged.get("recommendation", "interview")
+    profile.recommendation = recommendation
     profile.status = "screened"
     profile.ai_model = merged.get("_ai_model", "")
+
+    # ONEIC scoring breakdown + reasoning
+    import json as _json
+    breakdown = merged.get("scoring_breakdown") or {}
+    if breakdown:
+        profile.scoring_breakdown = breakdown if isinstance(breakdown, dict) else {}
+    profile.ai_reasoning = merged.get("ai_reasoning", "") or ""
+    profile.oneic_grand_total = grand_total or 0
+    profile.oneic_percentage = composite_score
 
     # Personal details (resume-priority merged from all docs)
     profile.extracted_nationality = merged.get("nationality", "") or ""

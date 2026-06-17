@@ -44,6 +44,7 @@ from fits_widgets.widgets.fits_multi_select_field import FitsMultiSelectField
 from fits_widgets.widgets.select_widgets import FitsMultiSelectWidget
 from recruitment import widgets
 from recruitment.models import (
+    GRADE_CHOICES,
     Candidate,
     CandidateDocument,
     CandidateDocumentRequest,
@@ -328,7 +329,10 @@ class RecruitmentCreationForm(BaseModelForm):
             "description": forms.Textarea(attrs={"data-summernote": ""}),
             "justification": forms.Textarea(attrs={"rows": 3, "placeholder": "Why is this position being opened?"}),
             "budget_available": forms.CheckboxInput(attrs={"disabled": "disabled"}),
-            "grade": forms.TextInput(attrs={"class": "oh-input w-100", "placeholder": "e.g. G5"}),
+            "grade": forms.Select(
+                choices=[("", _("— Select Grade —"))] + GRADE_CHOICES,
+                attrs={"class": "oh-select oh-select-2 w-100", "id": "id_grade"},
+            ),
             "band": forms.TextInput(attrs={"class": "oh-input w-100", "placeholder": "e.g. B2"}),
             "budget": forms.NumberInput(attrs={"class": "oh-input w-100", "step": "0.01", "placeholder": "e.g. 25000.00"}),
             "employment_type": forms.Select(attrs={"class": "oh-select oh-select-2 w-100"}),
@@ -348,6 +352,9 @@ class RecruitmentCreationForm(BaseModelForm):
         super().__init__(*args, **kwargs)
 
         reload_queryset(self.fields)
+        # Grade drives the approval routing, so always require it.
+        if "grade" in self.fields:
+            self.fields["grade"].required = True
         if not self.instance.pk:
             self.fields["recruitment_managers"] = FitsMultiSelectField(
                 queryset=Employee.objects.filter(is_active=True),

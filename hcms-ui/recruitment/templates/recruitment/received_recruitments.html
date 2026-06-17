@@ -172,6 +172,13 @@
             <td>
               <div class="rr-title">{{ rec.title }}</div>
               <div class="rr-raised">{% trans "Raised by" %} {{ rec.raised_by }}</div>
+              {% if rec.grade %}
+              <div style="margin-top:3px;">
+                <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;background:#eef2ff;color:#3730a3;">
+                  {% trans "Grade" %} {{ rec.grade }}{% if rec.grade_level_label %} &middot; {{ rec.grade_level_label }}{% endif %}
+                </span>
+              </div>
+              {% endif %}
               <div style="font-size:11px;color:#9ca3af;margin-top:2px;">
                 {{ rec.start_date }} &mdash; {{ rec.end_date }}
               </div>
@@ -241,6 +248,13 @@
             <td>
               <div class="rr-title">{{ rec.title }}</div>
               <div class="rr-raised">{% trans "Raised by" %} {{ rec.raised_by }}</div>
+              {% if rec.grade %}
+              <div style="margin-top:3px;">
+                <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;background:#eef2ff;color:#3730a3;">
+                  {% trans "Grade" %} {{ rec.grade }}{% if rec.grade_level_label %} &middot; {{ rec.grade_level_label }}{% endif %}
+                </span>
+              </div>
+              {% endif %}
               {% if rec.oman_last_action %}
               <div class="rr-modified">{% trans "Last action:" %} {{ rec.oman_last_action }}</div>
               {% endif %}
@@ -329,6 +343,13 @@
             <td>
               <div class="rr-title">{{ rec.title }}</div>
               <div class="rr-raised">{% trans "Raised by" %} {{ rec.raised_by }}</div>
+              {% if rec.grade %}
+              <div style="margin-top:3px;">
+                <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;background:#eef2ff;color:#3730a3;">
+                  {% trans "Grade" %} {{ rec.grade }}{% if rec.grade_level_label %} &middot; {{ rec.grade_level_label }}{% endif %}
+                </span>
+              </div>
+              {% endif %}
               {% if rec.oman_last_action %}
               <div class="rr-modified">{% trans "Last action:" %} {{ rec.oman_last_action }}</div>
               {% endif %}

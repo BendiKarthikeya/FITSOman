@@ -273,6 +273,8 @@ class ProposalApproval(models.Model):
     feedback = models.TextField(blank=True)
     signature_image = models.TextField(blank=True, verbose_name=_("Signature (base64)"))
     acted_at = models.DateTimeField(null=True, blank=True)
+    esign_provider = models.CharField(max_length=20, blank=True, null=True, verbose_name=_("E-Sign Provider"))
+    esign_reference = models.CharField(max_length=120, blank=True, null=True, verbose_name=_("E-Sign Reference"))
 
     class Meta:
         ordering = ["sequence"]

@@ -46,6 +46,17 @@ def _notify_first_approver(proposal, step):
         )
     except Exception:
         pass
+    # Also email the approver (mirror the dashboard notification).
+    try:
+        import threading
+        from recruitment.email_utils import email_proposal_for_signature
+        threading.Thread(
+            target=email_proposal_for_signature,
+            args=(proposal, approver_emp),
+            daemon=True,
+        ).start()
+    except Exception:
+        pass
 
 PROPOSAL_PERMISSIONS = [
     "recruitment.view_employmentproposal",
@@ -297,6 +308,17 @@ def reject_proposal(proposal, rejecting_step, feedback, actor_user=None):
         f"({rejecting_step.role_label}). Feedback: {feedback or 'None'}",
         redirect_path="/recruitment/proposals/",
     )
+    # Also email the submitter.
+    try:
+        import threading
+        from recruitment.email_utils import email_proposal_rejected
+        threading.Thread(
+            target=email_proposal_rejected,
+            args=(proposal, feedback),
+            daemon=True,
+        ).start()
+    except Exception:
+        pass
 
 
 def annotate_display_status(proposal):

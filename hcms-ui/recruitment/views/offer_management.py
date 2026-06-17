@@ -149,13 +149,70 @@ def offer_detail(request, offer_id):
         sign_url = reverse("offer-candidate-sign", args=[str(offer.candidate_signature_token)])
     except Exception:
         pass
+    # Show visa button when all signatories have approved (status advances to sent/accepted/joined)
+    show_visa_btn = offer.status in ("sent", "accepted", "joined")
     return render(request, "recruitment/offer/detail.html", {
         "offer": offer,
         "approvals": approvals,
         "pending_approval": pending_approval,
         "employee": employee,
         "sign_url": sign_url,
+        "show_visa_btn": show_visa_btn,
     })
+
+
+# ── REQUEST VISA ──────────────────────────────────────────────────────────────
+
+@login_required
+@permission_required("recruitment.view_offerletter", raise_exception=True)
+@require_POST
+def offer_request_visa(request, offer_id):
+    offer = get_object_or_404(OfferLetter, id=offer_id)
+
+    from recruitment.onboarding_docs import all_documents_approved
+    if offer.sign_documents.exists() and not all_documents_approved(offer):
+        messages.warning(request, _("All onboarding documents must be approved before sending to the Visa Department."))
+        return redirect(request.META.get("HTTP_REFERER", reverse("offer-detail", args=[offer_id])))
+
+    offer.visa_status = "in_progress"
+    offer.save(update_fields=["visa_status"])
+    try:
+        from recruitment.email_utils import email_visa_team
+        threading.Thread(target=email_visa_team, args=(offer,), daemon=True).start()
+    except Exception:
+        pass
+    messages.success(request, "Request sent to the Visa Department to process the candidate's visa.")
+    return redirect(request.META.get("HTTP_REFERER", reverse("offer-detail", args=[offer_id])))
+
+
+# ── ONBOARDING DOCUMENT HR REVIEW ──────────────────────────────────────────────
+
+@login_required
+@permission_required("recruitment.view_offerletter", raise_exception=True)
+@require_POST
+def onboarding_doc_approve(request, doc_id):
+    from recruitment.models import OnboardingDocument
+    from recruitment.onboarding_docs import on_hr_approve
+    doc = get_object_or_404(OnboardingDocument, id=doc_id)
+    if doc.status != OnboardingDocument.STATUS_SIGNED:
+        messages.warning(request, _("Only signed documents can be approved."))
+    else:
+        on_hr_approve(doc, _get_employee(request.user))
+        messages.success(request, _(f"'{doc.title}' approved."))
+    return redirect(request.META.get("HTTP_REFERER", reverse("offer-detail", args=[doc.offer_id])))
+
+
+@login_required
+@permission_required("recruitment.view_offerletter", raise_exception=True)
+@require_POST
+def onboarding_doc_resign(request, doc_id):
+    from recruitment.models import OnboardingDocument
+    from recruitment.onboarding_docs import on_hr_resign
+    doc = get_object_or_404(OnboardingDocument, id=doc_id)
+    note = request.POST.get("note", "").strip()
+    on_hr_resign(doc, _get_employee(request.user), note)
+    messages.info(request, _(f"'{doc.title}' sent back to the candidate to re-sign."))
+    return redirect(request.META.get("HTTP_REFERER", reverse("offer-detail", args=[doc.offer_id])))
 
 
 # ── SEND ──────────────────────────────────────────────────────────────────────

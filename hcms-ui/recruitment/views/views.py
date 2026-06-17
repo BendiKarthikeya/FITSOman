@@ -107,6 +107,7 @@ from recruitment.forms import (
     ToSkillZoneForm,
 )
 from recruitment.models import (
+    BulkRequestLine,
     Candidate,
     CandidateDocument,
     CandidateRating,
@@ -211,15 +212,40 @@ def get_reporting_chain(employee):
     return chain
 
 
+def _grade_based_approvers(recruitment_obj):
+    """Approval chain driven by the post grade.
+
+    Grade A/B/C ("Below General Manager") -> [HR Head].
+    Grade D/E/F ("Above General Manager") -> [HR Head, CEO].
+    Returns None when no valid A-F grade is set so callers fall back to the
+    legacy custom/hierarchy routing.
+    """
+    grade = (getattr(recruitment_obj, "grade", "") or "").strip().upper()
+    if grade not in {"A", "B", "C", "D", "E", "F"}:
+        return None
+    from recruitment.approvals.proposal_engine import _ensure_role_employee
+    from recruitment.models_proposal import ROLE_CEO, ROLE_GM_HRA
+
+    chain = [_ensure_role_employee(ROLE_GM_HRA)]  # HR Head
+    if grade in {"D", "E", "F"}:
+        chain.append(_ensure_role_employee(ROLE_CEO))  # + CEO
+    return [emp for emp in chain if emp]
+
+
 def create_employee_recruitment_approvals(recruitment_obj, approver_ids=None):
     """Create approval steps for an employee-raised recruitment."""
     approvers = []
     raised_by = recruitment_obj.raised_by
 
-    # 1) Per-requester custom flow (Fatma / Aisha / Khalid) — always wins,
-    #    regardless of what was selected in the Managers field on the form.
+    # 0) Grade-based routing wins over everything: a valid A-F grade dictates
+    #    HR Head (A-C) or HR Head -> CEO (D-F).
+    grade_chain = _grade_based_approvers(recruitment_obj)
     custom = _custom_recruitment_approvers(raised_by)
-    if custom:
+    if grade_chain:
+        approvers = [m for m in grade_chain if m != raised_by]
+    # 1) Per-requester custom flow (Fatma / Aisha / Khalid) — used only when no
+    #    grade is set, regardless of what was selected in the Managers field.
+    elif custom:
         approvers = [m for m in custom if m != raised_by]
     elif approver_ids is not None:
         normalized_ids = [int(i) for i in approver_ids if str(i).strip().isdigit()]
@@ -244,6 +270,63 @@ def create_employee_recruitment_approvals(recruitment_obj, approver_ids=None):
             )
         )
     return approvals
+
+
+def fanout_bulk_recruitment(parent):
+    """
+    When a bulk recruitment request (``parent.is_bulk``) is fully approved, spawn
+    one published campaign per :class:`BulkRequestLine` so external candidates can
+    apply per role. Idempotent — lines already linked to a campaign are skipped.
+
+    Returns the list of campaigns created on this call.
+    """
+    from django.utils.text import slugify
+    from uuid import uuid4
+
+    if not getattr(parent, "is_bulk", False):
+        return []
+
+    created = []
+    for line in parent.bulk_lines.all():
+        if line.published_recruitment_id:
+            continue  # already fanned out
+
+        base_slug = slugify(line.title) or "position"
+        slug = f"{base_slug}-{uuid4().hex[:6]}"
+
+        child = Recruitment(
+            title=(line.title or "Position")[:50],
+            vacancy=line.vacancy or 1,
+            description=parent.description,
+            justification=parent.justification,
+            start_date=parent.start_date,
+            company_id_id=parent.company_id_id,
+            employment_type=parent.employment_type,
+            location=parent.location,
+            grade=parent.grade,
+            raised_by=parent.raised_by,
+            raised_from_employee=True,
+            approval_status="approved",
+            is_published=True,
+            is_public=True,
+            public_slug=slug,
+        )
+        if line.job_position_id:
+            child.job_position_id_id = line.job_position_id
+        child.save()
+
+        # Seed the initial pipeline stage so applicants land somewhere.
+        Stage.objects.get_or_create(
+            recruitment_id=child,
+            stage_type="initial",
+            defaults={"stage": "Applied", "sequence": 0},
+        )
+
+        line.published_recruitment = child
+        line.save(update_fields=["published_recruitment"])
+        created.append(child)
+
+    return created
 
 
 def _custom_recruitment_approvers(raised_by):
@@ -280,8 +363,11 @@ def repair_employee_recruitment_approvals(recruitment_obj):
     if not recruitment_obj.raised_from_employee:
         return
 
-    # Determine the expected approver chain.
-    expected = _custom_recruitment_approvers(recruitment_obj.raised_by)
+    # Determine the expected approver chain — grade routing wins, mirroring
+    # create_employee_recruitment_approvals().
+    expected = _grade_based_approvers(recruitment_obj)
+    if not expected:
+        expected = _custom_recruitment_approvers(recruitment_obj.raised_by)
     if not expected:
         manager_ids = list(
             recruitment_obj.recruitment_managers.values_list("id", flat=True)
@@ -1959,6 +2045,18 @@ def candidate_view_individual(request, cand_id, **kwargs):
     )
     ratings = candidate_obj.candidate_rating.all()
     documents = CandidateDocument.objects.filter(candidate_id=cand_id)
+
+    # Onboarding sign-documents + uploaded certificates (post-offer portal flow)
+    from recruitment.models import OfferLetter
+    from recruitment.onboarding_docs import all_documents_approved
+    candidate_offer = OfferLetter.objects.filter(candidate_id=candidate_obj).first()
+    sign_documents = []
+    portal_uploads = []
+    all_docs_approved = False
+    if candidate_offer:
+        sign_documents = candidate_offer.sign_documents.all().order_by("batch", "sequence")
+        portal_uploads = candidate_offer.portal_uploads.all().order_by("uploaded_at")
+        all_docs_approved = all_documents_approved(candidate_offer)
     rating_list = []
     avg_rate = 0
     for rating in ratings:
@@ -2004,6 +2102,10 @@ def candidate_view_individual(request, cand_id, **kwargs):
             "emp_list": existing_emails,
             "average_rate": avg_rate,
             "documents": documents,
+            "candidate_offer": candidate_offer,
+            "sign_documents": sign_documents,
+            "portal_uploads": portal_uploads,
+            "all_docs_approved": all_docs_approved,
             "now": now,
         },
     )
@@ -2883,6 +2985,9 @@ def approve_employee_recruitment(request, approval_id):
 
     approval.status = "approved"
     approval.approved_at = timezone.now()
+    sig = request.POST.get("signature_data", "").strip()
+    if sig:
+        approval.signature_image = sig
     approval.save()
 
     next_approval = RecruitmentApproval.objects.filter(
@@ -2907,6 +3012,10 @@ def approve_employee_recruitment(request, approval_id):
         # mark approved
         recruitment.approval_status = "approved"
         recruitment.save()
+
+        # Bulk request: spawn one published campaign per position line.
+        if getattr(recruitment, "is_bulk", False):
+            fanout_bulk_recruitment(recruitment)
 
         # notify employee
         recipient = (
@@ -3640,7 +3749,7 @@ def careers(request):
         is_active=True,
     ).filter(
         Q(open_positions__isnull=False) | Q(vacancy__gt=0)
-    ).distinct().select_related("company_id").order_by("-created_at")
+    ).distinct().select_related("company_id", "job_position_id").order_by("-created_at")
 
     return render(request, "recruitment/careers.js", {
         "recruitments": recruitments,
