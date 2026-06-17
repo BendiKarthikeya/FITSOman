@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Subtle background gradient -->
+    <linearGradient id="horizontalBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f1f3f4;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Symbol gradient -->
+    <linearGradient id="horizontalSymbol" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37" />
+      <stop offset="100%" style="stop-color:#8b7355" />
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="horizontalText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c3e50" />
+      <stop offset="100%" style="stop-color:#34495e" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Subtle background -->
+  <rect width="280" height="60" fill="url(#horizontalBg)" rx="8"/>
+  
+  <!-- Icon section -->
+  <g transform="translate(30, 30)">
+    <!-- Central connection hub -->
+    <circle cx="0" cy="0" r="2.5" fill="none" stroke="url(#horizontalSymbol)" stroke-width="1.5"/>
+    
+    <!-- Business connection branches -->
+    <g stroke="url(#horizontalSymbol)" stroke-width="1.5" fill="none">
+      <path d="M -12 -4 L -4 -1.5 L 0 0"/>
+      <path d="M 12 -4 L 4 -1.5 L 0 0"/>
+      <path d="M 0 -10 L 0 -2.5"/>
+      <path d="M -6 6 L -2 2 L 0 0"/>
+      <path d="M 6 6 L 2 2 L 0 0"/>
+      
+      <!-- Growth indicator -->
+      <path d="M -2 -12 L 0 -10 L 2 -12"/>
+    </g>
+    
+    <!-- Connection points -->
+    <circle cx="-12" cy="-4" r="1.5" fill="url(#horizontalSymbol)"/>
+    <circle cx="12" cy="-4" r="1.5" fill="url(#horizontalSymbol)"/>
+    <circle cx="-6" cy="6" r="1" fill="url(#horizontalSymbol)"/>
+    <circle cx="6" cy="6" r="1" fill="url(#horizontalSymbol)"/>
+    <circle cx="0" cy="-12" r="1" fill="url(#horizontalSymbol)"/>
+  </g>
+  
+  <!-- Text section -->
+  <g transform="translate(70, 0)">
+    <!-- Main brand name -->
+    <text x="0" y="25" font-family="serif" font-weight="300" font-size="16" 
+          fill="url(#horizontalText)" letter-spacing="2px">
+      BUSINESSMATCH
+    </text>
+    
+    <!-- Tagline -->
+    <text x="0" y="40" font-family="serif" font-weight="200" font-size="8" 
+          fill="url(#horizontalText)" letter-spacing="1.5px" opacity="0.7">
+      CONNECTING BUSINESSES • OMAN
+    </text>
+  </g>
+  
+  <!-- Minimal decorative line -->
+  <line x1="70" y1="45" x2="200" y2="45" stroke="url(#horizontalSymbol)" stroke-width="0.5" opacity="0.5"/>
+</svg>

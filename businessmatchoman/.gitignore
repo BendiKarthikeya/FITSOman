@@ -1,0 +1,24 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+secrets/
+dburl.txt
+# Local helper/patch scripts and temp artifacts
+.admin-*.cjs
+.apply-*.cjs
+.audit-*.cjs
+.check-*.cjs
+.fix-*.cjs
+.patch-*.cjs
+server/*.tmp
+server/.*.tmp
+docs/admin-i18n-audit-*.txt
+$null
+
+# Local environment files (keep untracked)
+.env
+.env.*
+!.env.example

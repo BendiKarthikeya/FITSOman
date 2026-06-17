@@ -1,0 +1,2001 @@
+{
+  "nav": {
+    "home": "Home",
+    "listings": "Listings",
+    "investors": "Investors",
+    "about": "About",
+    "contact": "Contact",
+    "dashboard": "Dashboard",
+    "createListing": "Create Listing",
+    "kyc": "KYC",
+    "verification": "Verification",
+    "messages": "Messages",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "register": "Register",
+    "login": "Login",
+    "getStarted": "Get Started",
+    "logout": "Logout",
+    "loading": "Loading...",
+    "browse": "Browse Listings",
+    "create": "List Your Business",
+    "faq": "FAQ",
+    "admin": "Admin",
+    "savedListings": "Saved Listings",
+    "toggleMenu": "Toggle navigation menu",
+    "verify": "Verify",
+    "completeVerification": "Complete Verification"
+  },
+  "common": {
+    "switchTo": "Switch to {{language}}",
+    "language": "Language",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "exitEdit": "Exit Edit",
+    "editHomePage": "Edit home page",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "viewMore": "View More",
+    "viewLess": "View Less",
+    "featured": "Featured",
+    "verified": "Verified",
+    "currency": "OMR",
+    "broker": "Broker",
+    "back": "Back to Home",
+    "download": "Download",
+    "uploaded": "Uploaded",
+    "recently": "recently",
+    "saleTypes": {
+      "fullsale": "Full Sale",
+      "partnership": "Partnership",
+      "partialinvestment": "Partial Investment",
+      "franchise": "Franchise"
+    },
+    "locations": {
+      "muscat": "Muscat",
+      "salalah": "Salalah",
+      "sohar": "Sohar",
+      "nizwa": "Nizwa",
+      "sur": "Sur",
+      "dubai": "Dubai",
+      "abudhabi": "Abu Dhabi",
+      "doha": "Doha",
+      "riyadh": "Riyadh",
+      "jeddah": "Jeddah",
+      "manama": "Manama",
+      "kuwaitcity": "Kuwait City",
+      "wahibasands": "Wahiba Sands",
+      "othergcc": "Other GCC"
+    },
+    "transactionTypes": {
+      "fullsale": "Full Sale",
+      "businesssale": "Business Sale",
+      "partialinvestment": "Partial Investment",
+      "investment": "Investment",
+      "partnership": "Partnership",
+      "franchise": "Franchise"
+    },
+    "industries": {
+      "technology": "Technology",
+      "foodbeverage": "Food & Beverage",
+      "agriculture": "Agriculture",
+      "tourismhospitality": "Tourism & Hospitality",
+      "marineservices": "Marine Services",
+      "manufacturing": "Manufacturing",
+      "renewableenergy": "Renewable Energy",
+      "foodprocessing": "Food Processing",
+      "ecommerce": "E-commerce",
+      "healthcare": "Healthcare",
+      "realestate": "Real Estate",
+      "retailecommerce": "Retail & E-commerce",
+      "foodhospitality": "Food & Hospitality"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign In",
+      "subtitle": "Access your TEEJARTI account",
+      "emailOrUsernameLabel": "Email or Username",
+      "emailOrUsernamePlaceholder": "Enter your email or username",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "rememberMe": "Remember me",
+      "submitButton": "Sign In",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "registerNow": "Register now",
+      "newToTeejarti": "New to TEEJARTI?",
+      "createAccount": "Create your account"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Start your business journey with TEEJARTI",
+      "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "Choose a username",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Create a password",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "roleLabel": "I am a",
+      "rolePlaceholder": "Select your role",
+      "roles": {
+        "entrepreneur": "Entrepreneur",
+        "investor": "Investor",
+        "broker": "Broker",
+        "admin": "Admin",
+        "blocked": "Blocked"
+      },
+      "companyLabel": "Company (Optional)",
+      "companyPlaceholder": "Your company name",
+      "positionLabel": "Position (Optional)",
+      "positionPlaceholder": "Your position",
+      "locationLabel": "Location (Optional)",
+      "locationPlaceholder": "Your location",
+      "phoneLabel": "Phone (Optional)",
+      "phonePlaceholder": "Enter phone number",
+      "bioLabel": "Bio (Optional)",
+      "bioPlaceholder": "Tell us about yourself and your business interests...",
+      "acceptTermsPrefix": "I accept the",
+      "termsAndConditions": "Terms and Conditions",
+      "submitButton": "Create Account",
+      "creatingAccount": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "sidebar": {
+      "welcomeTitle": "Welcome to TEEJARTI",
+      "welcomeSubtitle": "Oman's Premier Business Marketplace",
+      "verifiedListings": {
+        "title": "Verified Listings",
+        "description": "All businesses undergo thorough verification"
+      },
+      "secureCommunication": {
+        "title": "Secure Communication",
+        "description": "Protected messaging and document sharing"
+      },
+      "qualifiedNetwork": {
+        "title": "Qualified Network",
+        "description": "Connect with serious buyers and investors"
+      },
+      "expertSupport": {
+        "title": "Expert Support",
+        "description": "Dedicated guidance throughout your journey"
+      },
+      "joinMessage": "Join 500+ verified businesses"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Connect. Invest. Grow.",
+      "subtitle": "The leading platform for business opportunities in Oman and the GCC region",
+      "cta": "Get Started",
+      "secondaryButton": "Learn More",
+      "searchButton": "Search Businesses"
+    },
+    "heroTitle": "Connect, Invest & Grow in Oman's Business Marketplace",
+    "heroSubtitle": "The premier platform for business listings, investments, and partnerships in Oman and the GCC region",
+    "findBusiness": "Find a Business",
+    "listBusiness": "List Your Business",
+    "adminAccess": "Admin Access",
+    "browseByCategory": "Browse by Category",
+    "categories": {
+      "title": "Browse by Category",
+      "subtitle": "Explore business opportunities across various industries in Oman and the GCC region",
+      "viewAll": "View All",
+      "listings": "listings",
+      "error_loading": "Error loading categories. Please try again later.",
+      "cta_text": "Want to list your business in these categories?",
+      "cta_button": "Start Listing Today",
+      "retail": "Retail",
+      "technology": "Technology",
+      "hospitality": "Hospitality",
+      "manufacturing": "Manufacturing",
+      "services": "Services",
+      "food_hospitality": "Food & Hospitality",
+      "retail_ecommerce": "Retail & E-commerce",
+      "real_estate": "Real Estate",
+      "healthcare": "Healthcare",
+      "education": "Education",
+      "others": "Others"
+    },
+    "featuredListings": {
+      "title": "Featured Business Opportunities",
+      "subtitle": "Discover hand-picked business listings across Oman and the GCC region",
+      "viewListing": "View Listing",
+      "noListings": "No featured listings available at the moment",
+      "error": "Error loading featured listings. Please try again later.",
+      "featured": "Featured",
+      "priceOnRequest": "Price on Request",
+      "checkBackLater": "Check back later for featured business opportunities",
+      "viewAllListings": "View All Listings"
+    },
+    "searchSection": {
+      "title": "Search Business Opportunities",
+      "searchLabel": "Search",
+      "searchPlaceholder": "Search for businesses...",
+      "transactionType": "Transaction Type",
+      "allTypes": "All Types",
+      "location": "Location",
+      "allLocations": "All Locations",
+      "industry": "Industry",
+      "allIndustries": "All Industries",
+      "searchButton": "Search",
+      "advancedFilters": "Advanced Filters",
+      "verifiedOnly": "Verified Only",
+      "allListings": "All Listings",
+      "businessAge": "Business Age",
+      "anyAge": "Any Age",
+      "priceRange": "Price Range",
+      "maxPrice": "Max Price",
+      "minPrice": "Min Price"
+    },
+    "howItWorks": {
+      "title": "How TEEJARTI Works",
+      "subtitle": "Our platform makes it easy to list, discover, and connect with business opportunities in Oman and the GCC region",
+      "step1": {
+        "title": "1. Create Your Listing",
+        "description": "List your business with key details including industry, location, financials, and your asking price or investment needs."
+      },
+      "step2": {
+        "title": "2. Connect with Buyers",
+        "description": "Our platform matches your listing with qualified investors and buyers interested in your business opportunity."
+      },
+      "step3": {
+        "title": "3. Close Your Deal",
+        "description": "Communicate securely, share documents, and track proposals all within our platform until you successfully close your deal."
+      },
+      "ctaText": "Ready to transform your business journey?",
+      "ctaButton": "Get Started Now"
+    },
+    "testimonials": {
+      "title": "Success Stories",
+      "subtitle": "See what our users say about their experience with TEEJARTI"
+    },
+    "callToAction": {
+      "title": "Transform Your Business Dreams into Reality",
+      "subtitle": "Access exclusive investment opportunities, connect with serious buyers, and scale your business across the GCC's most dynamic markets",
+      "startJourney": "Start Your Journey",
+      "exploreOpportunities": "Explore Opportunities"
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "lastUpdated": "Last updated: June 10, 2025",
+    "back": "Back",
+    "acceptance": {
+      "title": "1. Acceptance of Terms",
+      "content": "By accessing and using TEEJARTI (\"the Platform\"), you accept and agree to be bound by the terms and provision of this agreement. These Terms and Conditions apply to all users of the platform, including entrepreneurs, investors, and business brokers."
+    },
+    "platform": {
+      "title": "2. Platform Description",
+      "content": "TEEJARTI is a business discovery and investment platform that connects entrepreneurs and investors across Oman and the GCC region. The platform facilitates business listings, investment opportunities, and professional networking."
+    },
+    "userResponsibilities": {
+      "title": "3. User Responsibilities",
+      "intro": "As a user of the platform, you agree to:",
+      "items": [
+        "Provide accurate and truthful information in all business listings and profiles",
+        "Maintain the confidentiality of your account credentials",
+        "Comply with all applicable laws and regulations in your jurisdiction",
+        "Respect the intellectual property rights of others",
+        "Use the platform for legitimate business purposes only",
+        "Complete the KYC (Know Your Customer) verification process when required"
+      ]
+    },
+    "verification": {
+      "title": "4. Business Listings and Verification",
+      "content": "All business listings are subject to review and verification by our team. We reserve the right to reject, modify, or remove any listing that violates our guidelines or contains inaccurate information. Users are responsible for ensuring all financial and business information provided is accurate and up-to-date."
+    },
+    "privacy": {
+      "title": "5. Privacy and Data Protection",
+      "content": "We are committed to protecting your privacy and personal data in accordance with applicable data protection laws. Your personal information will be used solely for the purposes outlined in our Privacy Policy and will not be shared with third parties without your explicit consent, except as required by law."
+    },
+    "financialTransactions": {
+      "title": "6. Financial Transactions and Due Diligence",
+      "intro": "Important disclaimers regarding financial activities:",
+      "items": [
+        "TEEJARTI facilitates connections but does not provide financial advice",
+        "All investment decisions are made at your own risk",
+        "Users must conduct their own due diligence before any financial transactions",
+        "We are not responsible for the accuracy of financial information provided by users",
+        "All transactions are conducted directly between parties"
+      ]
+    },
+    "prohibited": {
+      "title": "7. Prohibited Activities",
+      "intro": "Users are prohibited from:",
+      "items": [
+        "Posting fraudulent, misleading, or false business information",
+        "Using the platform for money laundering or other illegal activities",
+        "Attempting to circumvent our verification processes",
+        "Harassing or engaging in inappropriate conduct with other users",
+        "Uploading malicious software or attempting to hack the platform",
+        "Creating multiple accounts to deceive other users"
+      ]
+    },
+    "liability": {
+      "title": "8. Limitation of Liability",
+      "content": "TEEJARTI shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of the platform. This includes but is not limited to financial losses, business interruption, or loss of data. Our total liability shall not exceed the amount paid by you for using our services."
+    },
+    "intellectualProperty": {
+      "title": "9. Intellectual Property",
+      "content": "All content, trademarks, and intellectual property on the platform are owned by TEEJARTI or licensed to us. Users retain ownership of their business information but grant us a license to display and promote their listings on the platform."
+    },
+    "termination": {
+      "title": "10. Termination",
+      "content": "We reserve the right to terminate or suspend user accounts at our discretion, particularly in cases of terms violations, fraudulent activity, or legal requirements. Users may also terminate their accounts at any time by contacting our support team."
+    },
+    "governingLaw": {
+      "title": "11. Governing Law",
+      "content": "These Terms and Conditions are governed by the laws of the Sultanate of Oman. Any disputes arising from the use of this platform shall be resolved in the courts of Oman."
+    },
+    "contact": {
+      "title": "12. Contact Information",
+      "intro": "For questions or concerns regarding these Terms and Conditions, please contact us:",
+      "email": "Email: legal@teejarti.com",
+      "phone": "Phone: +968 2XXX XXXX",
+      "address": "Address: Muscat, Sultanate of Oman"
+    },
+    "changes": {
+      "title": "13. Changes to Terms",
+      "content": "We reserve the right to modify these Terms and Conditions at any time. Users will be notified of significant changes via email or platform notifications. Continued use of the platform after changes constitutes acceptance of the revised terms."
+    },
+    "cta": {
+      "title": "Ready to Join TEEJARTI?",
+      "description": "By creating an account, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.",
+      "button": "Agree and Continue to Sign Up"
+    }
+  },
+  "featured": "Featured",
+  "verified": "Verified",
+  "listing": {
+    "details": {
+      "featured": "Featured",
+      "verified": "Verified",
+      "saleType": "Sale Type",
+      "askingPrice": "Asking Price",
+      "listedDate": "Listed Date",
+      "status": "Status",
+      "industry": "Industry",
+      "location": "Location"
+    },
+    "actions": {
+      "makeOffer": "Make an Offer",
+      "contactSeller": "Contact Seller",
+      "sendMessage": "Send Message",
+      "viewProfile": "View Profile"
+    },
+    "messages": {
+      "notFound": "Listing Not Found",
+      "removed": "This listing may have been removed or is no longer available",
+      "loginRequired": "Please log in to access business documents"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "sidebar": {
+      "userProfile": "User Profile",
+      "navigation": "Navigation",
+      "dashboard": "Dashboard",
+      "myListings": "My Listings",
+      "messages": "Messages",
+      "documents": "Documents",
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "listings": "Listings",
+      "messages": "Messages",
+      "documents": "Documents",
+      "profile": "Profile",
+      "settings": "Settings"
+    },
+    "overview": {
+      "activeListings": "Active Listings",
+      "unreadMessages": "Unread Messages",
+      "profileCompletion": "Profile Completion",
+      "businessesListed": "Businesses listed for sale/investment",
+      "messagesFromBuyers": "Messages from potential buyers/investors",
+      "completeProfileVisibility": "Complete your profile for better visibility",
+      "quickActions": "Quick Actions",
+      "createListing": "Create Listing",
+      "checkMessages": "Check Messages",
+      "uploadDocuments": "Upload Documents",
+      "editProfile": "Edit Profile",
+      "recentListings": "Recent Listings",
+      "recentListingsDesc": "Your most recently created business listings",
+      "noListingsYet": "No Listings Yet",
+      "noListingsDesc": "Start by creating your first business listing",
+      "viewAllListings": "View All Listings"
+    },
+    "listings": {
+      "title": "My Listings",
+      "description": "Manage your business listings",
+      "newListing": "New Listing",
+      "noListingsYet": "No Listings Yet",
+      "noListingsDesc": "Start by creating your first business listing"
+    },
+    "messages": {
+      "title": "Messages",
+      "description": "Communicate with potential buyers or sellers",
+      "noMessagesYet": "No Messages Yet",
+      "noMessagesDesc": "You don't have any messages in your inbox",
+      "browseListings": "Browse Listings"
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Manage your business documents",
+      "uploadDocument": "Upload Document",
+      "noDocuments": "No Documents",
+      "noDocumentsDesc": "You haven't uploaded any documents yet",
+      "uploadDocuments": "Upload Documents"
+    },
+    "profile": {
+      "title": "My Profile",
+      "description": "Manage your personal and business information",
+      "personalInformation": "Personal Information",
+      "businessInformation": "Business Information",
+      "fullName": "Full Name",
+      "email": "Email",
+      "username": "Username",
+      "role": "Role",
+      "company": "Company",
+      "position": "Position",
+      "location": "Location",
+      "phone": "Phone",
+      "notProvided": "Not provided"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "subtitle": "Manage users, listings, and system settings",
+    "returnToDashboard": "Return to Dashboard",
+    "back": "Back",
+    "analytics": "Analytics",
+    "stats": "Statistics",
+    "kycApprovals": "KYC Approvals",
+    "kyc": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "unknown": "Unknown",
+      "fetchFailed": "Failed to fetch KYC applications",
+      "kycApproved": "KYC Approved",
+      "approvedSuccessfully": "KYC application approved successfully",
+      "approvalFailed": "Approval Failed",
+      "approvalFailedMessage": "Failed to approve KYC application",
+      "kycRejected": "KYC Rejected",
+      "rejectedSuccessfully": "KYC application rejected successfully",
+      "status": "Status",
+      "submitted": "Submitted",
+      "actions": "Actions",
+      "details": "Details",
+      "address": "Address",
+      "addressInformation": "Address Information",
+      "addressProofDocument": "Address Proof Document",
+      "all": "All",
+      "applicationDetails": "Application Details",
+      "approve": "Approve",
+      "approving": "Approving...",
+      "backToDashboard": "Back to Dashboard",
+      "businessLicense": "Business License",
+      "cancel": "Cancel",
+      "close": "Close",
+      "confirmRejection": "Confirm Rejection",
+      "country": "Country",
+      "currentStatus": "Current Status",
+      "email": "Email",
+      "errorLoading": "Error loading KYC applications",
+      "fullName": "Full Name",
+      "idNumber": "ID Number",
+      "idProofDocument": "ID Proof Document",
+      "idType": "ID Type",
+      "kycRequests": "KYC Requests",
+      "nationality": "Nationality",
+      "noApplicationsFound": "No applications found {{status}}",
+      "noDocumentProvided": "No document provided",
+      "personalInformation": "Personal Information",
+      "pleaseRetry": "Please retry in a moment",
+      "reject": "Reject",
+      "rejecting": "Rejecting...",
+      "rejectionFailed": "Rejection Failed",
+      "rejectionFailedMessage": "Failed to reject KYC application",
+      "rejectionPlaceholder": "Enter rejection reason...",
+      "rejectionReason": "Rejection Reason",
+      "reviewInformation": "Review the information below",
+      "subtitle": "Review and manage KYC applications",
+      "title": "KYC Verification",
+      "unknownUser": "Unknown User",
+      "user": "User",
+      "username": "Username",
+      "verificationDocuments": "Verification Documents",
+      "viewDocument": "View Document"
+    },
+    "docs": "Documents",
+    "lists": "Listings",
+    "users": {
+      "backToDashboard": "Back to Dashboard",
+      "title": "User Management",
+      "subtitle": "Manage and view user accounts",
+      "users": "Users",
+      "loadingUsers": "Loading users...",
+      "errorLoadingUsers": "Error loading users",
+      "tryAgainLater": "Please try again later",
+      "searchUsers": "Search users...",
+      "filterByRole": "Filter by role",
+      "allRoles": "All roles",
+      "admins": "Admins",
+      "entrepreneurs": "Entrepreneurs",
+      "investors": "Investors",
+      "brokers": "Brokers",
+      "blockedUsers": "Blocked Users",
+      "userDetails": "User Details",
+      "role": "Role",
+      "verification": "Verification",
+      "registeredOn": "Registered On",
+      "actions": "Actions",
+      "verified": "Verified",
+      "notVerified": "Not Verified",
+      "view": "View",
+      "userProfile": "User Profile",
+      "userInfoActivity": "User Information & Activity",
+      "uploading": "Uploading...",
+      "uploadPhoto": "Upload Photo",
+      "contactInformation": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "position": "Position",
+      "location": "Location",
+      "notProvided": "Not provided",
+      "bio": "Bio",
+      "kycStatus": "KYC Status",
+      "listings": "Listings",
+      "kycApplication": "KYC Application",
+      "submissionDate": "Submission Date",
+      "idType": "ID Type",
+      "rejectionReason": "Rejection Reason",
+      "applicationDocuments": "Application Documents",
+      "idDocument": "ID Document",
+      "addressProof": "Address Proof",
+      "verificationDocument": "Verification Document",
+      "businessLicense": "Business License",
+      "companyDocument": "Company Document",
+      "viewKycApplicationDetails": "View KYC Application Details",
+      "additionalKycDocuments": "Additional KYC Documents",
+      "viewDocument": "View Document",
+      "userListings": "User Listings",
+      "viewListing": "View Listing",
+      "noKycApplication": "No KYC application found",
+      "noUsersFound": "No users found",
+      "adjustSearchCriteria": "Try adjusting your search criteria",
+      "noListingsFound": "No listings found",
+      "close": "Close",
+      "profileImageUpdated": "Profile Image Updated",
+      "profileImageUpdatedDesc": "User profile image has been updated successfully",
+      "uploadFailed": "Upload Failed"
+    },
+    "blocked": "Blocked",
+    "settings": {
+      "title": "Admin Settings",
+      "subtitle": "Configure system settings and platform options",
+      "changePassword": "Change Password",
+      "uploadImage": "Upload Image",
+      "saveChanges": "Save Changes",
+      "backToDashboard": "Back to Dashboard",
+      "categories": "Categories",
+      "generalSettings": "General Settings",
+      "themeAndHome": "Theme & Home",
+      "imageSettings": "Image Settings",
+      "contactPage": "Contact Page",
+      "seoSettings": "SEO Settings",
+      "socialMedia": "Social Media",
+      "platformFeatures": "Platform Features",
+      "securitySettings": "Security Settings",
+      "accountSettings": "Account Settings",
+      "preview": "Preview",
+      "uploading": "Uploading...",
+      "changeImage": "Change Image",
+      "enabled": "Enabled",
+      "urlPlaceholder": "https://example.com",
+      "emailPlaceholder": "admin@example.com",
+      "websiteFavicon": "Website Favicon",
+      "uploadSiteLogo": "Upload Site Logo",
+      "uploadBackgroundImage": "Upload Background Image",
+      "heroBackground": "Hero Background",
+      "themeHomePageSettings": "Theme & Home Page Settings",
+      "customizeSiteAppearance": "Customize the appearance of your site",
+      "siteLogo": "Site Logo",
+      "contactPageSettings": "Contact Page Settings",
+      "contactPageDescription": "Configure contact page information",
+      "seoDescription": "Configure search engine optimization settings",
+      "socialMediaIntegration": "Social Media Integration",
+      "socialMediaDescription": "Configure social media links and integrations",
+      "platformFeaturesDescription": "Enable or disable platform features",
+      "accountSettingsDescription": "Manage your admin account settings",
+      "configureSecurityOptions": "Configure security and access options",
+      "addNewSetting": "Add New Setting",
+      "imageSettingsDescription": "Configure image upload and processing settings",
+      "addSetting": "Add Setting",
+      "basicApplicationSettings": "Basic application settings",
+      "changesSuccessfullySaved": "Changes saved successfully",
+      "createNewSystemSetting": "Create a new system setting",
+      "createSettingErrorMessage": "Failed to create the setting",
+      "failedToCreateSetting": "Failed to create setting",
+      "failedToLoadSettings": "Failed to load settings",
+      "failedToUpdateSettings": "Failed to update settings",
+      "fileError": "File Error",
+      "fileErrorMessage": "Something went wrong with the selected file",
+      "fileTooLarge": "File too large",
+      "imageUploaded": "Image Uploaded",
+      "imageUploadedSuccessfully": "Image uploaded successfully",
+      "invalidFileType": "Invalid file type",
+      "loggedOut": "Logged Out",
+      "loggedOutSuccessfully": "Logged out successfully",
+      "logout": "Logout",
+      "logoutFailed": "Logout Failed",
+      "logoutFailedMessage": "Failed to logout",
+      "logoutInstructions": "You can sign out of the admin panel at any time. You'll need to log in again to access admin features.",
+      "noSettingsConfigured": "No settings configured",
+      "noSettingsFound": "No settings found",
+      "pleaseTryLoginAgain": "Please try logging in again",
+      "selectImageUnder5MB": "Please select an image under 5MB",
+      "selectValidImageType": "Please select a valid image type (PNG, JPG, JPEG)",
+      "settingCreated": "Setting Created",
+      "settingCreatedSuccessfully": "Setting created successfully",
+      "settingKey": "Setting Key",
+      "settingKeyPlaceholder": "Enter a unique key (e.g., site.title)",
+      "settingType": "Setting Type",
+      "settingValue": "Setting Value",
+      "settingsUpdated": "Settings Updated",
+      "signOutAdminPanel": "Sign out of admin panel",
+      "updateSettingsErrorMessage": "Failed to update settings",
+      "uploadFailed": "Upload Failed",
+      "uploadFailedMessage": "Failed to upload image",
+      "uploadFavicon": "Upload Favicon",
+      "lang": {
+        "english": "English",
+        "arabic": "Arabic"
+      },
+      "group": {
+        "headings": "Headings",
+        "maintenance": "Maintenance"
+      },
+      "keyLabels": {
+        "headings": {
+          "listings_page_title_en": "Listings Page Title (English)",
+          "listings_page_title_ar": "Listings Page Title (Arabic)",
+          "investor_page_title_en": "Investor Page Title (English)",
+          "investor_page_title_ar": "Investor Page Title (Arabic)",
+          "entrepreneur_page_title_en": "Entrepreneur Page Title (English)",
+          "entrepreneur_page_title_ar": "Entrepreneur Page Title (Arabic)"
+        },
+        "maintenance": {
+          "enabled": "Maintenance Mode",
+          "message_en": "Maintenance Message (English)",
+          "message_ar": "Maintenance Message (Arabic)"
+        },
+        "site_description": "Site Description"
+      }
+    },
+    "totalUsers": "Total Users",
+    "totalListings": "Total Listings",
+    "pendingKycs": "Pending KYCs",
+    "userAnalytics": "User Analytics",
+    "activeUsers": "Active Users",
+    "entrepreneurs": "Entrepreneurs",
+    "investors": "Investors",
+    "brokers": "Brokers",
+    "verified": "Verified",
+    "listingStatus": "Listing Status",
+    "approved": "Approved",
+    "pending": "Pending",
+    "rejected": "Rejected",
+    "averageApproval": "Average Approval Time",
+    "notAvailable": "Not Available",
+    "platformHealth": "Platform Health",
+    "kycApproved": "KYC Approved",
+    "kycPending": "KYC Pending",
+    "newThisWeek": "New This Week",
+    "blockedUsersCount": "Blocked Users",
+    "kycApplications": "KYC Applications",
+    "allCaughtUp": "All caught up!",
+    "noPendingKycApplications": "No pending KYC applications",
+    "unknownUser": "Unknown User",
+    "email": "Email",
+    "company": "Company",
+    "notSpecified": "Not specified",
+    "submitted": "Submitted",
+    "approve": "Approve",
+    "reject": "Reject",
+    "rejectKycApplication": "Reject KYC Application",
+    "provideRejectionReason": "Please provide a reason for rejection",
+    "rejectionReason": "Rejection Reason",
+    "enterRejectionReason": "Enter rejection reason...",
+    "errorLoadingKyc": "Error loading KYC data",
+    "kycDocuments": "KYC Documents",
+    "noPendingKycDocs": "No pending KYC documents",
+    "errorLoadingKycDocs": "Error loading KYC documents",
+    "user": "User",
+    "noEmail": "No email",
+    "status": "Status",
+    "reason": "Reason",
+    "viewDocument": "View Document",
+    "uploaded": "Uploaded",
+    "rejectKycDocument": "Reject KYC Document",
+    "provideRejectionReasonForDoc": "Please provide a reason for rejecting this document",
+    "listingModeration": "Listing Moderation",
+    "noPendingListings": "No pending listings",
+    "userManagement": "User Management",
+    "blockedUsers": "Blocked Users",
+    "layout": {
+      "adminPanel": "Admin Panel",
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "listings": "Listings",
+      "kycVerification": "KYC Verification",
+      "settings": "Settings",
+      "imageSettings": "Image Settings",
+      "fileExplorer": "File Explorer"
+    },
+    "imageSettings": {
+      "title": "Image Settings",
+      "accessDenied": "Access Denied",
+      "noPermission": "You do not have permission to access this page",
+      "error": "Error",
+      "failedToLoad": "Failed to load image settings",
+      "noChanges": "No Changes",
+      "noChangesToSave": "No changes to save",
+      "uploadFavicon": "Upload Favicon",
+      "faviconRecommendation": "Recommended size: 32x32 or 16x16 pixels",
+      "success": "Success",
+      "settingsUpdated": "Image settings updated successfully",
+      "saveError": "Failed to save settings",
+      "noFileSelected": "No file selected",
+      "selectImageFile": "Please select an image file",
+      "invalidFileType": "Invalid file type",
+      "validImageTypes": "Please select a valid image (PNG, JPG, JPEG, GIF, WEBP, SVG)",
+      "fileTooLarge": "File too large",
+      "imageSizeLimit": "Please select an image up to 5MB",
+      "processingImage": "Processing image",
+      "uploadInProgress": "Uploading image, please wait...",
+      "uploadSuccessful": "Upload Successful",
+      "imageSaved": "Image saved successfully",
+      "uploadFailed": "Upload Failed",
+      "uploadError": "Failed to upload image",
+      "settingsRefreshed": "Settings Refreshed",
+      "refreshedFromServer": "Latest settings have been fetched from the server",
+      "refreshSettings": "Refresh Settings",
+      "description": "Manage and upload brand images used across the site",
+      "siteLogo": "Site Logo",
+      "uploadCompanyLogo": "Upload company logo",
+      "logoPreview": "Logo preview",
+      "uploadLogo": "Upload Logo",
+      "logoRecommendation": "Recommended size: at least 256�256 PNG with transparent background",
+      "heroBackground": "Hero Background",
+      "heroBackgroundDescription": "Large background image used on the home page hero section",
+      "backgroundPreview": "Background preview",
+      "uploadBackground": "Upload Background",
+      "backgroundRecommendation": "Recommended size: 1920�1080 or larger, JPG/WEBP",
+      "favicon": "Website Favicon",
+      "faviconDescription": "Small icon shown in browser tabs and bookmarks",
+      "faviconPreview": "Favicon preview",
+      "websiteFavicon": "Website Favicon",
+      "uploadSiteLogo": "Upload Site Logo",
+      "uploadBackgroundImage": "Upload Background Image"
+    },
+    "listings": {
+      "fetchFailed": "Failed to fetch listings",
+      "listingApproved": "Listing Approved",
+      "approvedSuccessfully": "Listing approved successfully",
+      "approvalFailed": "Approval Failed",
+      "approvalFailedMessage": "Failed to approve listing",
+      "listingRejected": "Listing Rejected",
+      "actions": "Actions",
+      "all": "All",
+      "approve": "Approve",
+      "approved": "Approved",
+      "arabicTitle": "Arabic Title",
+      "askingPrice": "Asking Price",
+      "backToDashboard": "Back to Dashboard",
+      "businessListings": "Business Listings",
+      "cancel": "Cancel",
+      "close": "Close",
+      "confirmRejection": "Confirm Rejection",
+      "created": "Created",
+      "currentStatus": "Current Status",
+      "details": "Details",
+      "englishTitle": "English Title",
+      "errorLoading": "Error loading listings",
+      "industry": "Industry",
+      "listingDetails": "Listing Details",
+      "listingImage": "Listing Image",
+      "location": "Location",
+      "noListingsFound": "No listings found {{status}}",
+      "pending": "Pending",
+      "pleaseRetry": "Please retry in a moment",
+      "price": "Price",
+      "reject": "Reject",
+      "rejected": "Rejected",
+      "rejectedSuccessfully": "Listing rejected successfully",
+      "rejectionFailed": "Rejection Failed",
+      "rejectionFailedMessage": "Failed to reject listing",
+      "rejectionPlaceholder": "Enter rejection reason...",
+      "reviewListing": "Review the listing details",
+      "status": "Status",
+      "subtitle": "Moderate and manage user-submitted listings",
+      "title": "Listings",
+      "unknown": "Unknown"
+    },
+    "login": {
+      "usernameRequired": "Username is required",
+      "passwordRequired": "Password is required",
+      "adminPortal": "Login AdminPortal",
+      "administratorLogin": "Login AdministratorLogin",
+      "authenticating": "Login Authenticating",
+      "authenticationError": "Login AuthenticationError",
+      "authorizedOnly": "Login AuthorizedOnly",
+      "checkCredentials": "Login CheckCredentials",
+      "emailOrUsername": "Login EmailOrUsername",
+      "emailPlaceholder": "Login EmailPlaceholder",
+      "enterCredentials": "Login EnterCredentials",
+      "loginFailed": "Login LoginFailed",
+      "loginFailedTitle": "Login LoginFailedTitle",
+      "loginSuccessful": "Login LoginSuccessful",
+      "password": "Login Password",
+      "passwordPlaceholder": "Login PasswordPlaceholder",
+      "returnToSite": "Login ReturnToSite",
+      "secureAccess": "Login SecureAccess",
+      "signIn": "Login SignIn",
+      "welcomeBack": "Login WelcomeBack"
+    },
+    "changePassword": "ChangePassword",
+    "changePasswordDescription": "ChangePasswordDescription",
+    "changePasswordTitle": "ChangePasswordTitle",
+    "confirmPassword": "ConfirmPassword",
+    "currentPassword": "CurrentPassword",
+    "dashboard": {
+      "tabs": {
+        "kyc": "Dashboard Tabs Kyc"
+      }
+    },
+    "dashboardPage": {
+      "alert": {
+        "description": "DashboardPage Alert Description",
+        "return": "DashboardPage Alert Return",
+        "title": "DashboardPage Alert Title"
+      },
+      "cards": {
+        "listings": {
+          "approved": "DashboardPage Cards Listings Approved",
+          "archived": "DashboardPage Cards Listings Archived",
+          "byStatus": "DashboardPage Cards Listings ByStatus",
+          "description": "DashboardPage Cards Listings Description",
+          "pending": "DashboardPage Cards Listings Pending",
+          "rejected": "DashboardPage Cards Listings Rejected",
+          "title": "DashboardPage Cards Listings Title",
+          "total": "DashboardPage Cards Listings Total"
+        },
+        "stats": {
+          "activeListings": "DashboardPage Cards Stats ActiveListings",
+          "activeUsers": "DashboardPage Cards Stats ActiveUsers",
+          "approvalRate": "DashboardPage Cards Stats ApprovalRate",
+          "avgApprovalTime": "DashboardPage Cards Stats AvgApprovalTime",
+          "description": "DashboardPage Cards Stats Description",
+          "kycRate": "DashboardPage Cards Stats KycRate",
+          "listingActivity": "DashboardPage Cards Stats ListingActivity",
+          "newListings": "DashboardPage Cards Stats NewListings",
+          "newUsers": "DashboardPage Cards Stats NewUsers",
+          "notAvailable": "DashboardPage Cards Stats NotAvailable",
+          "title": "DashboardPage Cards Stats Title",
+          "userActivity": "DashboardPage Cards Stats UserActivity",
+          "verifiedUsers": "DashboardPage Cards Stats VerifiedUsers"
+        },
+        "tasks": {
+          "description": "DashboardPage Cards Tasks Description",
+          "pendingKycDescription": "DashboardPage Cards Tasks PendingKycDescription",
+          "pendingKycTitle": "DashboardPage Cards Tasks PendingKycTitle",
+          "pendingListingsDescription": "DashboardPage Cards Tasks PendingListingsDescription",
+          "pendingListingsTitle": "DashboardPage Cards Tasks PendingListingsTitle",
+          "title": "DashboardPage Cards Tasks Title"
+        },
+        "users": {
+          "active": "DashboardPage Cards Users Active",
+          "admins": "DashboardPage Cards Users Admins",
+          "blocked": "DashboardPage Cards Users Blocked",
+          "brokers": "DashboardPage Cards Users Brokers",
+          "description": "DashboardPage Cards Users Description",
+          "entrepreneurs": "DashboardPage Cards Users Entrepreneurs",
+          "investors": "DashboardPage Cards Users Investors",
+          "rolesTitle": "DashboardPage Cards Users RolesTitle",
+          "title": "DashboardPage Cards Users Title",
+          "total": "DashboardPage Cards Users Total"
+        }
+      },
+      "error": "DashboardPage Error",
+      "exitButton": "DashboardPage ExitButton",
+      "subtitle": "DashboardPage Subtitle",
+      "title": "DashboardPage Title"
+    },
+    "documentTypes": {
+      "bankStatement": "DocumentTypes BankStatement",
+      "businessLicense": "DocumentTypes BusinessLicense",
+      "nationalId": "DocumentTypes NationalId",
+      "passport": "DocumentTypes Passport",
+      "taxCertificate": "DocumentTypes TaxCertificate"
+    },
+    "errorLoadingListings": "ErrorLoadingListings",
+    "errorTitle": "ErrorTitle",
+    "newPassword": "NewPassword",
+    "owner": "Owner",
+    "passwordChangedErrorDescription": "PasswordChangedErrorDescription",
+    "passwordChangedErrorTitle": "PasswordChangedErrorTitle",
+    "passwordChangedSuccessDescription": "PasswordChangedSuccessDescription",
+    "passwordChangedSuccessTitle": "PasswordChangedSuccessTitle",
+    "passwordSecurityRequirements": "PasswordSecurityRequirements",
+    "passwordUpdatedDescription": "PasswordUpdatedDescription",
+    "passwordUpdatedTitle": "PasswordUpdatedTitle",
+    "provideListingRejectionReason": "ProvideListingRejectionReason",
+    "rejectListing": "RejectListing",
+    "toasts": {
+      "documentApproved": "Toasts DocumentApproved",
+      "documentRejected": "Toasts DocumentRejected",
+      "kycApproved": "Toasts KycApproved",
+      "kycRejected": "Toasts KycRejected",
+      "listingApproved": "Toasts ListingApproved",
+      "listingRejected": "Toasts ListingRejected",
+      "provideBlockReason": "Toasts ProvideBlockReason",
+      "provideRejectionReason": "Toasts ProvideRejectionReason",
+      "userBlocked": "Toasts UserBlocked",
+      "userUnblocked": "Toasts UserUnblocked"
+    },
+    "uncategorized": "Uncategorized",
+    "updating": "Updating",
+    "uploadImage": "UploadImage",
+    "viewDetails": "ViewDetails"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "networkError": "Network error occurred",
+    "unauthorized": "Unauthorized access",
+    "validation": {
+      "passwordLength": "Password must be at least 8 characters",
+      "passwordMatch": "Passwords do not match",
+      "invalidPhone": "Invalid phone number"
+    }
+  },
+  "alerts": {
+    "auth": {
+      "loginSuccess": "Login successful",
+      "loginWelcome": "Welcome back, {{name}}!",
+      "loginFailed": "Login failed",
+      "invalidCredentials": "Invalid email or password",
+      "registrationSuccess": "Registration successful",
+      "registrationWelcome": "Welcome to TEEJARTI! Please complete your verification.",
+      "registrationFailed": "Registration failed",
+      "loggedOut": "Logged out",
+      "loggedOutDesc": "You have been successfully logged out",
+      "logoutFailed": "Logout failed"
+    },
+    "upload": {
+      "fileTooLarge": "File Too Large",
+      "fileSizeLimit": "File size must be less than 10MB",
+      "fileSizeLimit5MB": "Maximum file size is 5MB",
+      "invalidFileType": "Invalid File Type",
+      "invalidFileTypeDesc": "Please select a JPEG, PNG, GIF, WebP, SVG, or ICO image",
+      "validImageTypes": "Please upload PDF, DOC, DOCX, TXT, or image files only.",
+      "uploadFailed": "Upload Failed",
+      "uploadFailedDesc": "Failed to upload document. Please try again.",
+      "uploadSuccess": "Document Uploaded Successfully",
+      "uploadSuccessDesc": "Your document has been uploaded successfully.",
+      "imageUploaded": "Image uploaded successfully",
+      "imageUploadedDesc": "The image has been uploaded and saved",
+      "errorUploading": "Error uploading image",
+      "tooManyImages": "Too many images",
+      "imagesUploaded": "Images uploaded",
+      "documentDeleted": "Document Deleted",
+      "documentDeletedDesc": "Document has been deleted successfully.",
+      "deleteFailed": "Delete Failed",
+      "downloadFailed": "Download Failed",
+      "downloadFailedDesc": "Could not download the document. Please try again."
+    },
+    "verification": {
+      "codeSent": "Verification Code Sent! 📧",
+      "codeSentDesc": "Please check your email for the 6-digit verification code.",
+      "phoneCodeSent": "Verification Code Sent! 📱",
+      "phoneCodeSentDesc": "Please check your phone for the 6-digit verification code.",
+      "emailVerified": "Email Verified Successfully! ✅",
+      "emailVerifiedDesc": "Great! Now let's verify your phone number.",
+      "phoneVerified": "Phone Verified Successfully! ✅",
+      "phoneVerifiedDesc": "Perfect! Now let's complete your document verification.",
+      "verificationFailed": "Verification Failed",
+      "failedToSendCode": "Failed to Send Code",
+      "kycSubmitted": "KYC Documents Submitted! 🎉",
+      "kycSubmittedDesc": "Your documents have been submitted for review. You'll hear back within 24-48 hours.",
+      "submissionFailed": "Submission Failed",
+      "missingDocuments": "Missing Documents",
+      "missingDocumentsDesc": "Please upload at least one ID document before submitting."
+    },
+    "contact": {
+      "messageSent": "Message sent successfully",
+      "messageSentDesc": "Your message has been sent to the seller.",
+      "messageFailed": "Failed to send message",
+      "messageFailedDesc": "Please try again later",
+      "authRequired": "Authentication required",
+      "authRequiredDesc": "Please log in to contact the seller"
+    },
+    "listing": {
+      "listingCreated": "Listing Created",
+      "listingCreatedDesc": "Your business listing has been created successfully!",
+      "listingUpdated": "Success",
+      "listingUpdatedDesc": "Listing updated successfully!",
+      "accessDenied": "Access Denied",
+      "accessDeniedDesc": "You can only edit your own listings.",
+      "listingSaved": "Listing saved",
+      "listingUnsaved": "Listing unsaved"
+    },
+    "admin": {
+      "keyRequired": "Key required",
+      "keyRequiredDesc": "Please enter a key for the new setting.",
+      "logoUpdated": "Logo updated",
+      "logoUpdatedDesc": "The logo has been updated successfully.",
+      "backgroundUpdated": "Background updated",
+      "backgroundUpdatedDesc": "The background image has been updated successfully.",
+      "faviconUpdated": "Favicon updated",
+      "faviconUpdatedDesc": "The favicon has been updated successfully."
+    },
+    "newsletter": {
+      "success": "Success!",
+      "subscriptionFailed": "Subscription Failed",
+      "invalidEmail": "Invalid Email",
+      "invalidEmailDesc": "Please enter a valid email address."
+    },
+    "general": {
+      "error": "Error",
+      "success": "Success",
+      "warning": "Warning",
+      "info": "Information"
+    }
+  },
+  "footer": {
+    "description": "The premier platform connecting business owners and investors across Oman and the GCC region.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "help": "Help Center",
+    "contact": "Contact Us",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Get the latest business opportunities and investment insights delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "rights": "All rights reserved.",
+    "sitemap": "Sitemap",
+    "accessibility": "Accessibility",
+    "cookies": "Cookie Policy"
+  },
+  "listingDetails": {
+    "breadcrumb": {
+      "home": "Home",
+      "listings": "Business Services",
+      "businessListing": "Business Listing"
+    },
+    "errors": {
+      "notFound": "Listing Not Found",
+      "notFoundDescription": "The listing you're looking for doesn't exist.",
+      "backToListings": "Back to Listings"
+    },
+    "businessOverview": {
+      "title": "Business Overview",
+      "employees": "Employees",
+      "yearEstablished": "Year Established",
+      "monthlyRevenue": "Monthly Revenue",
+      "monthlyProfit": "Monthly Profit"
+    },
+    "description": {
+      "title": "About This Business",
+      "noDescription": "No description available for this listing."
+    },
+    "details": {
+      "title": "Business Details",
+      "industry": "Industry",
+      "location": "Location",
+      "saleType": "Sale Type",
+      "askingPrice": "Asking Price",
+      "listedBy": "Listed by",
+      "datePosted": "Date Posted",
+      "businessOwner": "Business Owner"
+    },
+    "overview": {
+      "saleType": "Sale Type",
+      "askingPrice": "Asking Price",
+      "listedBy": "Listed by",
+      "businessOwner": "Business Owner"
+    },
+    "seller": {
+      "title": "About the Seller",
+      "memberSince": "Member since",
+      "contactSeller": "Contact Seller",
+      "loginToContact": "Login to Contact Seller",
+      "verified": "Verified",
+      "seller": "Seller",
+      "company": "Company",
+      "location": "Location",
+      "contactDescription": "Get in touch with verified sellers for more information about their listings."
+    },
+    "documents": {
+      "title": "Documents & Resources",
+      "noDocuments": "No documents available for this listing",
+      "contactForMore": "Contact the seller for more information"
+    },
+    "similarListings": {
+      "title": "Similar Opportunities",
+      "viewAll": "View All Listings"
+    },
+    "actions": {
+      "editListing": "Edit Listing",
+      "saveListing": "Save Listing",
+      "contactSeller": "Contact Seller"
+    }
+  },
+  "listings": {
+    "title": "Business Listings",
+    "subtitle": "Discover investment and business opportunities",
+    "filters": {
+      "search": "Filters",
+      "searchField": "Search",
+      "searchPlaceholder": "Search listings...",
+      "industry": "Industry",
+      "allIndustries": "All Industries",
+      "location": "Location",
+      "allLocations": "All Locations",
+      "transactionType": "Transaction Type",
+      "allTypes": "All Types",
+      "allSaleTypes": "All Sale Types",
+      "priceRange": "Price Range",
+      "businessAge": "Business Age",
+      "anyAge": "Any Age",
+      "age0to2": "0-2 Years",
+      "age3to5": "3-5 Years",
+      "age6to10": "6-10 Years",
+      "age10plus": "10+ Years",
+      "verifiedOnly": "Show verified listings only",
+      "featuredOnly": "Show featured listings only",
+      "additionalOptions": "Additional Options",
+      "hasFinancials": "Has financial data",
+      "hasDocuments": "Has documents",
+      "advancedFilters": "Advanced Filters",
+      "applyFilters": "Apply Filters",
+      "clearFilters": "Clear Filters"
+    },
+    "sort": {
+      "label": "Sort by",
+      "newest": "Newest First",
+      "oldest": "Oldest First",
+      "priceHighToLow": "Price: High to Low",
+      "priceLowToHigh": "Price: Low to High"
+    },
+    "results": {
+      "showing": "Showing",
+      "of": "of",
+      "results": "listings",
+      "noResults": "No Listings Found",
+      "tryDifferentFilters": "We couldn't find any listings matching your search criteria."
+    },
+    "pagination": {
+      "page": "Page",
+      "of": "of",
+      "totalResults": "total results",
+      "previousPage": "Previous page",
+      "nextPage": "Next page",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "card": {
+      "viewDetails": "View Details",
+      "contactSeller": "Contact Seller",
+      "priceOnRequest": "Price on Request"
+    }
+  },
+  "investors": {
+    "title": "Active Investors in Oman",
+    "subtitle": "Connect with experienced investors who have successfully funded businesses across the GCC region",
+    "browseInvestors": "Browse Investors",
+    "joinNetwork": "Join Network",
+    "whyOman": {
+      "title": "Why Invest in Oman?",
+      "subtitle": "Oman offers unique advantages for investors seeking growth opportunities in the Middle East"
+    },
+    "strategicLocation": {
+      "title": "Strategic Location",
+      "description": "Gateway between Asia, Africa, and Europe with excellent logistics infrastructure and trade connections."
+    },
+    "politicalStability": {
+      "title": "Political Stability",
+      "description": "Stable government and business-friendly policies that support long-term investment security."
+    },
+    "skilledWorkforce": {
+      "title": "Skilled Workforce",
+      "description": "Educated, multilingual workforce with strong technical and business skills."
+    },
+    "taxAdvantages": {
+      "title": "Tax Advantages",
+      "description": "Competitive tax rates and incentives for foreign investors and businesses."
+    },
+    "diversifiedEconomy": {
+      "title": "Diversified Economy",
+      "description": "Growing economy beyond oil with investments in tourism, logistics, and technology."
+    },
+    "infrastructure": {
+      "title": "Modern Infrastructure",
+      "description": "World-class ports, airports, and telecommunications supporting business growth."
+    },
+    "filters": {
+      "all": "All",
+      "searchPlaceholder": "Search investors..."
+    },
+    "categories": {
+      "Technology": "Technology",
+      "Healthcare": "Healthcare",
+      "Real Estate": "Real Estate",
+      "Energy": "Energy",
+      "Manufacturing": "Manufacturing",
+      "Education": "Education",
+      "Fintech": "Fintech",
+      "Sustainability": "Sustainability",
+      "E-commerce": "E-commerce",
+      "Social Impact": "Social Impact",
+      "Hospitality": "Hospitality",
+      "Tourism": "Tourism",
+      "Infrastructure": "Infrastructure",
+      "AI/ML": "AI/ML",
+      "Blockchain": "Blockchain"
+    },
+    "profile": {
+      "investmentFocus": "Investment Focus",
+      "totalInvestments": "Total Investments",
+      "successfulExits": "Successful Exits",
+      "investmentRange": "Investment Range",
+      "recentPortfolio": "Recent Portfolio",
+      "since": "Since",
+      "contact": "Contact",
+      "at": "at",
+      "noInvestorsFound": "No investors found",
+      "tryDifferentFilters": "Try adjusting your filters or search terms",
+      "managingPartner": "Managing Partner",
+      "angelInvestor": "Angel Investor",
+      "investmentDirector": "Investment Director",
+      "independent": "Independent",
+      "activeInvestors": "Active Investors"
+    },
+    "titles": {
+      "Managing Partner": "Managing Partner",
+      "Angel Investor": "Angel Investor",
+      "Investment Director": "Investment Director",
+      "Venture Capitalist": "Venture Capitalist",
+      "Private Investor": "Private Investor",
+      "Impact Investor": "Impact Investor"
+    },
+    "companies": {
+      "Gulf Capital Partners": "Gulf Capital Partners",
+      "Independent": "Independent",
+      "Oman Investment Fund": "Oman Investment Fund",
+      "MENA Ventures": "MENA Ventures",
+      "Family Office": "Family Office",
+      "Social Impact Fund": "Social Impact Fund"
+    },
+    "locations": {
+      "Muscat, Oman": "Muscat, Oman",
+      "Dubai, UAE": "Dubai, UAE",
+      "Riyadh, Saudi Arabia": "Riyadh, Saudi Arabia",
+      "Kuwait City, Kuwait": "Kuwait City, Kuwait",
+      "Sharjah, UAE": "Sharjah, UAE"
+    },
+    "names": {
+      "Ahmed Al-Rashid": "Ahmed Al-Rashid",
+      "Fatima Al-Zahra": "Fatima Al-Zahra",
+      "Mohammed Al-Balushi": "Mohammed Al-Balushi",
+      "Sarah Al-Kindi": "Sarah Al-Kindi",
+      "Hassan Al-Maktoum": "Hassan Al-Maktoum",
+      "Layla Al-Qasimi": "Layla Al-Qasimi"
+    },
+    "bios": {
+      "Experienced investor with 15+ years in GCC markets, specializing in technology and healthcare ventures.": "Experienced investor with 15+ years in GCC markets, specializing in technology and healthcare ventures.",
+      "Serial entrepreneur turned angel investor, focusing on women-led startups and sustainable businesses.": "Serial entrepreneur turned angel investor, focusing on women-led startups and sustainable businesses.",
+      "Government fund representative specializing in infrastructure and manufacturing investments.": "Government fund representative specializing in infrastructure and manufacturing investments.",
+      "VC partner with expertise in early-stage technology companies across the MENA region.": "VC partner with expertise in early-stage technology companies across the MENA region.",
+      "Private wealth investor with focus on real estate and hospitality sectors across GCC.": "Private wealth investor with focus on real estate and hospitality sectors across GCC.",
+      "Dedicated to investments that create positive social and environmental impact in the region.": "Dedicated to investments that create positive social and environmental impact in the region."
+    },
+    "portfolioCompanies": {
+      "TechOman": "TechOman",
+      "HealthCare Plus": "HealthCare Plus",
+      "Digital Solutions": "Digital Solutions",
+      "EcoTech": "EcoTech",
+      "LearnOman": "LearnOman",
+      "GreenEnergy": "GreenEnergy",
+      "Industrial Complex": "Industrial Complex",
+      "Solar Power Oman": "Solar Power Oman",
+      "Port Development": "Port Development",
+      "AI Solutions": "AI Solutions",
+      "BlockchainOman": "BlockchainOman",
+      "TechStartup": "TechStartup",
+      "Luxury Hotels": "Luxury Hotels",
+      "Resort Development": "Resort Development",
+      "Commercial Properties": "Commercial Properties",
+      "Healthcare Access": "Healthcare Access",
+      "Education for All": "Education for All",
+      "Clean Water Project": "Clean Water Project"
+    },
+    "noResults": {
+      "title": "No investors found",
+      "description": "Try adjusting your filters or search terms"
+    },
+    "connect": {
+      "title": "How to Connect with Investors",
+      "subtitle": "Simple steps to connect with the right investors for your business",
+      "steps": {
+        "browse": {
+          "title": "Browse Profiles",
+          "description": "Explore investor profiles to find those who match your business sector and funding needs."
+        },
+        "prepare": {
+          "title": "Prepare Your Pitch",
+          "description": "Create a compelling business listing with detailed information about your opportunity."
+        },
+        "contact": {
+          "title": "Make Contact",
+          "description": "Reach out to investors through our platform with your business proposal."
+        },
+        "partnership": {
+          "title": "Build Partnership",
+          "description": "Discuss terms, negotiate deals, and build lasting business partnerships."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Connect with Investors?",
+      "subtitle": "Join our platform to connect with experienced investors and grow your business in Oman",
+      "joinPlatform": "Join Platform",
+      "createListing": "Create Listing"
+    },
+    "network": {
+      "title": "Our Investor Network",
+      "subtitle": "Connect with experienced investors who have funded successful businesses across various sectors"
+    },
+    "howToConnect": {
+      "title": "How to Connect with Investors",
+      "subtitle": "Simple steps to connect with the right investors for your business",
+      "step1": {
+        "title": "Browse Profiles",
+        "description": "Explore investor profiles to find those who match your business sector and funding needs."
+      },
+      "step2": {
+        "title": "Review Requirements",
+        "description": "Check each investor's criteria, investment focus, and portfolio to ensure alignment."
+      },
+      "step3": {
+        "title": "Prepare Your Pitch",
+        "description": "Create a compelling business presentation with financial projections and growth plans."
+      },
+      "step4": {
+        "title": "Make Contact",
+        "description": "Reach out through our secure platform and schedule meetings with interested investors."
+      }
+    }
+  },
+  "about": {
+    "title": "About TEEJARTI",
+    "subtitle": "Connecting businesses, entrepreneurs, and investors across the GCC region with intelligent matchmaking technology and market expertise.",
+    "mission": {
+      "title": "Our Mission",
+      "text1": "To democratize business opportunities across the Gulf Cooperation Council region by creating a transparent, secure, and efficient marketplace where entrepreneurs and investors can discover, evaluate, and execute meaningful business partnerships.",
+      "text2": "We believe that every great business idea deserves the right investment partner, and every investor deserves access to verified, high-potential opportunities."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text1": "To become the premier business matchmaking platform in the GCC region, fostering economic growth and innovation by facilitating billions of dollars in successful business transactions and partnerships.",
+      "text2": "We envision a future where geographical boundaries don't limit business potential, and where the best ideas find the resources they need to transform industries and communities."
+    },
+    "whyChoose": {
+      "title": "Why Choose TEEJARTI?",
+      "subtitle": "Our platform combines cutting-edge technology with deep regional expertise to deliver unparalleled value to our users."
+    },
+    "features": {
+      "verifiedListings": {
+        "title": "Verified Listings",
+        "description": "Every business listing undergoes rigorous verification to ensure authenticity and quality, protecting both buyers and investors."
+      },
+      "expertNetwork": {
+        "title": "Expert Network",
+        "description": "Access to a curated network of business advisors, legal experts, and industry specialists across the GCC region."
+      },
+      "regionalFocus": {
+        "title": "Regional Focus",
+        "description": "Deep understanding of GCC markets, regulations, and business culture to facilitate successful cross-border transactions."
+      },
+      "secureTransactions": {
+        "title": "Secure Transactions",
+        "description": "Advanced security protocols and escrow services to ensure safe and transparent business dealings."
+      },
+      "multilingual": {
+        "title": "Multilingual Support",
+        "description": "Platform available in English and Arabic with native language support for seamless communication."
+      },
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Data-driven insights and market intelligence to help you make informed investment and business decisions."
+      },
+      "smartMatching": {
+        "title": "Smart Matching",
+        "description": "AI-powered algorithms that match businesses with the most suitable investors based on industry, size, and strategic fit."
+      },
+      "successSupport": {
+        "title": "Success Support",
+        "description": "Comprehensive support throughout the entire transaction process, from initial contact to deal closure and beyond."
+      },
+      "provenResults": {
+        "title": "Proven Results",
+        "description": "Track record of successful business transactions and partnerships that have created substantial value for all parties involved."
+      }
+    },
+    "stats": {
+      "title": "Driving Business Growth Across the GCC",
+      "subtitle": "Our platform has facilitated meaningful connections and successful transactions across the region.",
+      "activeListings": "Active Listings",
+      "registeredUsers": "Registered Users",
+      "gccCountries": "GCC Countries",
+      "successfulMatches": "Successful Matches"
+    },
+    "team": {
+      "title": "Our Leadership Team",
+      "subtitle": "Led by experienced professionals with deep expertise in business, technology, and the GCC market.",
+      "description1": "Our team combines decades of experience in investment banking, technology, and regional business development. We understand the unique challenges and opportunities in the GCC market, and we're committed to providing our users with the tools and support they need to succeed.",
+      "description2": "From our headquarters in Muscat to our regional offices across the Gulf, we're building the future of business collaboration in the Middle East."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to transform your business journey? Get in touch with our expert team and discover how we can help you achieve your goals.",
+    "getInTouch": "Get in Touch",
+    "description": "We're here to help you navigate the exciting world of business opportunities in the GCC region. Whether you're looking to buy, sell, or invest in a business, our team of experts is ready to guide you.",
+    "info": {
+      "title": "Contact Information",
+      "subtitle": "We're here to help you succeed. Contact us through any of these channels.",
+      "location": {
+        "title": "Visit Us",
+        "address": "Knowledge Oasis Muscat\nBuilding 1, Office 205\nAl Rusayl, Muscat 124\nSultanate of Oman"
+      },
+      "phone": {
+        "title": "Call Us",
+        "main": "Main",
+        "whatsapp": "WhatsApp",
+        "tollfree": "Toll-free"
+      },
+      "email": {
+        "title": "Email Us",
+        "general": "General",
+        "support": "Support",
+        "partnerships": "Partnerships"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "sunday": "Sunday - Thursday: 8:00 AM - 6:00 PM",
+        "friday": "Friday: 1:00 PM - 6:00 PM",
+        "saturday": "Saturday: Closed"
+      }
+    },
+    "officeAddress": "Office Address",
+    "phoneNumbers": "Phone Numbers",
+    "main": "Main",
+    "whatsapp": "WhatsApp",
+    "businessHours": "Business Hours",
+    "email": "Email Address",
+    "generalInquiries": "General Inquiries",
+    "support": "Support",
+    "partnerships": "Partnerships",
+    "quickSupport": {
+      "title": "Quick Support",
+      "platformSupport": "Platform Support",
+      "liveChat": "Live Chat",
+      "scheduleDemo": "Schedule a Demo",
+      "bookNow": "Book Now",
+      "downloadBrochure": "Download Brochure",
+      "download": "Download"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "description": "Fill out the form below and we'll get back to you as soon as possible.",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is this regarding?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help you...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message sent successfully!",
+      "successDescription": "Thank you for contacting us. We'll get back to you within 24 hours.",
+      "errorTitle": "Error sending message",
+      "errorDescription": "Please try again later or contact us directly.",
+      "privacyAgreement": "By submitting this form, you agree to our privacy policy and terms of service."
+    },
+    "hours": {
+      "sunday": "Sunday - Thursday: 8:00 AM - 6:00 PM",
+      "friday": "Friday: 2:00 PM - 6:00 PM",
+      "saturday": "Saturday: Closed"
+    },
+    "userRoles": {
+      "entrepreneur": "Entrepreneur",
+      "investor": "Investor",
+      "admin": "Admin",
+      "broker": "Broker"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find quick answers to common questions about our platform and services.",
+      "questions": {
+        "howToList": {
+          "question": "How do I list my business for sale?",
+          "answer": "Simply create an account, complete the verification process, and submit your business listing with detailed information. Our team will review and approve qualified listings within 24-48 hours."
+        },
+        "businessTypes": {
+          "question": "What types of businesses can I find?",
+          "answer": "We feature businesses across all industries including retail, manufacturing, technology, healthcare, hospitality, and more. From small local businesses to large enterprises across the GCC region."
+        },
+        "fees": {
+          "question": "Is there a fee to use the platform?",
+          "answer": "Basic browsing is free. We charge a success fee only when a transaction is completed through our platform. Premium features and enhanced listings have separate pricing tiers."
+        },
+        "verification": {
+          "question": "How do you verify business listings?",
+          "answer": "We conduct thorough due diligence including document verification, financial review, and legal compliance checks. Only verified businesses are featured on our platform."
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about TEEJARTI",
+    "questionsLabel": "questions",
+    "categories": {
+      "general": "General Questions",
+      "business": "Business Listings",
+      "investors": "For Investors",
+      "account": "Account & KYC",
+      "technical": "Technical Support"
+    },
+    "general": {
+      "whatIsTeejarti": {
+        "question": "What is TEEJARTI?",
+        "answer": "TEEJARTI is a premier business matchmaking platform that connects business owners and investors across Oman and the GCC region. Our platform facilitates business sales, partnerships, and investment opportunities."
+      },
+      "howDoesItWork": {
+        "question": "How does TEEJARTI work?",
+        "answer": "Business owners can list their businesses for sale or partnership opportunities. Investors and potential buyers can browse listings, contact sellers, and arrange meetings. Our platform provides secure communication and verification services."
+      },
+      "isTeejartieFree": {
+        "question": "Is TEEJARTI free to use?",
+        "answer": "Yes, browsing listings and basic account features are free. We offer premium services for enhanced listing visibility and additional features for serious sellers and investors."
+      }
+    },
+    "business": {
+      "howToListBusiness": {
+        "question": "How do I list my business on TEEJARTI?",
+        "answer": "Create an account, complete the KYC verification process, then use our \"List Your Business\" feature. Provide detailed information about your business, including financials, location, and asking price."
+      },
+      "whatDocumentsNeeded": {
+        "question": "What documents do I need to list my business?",
+        "answer": "You typically need business registration documents, financial statements, tax returns, and any relevant licenses. Our KYC process will guide you through the specific requirements."
+      },
+      "howLongListingActive": {
+        "question": "How long will my listing remain active?",
+        "answer": "Standard listings remain active for 6 months and can be renewed. Premium listings may have extended durations and enhanced visibility features."
+      },
+      "canEditListing": {
+        "question": "Can I edit my business listing after posting?",
+        "answer": "Yes, you can edit your listing at any time through your dashboard. Changes are reviewed and updated within 24 hours to maintain listing quality."
+      }
+    },
+    "investors": {
+      "howToInvest": {
+        "question": "How do I start investing through TEEJARTI?",
+        "answer": "Create an investor account, complete KYC verification, and browse available opportunities. You can filter by industry, location, investment amount, and business type to find suitable matches."
+      },
+      "minimumInvestment": {
+        "question": "Is there a minimum investment amount?",
+        "answer": "No, there is no platform-imposed minimum. Investment amounts vary by business and are set by individual sellers. You can find opportunities ranging from small startups to established enterprises."
+      },
+      "investorProtection": {
+        "question": "What protections do investors have?",
+        "answer": "We provide KYC verification for all users, secure communication channels, and guidance on due diligence. However, all investment decisions are independent, and we recommend professional legal and financial advice."
+      }
+    },
+    "account": {
+      "kycProcess": {
+        "question": "What is the KYC process?",
+        "answer": "Know Your Customer (KYC) verification involves submitting identity documents, proof of address, and relevant business credentials. This ensures platform security and builds trust between users."
+      },
+      "kycHowLong": {
+        "question": "How long does KYC verification take?",
+        "answer": "KYC verification typically takes 1-3 business days. Complex cases or additional documentation requests may extend this timeframe. You will receive email updates on your verification status."
+      },
+      "forgotPassword": {
+        "question": "I forgot my password. How do I reset it?",
+        "answer": "Click \"Forgot Password\" on the login page and enter your email address. You will receive a password reset link within a few minutes. Check your spam folder if you don't see it."
+      }
+    },
+    "technical": {
+      "supportedBrowsers": {
+        "question": "Which browsers are supported?",
+        "answer": "TEEJARTI works best on modern browsers including Chrome, Firefox, Safari, and Edge. We recommend keeping your browser updated for the best experience."
+      },
+      "mobileApp": {
+        "question": "Is there a mobile app?",
+        "answer": "Currently, TEEJARTI is a web-based platform optimized for mobile browsers. A dedicated mobile app is in development and will be available soon."
+      },
+      "dataSecurity": {
+        "question": "How is my data protected?",
+        "answer": "We use industry-standard encryption, secure servers, and follow strict data protection protocols. Your personal and business information is never shared without your explicit consent."
+      }
+    },
+    "stillNeedHelp": "Still need help?",
+    "contactSupport": "Can't find the answer you're looking for? Our support team is here to help.",
+    "contactUs": "Contact Support",
+    "emailSupport": "Email Support"
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "subtitle": "How we use cookies and similar technologies on TEEJARTI",
+    "lastUpdated": "Last updated: January 21, 2025",
+    "what": {
+      "title": "What are Cookies?",
+      "content": "Cookies are small text files that are placed on your device (computer, smartphone, or tablet) when you visit our website. They help us provide you with a better experience by remembering your preferences and enabling certain features of our platform."
+    },
+    "types": {
+      "title": "Types of Cookies We Use",
+      "essential": {
+        "title": "Essential Cookies",
+        "description": "These cookies are necessary for the website to function properly. They enable basic features like page navigation, access to secure areas, and form submissions.",
+        "examples": "Examples:",
+        "session": "Session management and user authentication",
+        "security": "Security tokens and CSRF protection",
+        "preferences": "Language and accessibility preferences"
+      },
+      "functional": {
+        "title": "Functional Cookies",
+        "description": "These cookies enhance your experience by remembering your choices and providing personalized features.",
+        "examples": "Examples:",
+        "saved": "Saved listings and search preferences",
+        "language": "Language and region settings",
+        "layout": "User interface preferences"
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "description": "These cookies help us understand how visitors use our website, allowing us to improve our services and user experience.",
+        "examples": "Examples:",
+        "usage": "Page views and user interaction tracking",
+        "performance": "Website performance monitoring",
+        "errors": "Error tracking and debugging"
+      }
+    },
+    "howWeUse": {
+      "title": "How We Use Cookies",
+      "authentication": "To keep you logged in and secure during your session",
+      "preferences": "To remember your language and display preferences",
+      "functionality": "To provide personalized features like saved listings",
+      "analytics": "To analyze website usage and improve our services",
+      "security": "To protect against fraud and maintain platform security"
+    },
+    "managing": {
+      "title": "Managing Your Cookie Preferences",
+      "content": "You have control over which cookies you accept. Here are your options:",
+      "browser": {
+        "title": "Browser Settings",
+        "content": "You can control cookies through your browser settings. Most browsers allow you to block cookies, delete existing cookies, or receive notifications when cookies are set."
+      },
+      "platform": {
+        "title": "Platform Settings",
+        "content": "In your TEEJARTI account settings, you can control functional cookies related to personalization and saved preferences."
+      },
+      "note": {
+        "title": "Important Note:",
+        "content": "Disabling essential cookies may affect the functionality of our website and prevent you from using certain features."
+      }
+    },
+    "thirdParty": {
+      "title": "Third-Party Services",
+      "content": "We may use third-party services that set their own cookies. These services include:",
+      "analytics": "Analytics services for website performance monitoring",
+      "security": "Security services for fraud protection",
+      "support": "Customer support and chat services"
+    },
+    "updates": {
+      "title": "Updates to This Policy",
+      "content": "We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any significant changes by posting the updated policy on our website and updating the \"last updated\" date."
+    },
+    "contact": {
+      "title": "Questions About Cookies",
+      "content": "If you have any questions about our use of cookies, please contact us:",
+      "email": "Email:",
+      "phone": "Phone:",
+      "address": "Address:"
+    }
+  },
+  "accessibility": {
+    "title": "Accessibility Statement",
+    "subtitle": "Our commitment to making TEEJARTI accessible to everyone",
+    "commitment": {
+      "title": "Our Commitment",
+      "content": "TEEJARTI is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards."
+    },
+    "standards": {
+      "title": "Accessibility Standards",
+      "content": "Our platform aims to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 level AA. These guidelines help make web content more accessible to people with disabilities."
+    },
+    "features": {
+      "title": "Accessibility Features",
+      "keyboard": {
+        "title": "Keyboard Navigation",
+        "description": "Full keyboard accessibility with logical tab order and visible focus indicators."
+      },
+      "screen": {
+        "title": "Screen Reader Support",
+        "description": "Semantic HTML and ARIA labels for enhanced screen reader compatibility."
+      },
+      "contrast": {
+        "title": "High Contrast",
+        "description": "Color combinations that meet WCAG contrast ratio requirements."
+      },
+      "text": {
+        "title": "Scalable Text",
+        "description": "Text can be resized up to 200% without loss of functionality or content."
+      },
+      "target": {
+        "title": "Large Touch Targets",
+        "description": "Interactive elements are sized appropriately for easy interaction."
+      },
+      "images": {
+        "title": "Image Descriptions",
+        "description": "Alternative text provided for all meaningful images and graphics."
+      }
+    },
+    "efforts": {
+      "title": "Ongoing Efforts",
+      "testing": "Regular accessibility testing with automated tools and manual review",
+      "feedback": "Collecting and implementing user feedback on accessibility barriers",
+      "training": "Team training on accessibility best practices and inclusive design",
+      "updates": "Continuous updates to improve compliance with accessibility standards",
+      "external": "Working with accessibility consultants for expert evaluation"
+    },
+    "browsers": {
+      "title": "Supported Browsers & Assistive Technologies",
+      "content": "TEEJARTI is designed to work with the following assistive technologies:",
+      "readers": {
+        "title": "Screen Readers"
+      },
+      "browsers": {
+        "title": "Browsers"
+      }
+    },
+    "feedback": {
+      "title": "Feedback & Support",
+      "content": "We welcome your feedback on the accessibility of TEEJARTI. If you encounter any accessibility barriers or have suggestions for improvement, please contact us:",
+      "email": {
+        "title": "Email"
+      },
+      "phone": {
+        "title": "Phone"
+      },
+      "response": "We aim to respond to accessibility feedback within 48 hours and will work with you to provide the information or feature you need."
+    },
+    "assessment": {
+      "title": "Accessibility Assessment",
+      "content": "This accessibility statement was last reviewed on January 21, 2025. We conduct ongoing accessibility assessments and update this statement as improvements are made to our platform."
+    }
+  },
+  "sitemap": {
+    "title": "Sitemap",
+    "subtitle": "Navigate all pages and features of TEEJARTI platform",
+    "main": {
+      "title": "Main Pages"
+    },
+    "company": {
+      "title": "Company",
+      "howItWorks": "How It Works"
+    },
+    "account": {
+      "title": "User Account",
+      "login": "Login / Register",
+      "dashboard": "Dashboard",
+      "profile": "Profile",
+      "saved": "Saved Listings"
+    },
+    "support": {
+      "title": "Support & Resources",
+      "faq": "FAQ"
+    },
+    "legal": {
+      "title": "Legal & Policies"
+    },
+    "other": {
+      "title": "Other"
+    },
+    "stats": {
+      "title": "Platform Overview",
+      "pages": "Total Pages",
+      "categories": "Main Categories",
+      "languages": "Languages Supported",
+      "mobile": "Mobile Responsive"
+    },
+    "contact": {
+      "title": "Need Help Finding Something?",
+      "description": "If you can't find what you're looking for, our support team is here to help.",
+      "button": "Contact Support"
+    },
+    "help": {
+      "button": "Visit Help Center"
+    }
+  },
+  "createListing": {
+    "page": {
+      "title": "Create Business Listing",
+      "subtitle": "List your business for sale, investment, or partnership"
+    },
+    "form": {
+      "titles": {
+        "listingInformation": "Listing Information",
+        "additionalDetails": "Additional Business Details (Optional)"
+      },
+      "descriptions": {
+        "provideDetails": "Provide details about your business opportunity"
+      },
+      "labels": {
+        "listingTitle": "Listing Title*",
+        "industry": "Industry*",
+        "location": "Location*",
+        "transactionType": "Transaction Type*",
+        "currency": "Currency",
+        "askingPrice": "Asking Price*",
+        "businessDescription": "Business Description*",
+        "businessImages": "Business Images",
+        "currentPriceRevenue": "Current Price/Revenue (Optional)",
+        "businessEstablished": "Business Established (Optional)",
+        "numberOfEmployees": "Number of Employees",
+        "yearEstablished": "Year Established",
+        "saleTimeframe": "Sale Timeframe",
+        "monthlyRevenue": "Monthly Revenue",
+        "monthlyProfit": "Monthly Profit",
+        "reasonForSelling": "Reason for Selling",
+        "assetsIncluded": "Assets Included",
+        "liabilities": "Liabilities",
+        "trainingSupport": "Training & Support",
+        "postSaleSupport": "Post-Sale Support",
+        "businessPlan": "Business Plan (Optional)",
+        "financialInformation": "Financial Information (Optional)"
+      },
+      "placeholders": {
+        "titleExample": "e.g. Established Restaurant in Muscat",
+        "titleExampleAr": "مثال: مطعم راسخ في مسقط",
+        "selectIndustry": "Select industry category",
+        "selectLocation": "Select location",
+        "selectTransactionType": "Select transaction type",
+        "currencyDefault": "OMR",
+        "priceDefault": "0",
+        "descriptionExample": "Provide a detailed description of your business...",
+        "descriptionExampleAr": "قدم وصفاً مفصلاً لعملك التجاري...",
+        "establishedExample": "e.g., 2018 or January 2018",
+        "timeframeExample": "e.g., 3-6 months",
+        "reasonExample": "Retirement, relocation, new ventures...",
+        "assetsExample": "Equipment, inventory, property, vehicles...",
+        "liabilitiesExample": "Debts, loans, obligations...",
+        "trainingExample": "Training period, ongoing support offered...",
+        "supportExample": "Consultation, transition help, warranties...",
+        "businessPlanExample": "Provide details about your business plan, growth strategy, market analysis...",
+        "financialsExample": "Share financial highlights, revenue, profit margins, assets...",
+        "yearExample": "2020"
+      },
+      "helpText": {
+        "titleHelp": "Create a descriptive title for your business listing",
+        "autoTranslateToArabic": " (Will be translated to Arabic automatically)",
+        "autoTranslateToEnglish": " (سيتم ترجمته للإنجليزية تلقائيًا)",
+        "descriptionHelp": "Include key information such as business history, revenue, assets, reason for selling, etc.",
+        "descriptionHelpAr": "أدرج معلومات أساسية مثل تاريخ الأعمال والإيرادات والأصول وسبب البيع ، إلخ.",
+        "imagesHelp": "Upload up to 6 high-quality images of your business. The first image will be used as the featured image.",
+        "currentPriceHelp": "Current business price or annual revenue",
+        "establishedHelp": "When was your business established?",
+        "timeframeHelp": "When you want to complete the sale",
+        "monthlyRevenueHelp": "Average monthly revenue (optional)",
+        "monthlyProfitHelp": "Average monthly profit (optional)",
+        "reasonHelp": "Help buyers understand your motivation",
+        "assetsHelp": "Physical and digital assets included in the sale",
+        "liabilitiesHelp": "Outstanding debts or obligations",
+        "trainingHelp": "What training and support will you provide?",
+        "supportHelp": "Additional support after the sale",
+        "businessPlanHelp": "Include business model, target market, competitive advantages, growth projections",
+        "financialsHelp": "Include key financial metrics, revenue trends, assets, liabilities. Keep confidential details private."
+      }
+    },
+    "guidelines": {
+      "title": "Listing Guidelines",
+      "items": {
+        "honest": "Be honest and transparent about your business details",
+        "includeFinancials": "Include key financial information that buyers/investors need",
+        "highlightUSP": "Highlight unique selling points of your business",
+        "provideContact": "Provide clear contact information for inquiries",
+        "noConfidential": "Don't include confidential information in public listing"
+      }
+    },
+    "nextSteps": {
+      "title": "Next Steps",
+      "steps": {
+        "create": {
+          "title": "Create your listing",
+          "description": "Fill in all required information about your business"
+        },
+        "verification": {
+          "title": "Verification process",
+          "description": "Our team will review your listing"
+        },
+        "connect": {
+          "title": "Connect with buyers",
+          "description": "Respond to inquiries from interested parties"
+        },
+        "close": {
+          "title": "Close your deal",
+          "description": "Finalize your business transaction"
+        }
+      }
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "create": "Create Listing",
+      "creating": "Creating..."
+    },
+    "messages": {
+      "success": {
+        "title": "Listing Created",
+        "description": "Your business listing has been successfully created and translated."
+      },
+      "error": {
+        "title": "Error",
+        "description": "Failed to create listing"
+      }
+    }
+  },
+  "messages": {
+    "title": "Messages",
+    "subtitle": "Connect with buyers and sellers",
+    "searchPlaceholder": "Search conversations...",
+    "noConversations": "No conversations yet",
+    "startConversation": "Contact a seller to start chatting",
+    "selectConversation": "Select a conversation",
+    "selectConversationDesc": "Choose a conversation from the list to start chatting",
+    "noMessages": "No messages yet",
+    "typePlaceholder": "Type a message..."
+  }
+}

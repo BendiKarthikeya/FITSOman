@@ -1,0 +1,2034 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "listings": "القوائم",
+    "investors": "المستثمرون",
+    "about": "حول",
+    "contact": "اتصل بنا",
+    "dashboard": "لوحة التحكم",
+    "createListing": "إنشاء قائمة",
+    "kyc": "التحقق من الهوية",
+    "verification": "التحقق",
+    "messages": "الرسائل",
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "register": "تسجيل",
+    "login": "دخول",
+    "getStarted": "ابدأ الآن",
+    "logout": "تسجيل الخروج",
+    "loading": "جاري التحميل...",
+    "browse": "تصفح القوائم",
+    "create": "أضف عملك التجاري",
+    "faq": "الأسئلة الشائعة",
+    "admin": "إدارة",
+    "savedListings": "القوائم المحفوظة",
+    "toggleMenu": "تبديل قائمة التنقل",
+    "verify": "التحقق",
+    "completeVerification": "إكمال التحقق"
+  },
+  "common": {
+    "switchTo": "التبديل إلى {{language}}",
+    "language": "اللغة",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "exitEdit": "إنهاء التعديل",
+    "editHomePage": "تعديل الصفحة الرئيسية",
+    "delete": "حذف",
+    "confirm": "تأكيد",
+    "close": "إغلاق",
+    "next": "التالي",
+    "previous": "السابق",
+    "viewMore": "عرض المزيد",
+    "viewLess": "عرض أقل",
+    "featured": "مميز",
+    "verified": "موثق",
+    "broker": "وسيط",
+    "currency": "ر.ع.",
+    "back": "العودة للرئيسية",
+    "download": "تحميل",
+    "uploaded": "تم رفعه",
+    "recently": "مؤخراً",
+    "saleTypes": {
+      "fullsale": "بيع كامل",
+      "partnership": "شراكة",
+      "partialinvestment": "استثمار جزئي",
+      "franchise": "فرنشايز"
+    },
+    "locations": {
+      "muscat": "مسقط",
+      "salalah": "صلالة",
+      "sohar": "صحار",
+      "nizwa": "نزوى",
+      "sur": "صور",
+      "dubai": "دبي",
+      "abudhabi": "أبو ظبي",
+      "doha": "الدوحة",
+      "riyadh": "الرياض",
+      "jeddah": "جدة",
+      "manama": "المنامة",
+      "kuwaitcity": "مدينة الكويت",
+      "wahibasands": "رمال وهيبة",
+      "othergcc": "دول مجلس التعاون الأخرى"
+    },
+    "transactionTypes": {
+      "fullsale": "بيع كامل",
+      "businesssale": "بيع أعمال",
+      "partialinvestment": "استثمار جزئي",
+      "investment": "استثمار",
+      "partnership": "شراكة",
+      "franchise": "فرنشايز"
+    },
+    "industries": {
+      "technology": "التكنولوجيا",
+      "foodbeverage": "الأغذية والمشروبات",
+      "agriculture": "الزراعة",
+      "tourismhospitality": "السياحة والضيافة",
+      "marineservices": "الخدمات البحرية",
+      "manufacturing": "التصنيع",
+      "renewableenergy": "الطاقة المتجددة",
+      "foodprocessing": "تجهيز الأغذية",
+      "ecommerce": "التجارة الإلكترونية",
+      "healthcare": "الرعاية الصحية",
+      "realestate": "العقارات",
+      "retailecommerce": "التجزئة والتجارة الإلكترونية",
+      "foodhospitality": "الأغذية والضيافة"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "تسجيل الدخول",
+      "subtitle": "ادخل إلى حسابك في تيجارتي",
+      "emailOrUsernameLabel": "البريد الإلكتروني أو اسم المستخدم",
+      "emailOrUsernamePlaceholder": "أدخل بريدك الإلكتروني أو اسم المستخدم",
+      "passwordLabel": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "rememberMe": "تذكرني",
+      "submitButton": "تسجيل الدخول",
+      "signingIn": "جارٍ تسجيل الدخول...",
+      "noAccount": "ليس لديك حساب؟",
+      "registerNow": "سجل الآن",
+      "newToTeejarti": "جديد على تيجارتي؟",
+      "createAccount": "أنشئ حسابك"
+    },
+    "register": {
+      "title": "إنشاء حساب",
+      "subtitle": "ابدأ رحلتك التجارية مع تيجارتي",
+      "fullNameLabel": "الاسم الكامل",
+      "fullNamePlaceholder": "أدخل اسمك الكامل",
+      "usernameLabel": "اسم المستخدم",
+      "usernamePlaceholder": "اختر اسم مستخدم",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "passwordLabel": "كلمة المرور",
+      "passwordPlaceholder": "أنشئ كلمة مرور",
+      "confirmPasswordLabel": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "أكد كلمة المرور",
+      "roleLabel": "أنا",
+      "rolePlaceholder": "اختر دورك",
+      "roles": {
+        "entrepreneur": "رائد أعمال",
+        "investor": "مستثمر",
+        "broker": "وسيط",
+        "admin": "مسؤول",
+        "blocked": "محظور"
+      },
+      "companyLabel": "الشركة (اختياري)",
+      "companyPlaceholder": "اسم شركتك",
+      "positionLabel": "المنصب (اختياري)",
+      "positionPlaceholder": "منصبك",
+      "locationLabel": "الموقع (اختياري)",
+      "locationPlaceholder": "موقعك",
+      "phoneLabel": "الهاتف (اختياري)",
+      "phonePlaceholder": "أدخل رقم الهاتف",
+      "bioLabel": "النبذة (اختياري)",
+      "bioPlaceholder": "أخبرنا عن نفسك وعن اهتماماتك التجارية...",
+      "acceptTermsPrefix": "أوافق على",
+      "termsAndConditions": "الشروط والأحكام",
+      "submitButton": "إنشاء حساب",
+      "creatingAccount": "جارٍ إنشاء الحساب...",
+      "hasAccount": "لديك حساب بالفعل؟",
+      "signIn": "سجل دخولك"
+    },
+    "sidebar": {
+      "welcomeTitle": "مرحباً بك في تيجارتي",
+      "welcomeSubtitle": "السوق التجاري الرائد في عُمان",
+      "verifiedListings": {
+        "title": "قوائم موثقة",
+        "description": "جميع الأعمال تخضع للتحقق الشامل"
+      },
+      "secureCommunication": {
+        "title": "تواصل آمن",
+        "description": "مراسلة محمية ومشاركة وثائق آمنة"
+      },
+      "qualifiedNetwork": {
+        "title": "شبكة مؤهلة",
+        "description": "تواصل مع مشترين ومستثمرين جديين"
+      },
+      "expertSupport": {
+        "title": "دعم خبراء",
+        "description": "إرشاد مخصص طوال رحلتك"
+      },
+      "joinMessage": "انضم إلى أكثر من 500 عمل موثق"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "تواصل. استثمر. انمُ.",
+      "subtitle": "المنصة الرائدة للفرص التجارية في عُمان ومنطقة الخليج",
+      "cta": "ابدأ الآن",
+      "secondaryButton": "اعرف المزيد",
+      "searchButton": "ابحث عن الأعمال"
+    },
+    "heroTitle": "تواصل واستثمر وانمو في سوق الأعمال العُماني",
+    "heroSubtitle": "المنصة الرائدة لقوائم الأعمال والاستثمارات والشراكات في عُمان ومنطقة الخليج",
+    "findBusiness": "ابحث عن عمل تجاري",
+    "listBusiness": "أضف عملك التجاري",
+    "adminAccess": "لوحة المسؤول",
+    "browseByCategory": "تصفح حسب الفئة",
+    "categories": {
+      "title": "تصفح حسب الفئة",
+      "subtitle": "استكشف فرص الأعمال عبر مختلف القطاعات في عُمان ومنطقة الخليج",
+      "viewAll": "عرض الكل",
+      "listings": "قائمة",
+      "error_loading": "خطأ في تحميل الفئات. يرجى المحاولة مرة أخرى لاحقاً.",
+      "cta_text": "هل تريد إدراج عملك في هذه الفئات؟",
+      "cta_button": "ابدأ الإدراج اليوم",
+      "retail": "تجارة التجزئة",
+      "technology": "التكنولوجيا",
+      "hospitality": "الضيافة",
+      "manufacturing": "التصنيع",
+      "services": "الخدمات",
+      "food_hospitality": "الطعام والضيافة",
+      "retail_ecommerce": "التجزئة والتجارة الإلكترونية",
+      "real_estate": "العقارات",
+      "healthcare": "الرعاية الصحية",
+      "education": "التعليم",
+      "others": "أخرى"
+    },
+    "featuredListings": {
+      "title": "الفرص التجارية المميزة",
+      "subtitle": "اكتشف قوائم الأعمال المختارة بعناية عبر عُمان ومنطقة الخليج",
+      "viewListing": "عرض القائمة",
+      "noListings": "لا توجد قوائم مميزة متاحة في الوقت الحالي",
+      "error": "خطأ في تحميل القوائم المميزة. يرجى المحاولة مرة أخرى لاحقاً.",
+      "featured": "مميز",
+      "priceOnRequest": "السعر عند الطلب",
+      "checkBackLater": "تحقق مرة أخرى لاحقاً للفرص التجارية المميزة",
+      "viewAllListings": "عرض جميع القوائم"
+    },
+    "searchSection": {
+      "title": "البحث عن الفرص التجارية",
+      "searchLabel": "بحث",
+      "searchPlaceholder": "البحث عن الأعمال التجارية...",
+      "transactionType": "نوع المعاملة",
+      "allTypes": "جميع الأنواع",
+      "location": "الموقع",
+      "allLocations": "جميع المواقع",
+      "industry": "الصناعة",
+      "allIndustries": "جميع الصناعات",
+      "searchButton": "بحث",
+      "advancedFilters": "المرشحات المتقدمة",
+      "verifiedOnly": "المعتمدة فقط",
+      "allListings": "جميع القوائم",
+      "businessAge": "عمر الشركة",
+      "anyAge": "أي عمر",
+      "priceRange": "نطاق السعر",
+      "maxPrice": "أقصى سعر",
+      "minPrice": "أدنى سعر"
+    },
+    "howItWorks": {
+      "title": "كيف يعمل تيجارتي",
+      "subtitle": "منصتنا تجعل من السهل إدراج واكتشاف والتواصل مع الفرص التجارية في عُمان ومنطقة الخليج",
+      "step1": {
+        "title": "١. إنشاء قائمتك",
+        "description": "أدرج عملك التجاري مع التفاصيل الأساسية بما في ذلك الصناعة والموقع والماليات وسعرك المطلوب أو احتياجات الاستثمار."
+      },
+      "step2": {
+        "title": "٢. التواصل مع المشترين",
+        "description": "منصتنا تطابق قائمتك مع المستثمرين والمشترين المؤهلين المهتمين بفرصتك التجارية."
+      },
+      "step3": {
+        "title": "٣. إنهاء صفقتك",
+        "description": "تواصل بأمان، وشارك المستندات، وتتبع العروض جميعها ضمن منصتنا حتى تنهي صفقتك بنجاح."
+      },
+      "ctaText": "هل أنت مستعد لتحويل رحلتك التجارية؟",
+      "ctaButton": "ابدأ الآن"
+    },
+    "testimonials": {
+      "title": "قصص النجاح",
+      "subtitle": "اطلع على ما يقوله مستخدمونا حول تجربتهم مع تيجارتي"
+    },
+    "callToAction": {
+      "title": "حول أحلام عملك إلى حقيقة",
+      "subtitle": "احصل على فرص استثمارية حصرية، تواصل مع مشترين جديين، ووسع عملك عبر أكثر الأسواق ديناميكية في دول الخليج",
+      "startJourney": "ابدأ رحلتك",
+      "exploreOpportunities": "استكشف الفرص"
+    }
+  },
+  "listing": {
+    "details": {
+      "featured": "مميز",
+      "verified": "موثق",
+      "saleType": "نوع البيع",
+      "askingPrice": "السعر المطلوب",
+      "listedDate": "تاريخ الإدراج",
+      "status": "الحالة",
+      "industry": "الصناعة",
+      "location": "الموقع"
+    },
+    "actions": {
+      "makeOffer": "تقديم عرض",
+      "contactSeller": "الاتصال بالبائع",
+      "sendMessage": "إرسال رسالة",
+      "viewProfile": "عرض الملف الشخصي"
+    },
+    "messages": {
+      "notFound": "القائمة غير موجودة",
+      "removed": "قد تكون هذه القائمة قد تمت إزالتها أو لم تعد متاحة",
+      "loginRequired": "يرجى تسجيل الدخول للوصول إلى مستندات العمل"
+    }
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "sidebar": {
+      "userProfile": "الملف الشخصي للمستخدم",
+      "navigation": "التنقل",
+      "dashboard": "لوحة التحكم",
+      "myListings": "قوائمي",
+      "messages": "الرسائل",
+      "documents": "المستندات",
+      "profile": "الملف الشخصي",
+      "settings": "الإعدادات",
+      "logout": "تسجيل الخروج"
+    },
+    "tabs": {
+      "overview": "نظرة عامة",
+      "listings": "القوائم",
+      "messages": "الرسائل",
+      "documents": "المستندات",
+      "profile": "الملف الشخصي",
+      "settings": "الإعدادات"
+    },
+    "overview": {
+      "activeListings": "القوائم النشطة",
+      "unreadMessages": "الرسائل غير المقروءة",
+      "profileCompletion": "اكتمال الملف الشخصي",
+      "businessesListed": "أعمال مدرجة للبيع/الاستثمار",
+      "messagesFromBuyers": "رسائل من المشترين/المستثمرين المحتملين",
+      "completeProfileVisibility": "أكمل ملفك الشخصي لرؤية أفضل",
+      "quickActions": "إجراءات سريعة",
+      "createListing": "إنشاء قائمة",
+      "checkMessages": "فحص الرسائل",
+      "uploadDocuments": "رفع المستندات",
+      "editProfile": "تحرير الملف الشخصي",
+      "recentListings": "القوائم الحديثة",
+      "recentListingsDesc": "قوائم الأعمال التي أنشأتها مؤخراً",
+      "noListingsYet": "لا توجد قوائم بعد",
+      "noListingsDesc": "ابدأ بإنشاء قائمة أعمالك الأولى",
+      "viewAllListings": "عرض جميع القوائم"
+    },
+    "listings": {
+      "title": "قوائمي",
+      "description": "إدارة قوائم أعمالك",
+      "newListing": "قائمة جديدة",
+      "noListingsYet": "لا توجد قوائم بعد",
+      "noListingsDesc": "ابدأ بإنشاء قائمة أعمالك الأولى"
+    },
+    "messages": {
+      "title": "الرسائل",
+      "description": "تواصل مع المشترين أو البائعين المحتملين",
+      "noMessagesYet": "لا توجد رسائل بعد",
+      "noMessagesDesc": "ليس لديك أي رسائل في صندوق الوارد",
+      "browseListings": "تصفح القوائم"
+    },
+    "documents": {
+      "title": "المستندات",
+      "description": "إدارة مستندات أعمالك",
+      "uploadDocument": "رفع مستند",
+      "noDocuments": "لا توجد مستندات",
+      "noDocumentsDesc": "لم تقم برفع أي مستندات بعد",
+      "uploadDocuments": "رفع المستندات"
+    },
+    "profile": {
+      "title": "ملفي الشخصي",
+      "description": "إدارة معلوماتك الشخصية والتجارية",
+      "personalInformation": "المعلومات الشخصية",
+      "businessInformation": "المعلومات التجارية",
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "username": "اسم المستخدم",
+      "role": "الدور",
+      "company": "الشركة",
+      "position": "المنصب",
+      "location": "الموقع",
+      "phone": "الهاتف",
+      "bio": "النبذة الشخصية",
+      "editProfile": "تعديل الملف الشخصي",
+      "notProvided": "غير مقدم"
+    },
+    "settings": {
+      "title": "إعدادات الحساب",
+      "description": "إدارة تفضيلات حسابك",
+      "notificationPreferences": "تفضيلات الإشعارات",
+      "notificationComingSoon": "هذه الميزة قادمة قريباً. ستتمكن من إدارة إعدادات الإشعارات هنا.",
+      "securitySettings": "إعدادات الأمان",
+      "securityComingSoon": "هذه الميزة قادمة قريباً. ستتمكن من تغيير كلمة المرور وإدارة إعدادات الأمان هنا.",
+      "accountManagement": "إدارة الحساب",
+      "deleteAccount": "حذف الحساب"
+    }
+  },
+  "admin": {
+    "layout": {
+      "adminPanel": "لوحة تحكم المدير",
+      "dashboard": "لوحة التحكم",
+      "users": "المستخدمين",
+      "listings": "القوائم",
+      "kycVerification": "التحقق من الهوية",
+      "settingsLabel": "الإعدادات",
+      "imageSettings": "إعدادات الصور",
+      "fileExplorer": "مستكشف الملفات",
+      "settings": "الإعدادات"
+    },
+    "kyc": {
+      "actions": "الإجراءات",
+      "address": "العنوان",
+      "addressInformation": "معلومات العنوان",
+      "addressProofDocument": "مستند إثبات العنوان",
+      "all": "الكل",
+      "applicationDetails": "تفاصيل الطلب",
+      "approvalFailed": "فشلت الموافقة",
+      "approvalFailedMessage": "فشلت الموافقة على طلب التحقق",
+      "approve": "الموافقة",
+      "approved": "معتمد",
+      "approvedSuccessfully": "تمت الموافقة على طلب التحقق بنجاح",
+      "approving": "جارٍ الموافقة...",
+      "backToDashboard": "العودة إلى لوحة التحكم",
+      "businessLicense": "رخصة العمل",
+      "cancel": "إلغاء",
+      "close": "إغلاق",
+      "confirmRejection": "تأكيد الرفض",
+      "country": "الدولة",
+      "currentStatus": "الحالة الحالية",
+      "details": "التفاصيل",
+      "email": "البريد الإلكتروني",
+      "errorLoading": "خطأ في تحميل طلبات التحقق",
+      "fetchFailed": "فشل في جلب طلبات التحقق",
+      "fullName": "الاسم الكامل",
+      "idNumber": "رقم الهوية",
+      "idProofDocument": "مستند إثبات الهوية",
+      "idType": "نوع الهوية",
+      "kycApproved": "تمت الموافقة على التحقق",
+      "kycRejected": "تم رفض التحقق",
+      "kycRequests": "طلبات التحقق",
+      "nationality": "الجنسية",
+      "noApplicationsFound": "لم يتم العثور على طلبات {{status}}",
+      "noDocumentProvided": "لم يتم تقديم مستند",
+      "pending": "قيد الانتظار",
+      "personalInformation": "المعلومات الشخصية",
+      "pleaseRetry": "يرجى المحاولة مرة أخرى",
+      "reject": "رفض",
+      "rejected": "مرفوض",
+      "rejectedSuccessfully": "تم رفض طلب التحقق بنجاح",
+      "rejecting": "جارٍ الرفض...",
+      "rejectionFailed": "فشل الرفض",
+      "rejectionFailedMessage": "فشل رفض طلب التحقق",
+      "rejectionPlaceholder": "أدخل سبب الرفض...",
+      "rejectionReason": "سبب الرفض",
+      "reviewInformation": "راجع المعلومات أدناه",
+      "status": "الحالة",
+      "submitted": "تاريخ التقديم",
+      "subtitle": "مراجعة وإدارة طلبات التحقق",
+      "title": "التحقق من الهوية",
+      "unknown": "غير معروف",
+      "unknownUser": "مستخدم غير معروف",
+      "user": "المستخدم",
+      "username": "اسم المستخدم",
+      "verificationDocuments": "مستندات التحقق",
+      "viewDocument": "عرض المستند"
+    },
+    "settings": {
+      "backToDashboard": "العودة إلى لوحة التحكم",
+      "generalSettings": "الإعدادات العامة",
+      "securitySettings": "إعدادات الأمان",
+      "themeAndHome": "إعدادات المظهر والصفحة الرئيسية",
+      "contactPage": "صفحة التواصل",
+      "imageSettings": "إعدادات الصور",
+      "seoSettings": "إعدادات تحسين محركات البحث",
+      "socialMedia": "وسائل التواصل الاجتماعي",
+      "platformFeatures": "ميزات المنصة",
+      "accountSettings": "إعدادات الحساب",
+      "addNewSetting": "إضافة إعداد جديد",
+      "basicApplicationSettings": "الإعدادات الأساسية للتطبيق",
+      "configureSecurityOptions": "تكوين خيارات الأمان والوصول",
+      "themeHomePageSettings": "إعدادات المظهر والصفحة الرئيسية",
+      "customizeSiteAppearance": "تخصيص مظهر موقعك",
+      "contactPageSettings": "إعدادات صفحة التواصل",
+      "contactPageDescription": "تكوين معلومات صفحة التواصل",
+      "imageSettingsDescription": "تكوين تحميل الصور والصور الافتراضية وإعدادات جودة الصورة",
+      "seoDescription": "تكوين إعدادات تحسين محركات البحث",
+      "socialMediaIntegration": "تكامل وسائل التواصل الاجتماعي",
+      "socialMediaDescription": "تكوين روابط وسائل التواصل الاجتماعي والتكاملات",
+      "platformFeaturesDescription": "تفعيل أو تعطيل ميزات المنصة",
+      "accountSettingsDescription": "إدارة إعدادات حساب المسؤول الخاص بك",
+      "createNewSystemSetting": "إنشاء إعداد نظام جديد",
+      "settingKey": "مفتاح الإعداد",
+      "settingType": "نوع الإعداد",
+      "settingValue": "قيمة الإعداد",
+      "settingKeyPlaceholder": "مثال: site.title",
+      "addSetting": "إضافة إعداد",
+      "siteLogo": "شعار الموقع",
+      "uploadSiteLogo": "تحميل شعار الموقع",
+      "heroBackground": "خلفية القسم الرئيسي",
+      "uploadBackgroundImage": "تحميل صورة الخلفية",
+      "websiteFavicon": "أيقونة الموقع المفضلة",
+      "uploadFavicon": "تحميل أيقونة الموقع",
+      "logoRecommendation": "مستحسن: PNG أو SVG بخلفية شفافة، حد أقصى 5 ميجابايت",
+      "heroBackgroundRecommendation": "مستحسن: صورة أفقية عالية الجودة، حد أقصى 5 ميجابايت",
+      "faviconRecommendation": "مستحسن: صورة مربعة (32×32 بكسل أو 64×64 بكسل)، تنسيق PNG أو ICO",
+      "logout": "تسجيل الخروج",
+      "signOutAdminPanel": "تسجيل الخروج من لوحة الإدارة",
+      "logoutInstructions": "انقر على الزر أدناه لتسجيل الخروج من حساب المدير الخاص بك. ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى لوحة الإدارة.",
+      "fileTooLarge": "الملف كبير جداً",
+      "selectImageUnder5MB": "يرجى اختيار صورة أقل من 5 ميجابايت",
+      "invalidFileType": "نوع ملف غير صالح",
+      "selectValidImageType": "يرجى اختيار صورة JPEG أو PNG أو GIF أو WebP أو SVG",
+      "imageUploaded": "تم تحميل الصورة",
+      "imageUploadedSuccessfully": "تم تحميل الصورة بنجاح",
+      "uploadFailed": "فشل التحميل",
+      "uploadFailedMessage": "حدث خطأ أثناء تحميل صورتك. يرجى المحاولة مرة أخرى.",
+      "fileError": "خطأ في الملف",
+      "fileErrorMessage": "حدث خطأ أثناء معالجة صورتك. يرجى المحاولة مرة أخرى.",
+      "preview": "معاينة",
+      "uploading": "جارٍ التحميل...",
+      "changeImage": "تغيير الصورة",
+      "uploadImage": "تحميل صورة",
+      "enabled": "مفعّل",
+      "urlPlaceholder": "https://example.com",
+      "emailPlaceholder": "email@example.com",
+      "enterValue": "أدخل القيمة",
+      "noSettingsFound": "لم يتم العثور على إعدادات",
+      "noSettingsConfigured": "لا توجد إعدادات مكونة لهذا القسم بعد.",
+      "loggedOut": "تم تسجيل الخروج",
+      "loggedOutSuccessfully": "تم تسجيل خروجك بنجاح من لوحة الإدارة.",
+      "logoutFailed": "فشل تسجيل الخروج",
+      "logoutFailedMessage": "حدث خطأ أثناء تسجيل الخروج. يرجى المحاولة مرة أخرى.",
+      "failedToLoadSettings": "فشل في تحميل الإعدادات",
+      "pleaseTryLoginAgain": "يرجى المحاولة تسجيل الدخول مرة أخرى",
+      "settingsUpdated": "تم تحديث الإعدادات",
+      "changesSuccessfullySaved": "تم حفظ تغييراتك بنجاح.",
+      "failedToUpdateSettings": "فشل في تحديث الإعدادات",
+      "updateSettingsErrorMessage": "حدث خطأ أثناء تحديث الإعدادات. يرجى المحاولة مرة أخرى.",
+      "settingCreated": "تم إنشاء الإعداد",
+      "settingCreatedSuccessfully": "تم إنشاء الإعداد الجديد بنجاح.",
+      "failedToCreateSetting": "فشل في إنشاء الإعداد",
+      "createSettingErrorMessage": "حدث خطأ أثناء إنشاء الإعداد. يرجى المحاولة مرة أخرى.",
+      "loadingSettings": "جاري تحميل الإعدادات...",
+      "settingUpdated": "تم تحديث الإعداد",
+      "changesSaved": "تم حفظ تغييراتك.",
+      "invalidInput": "إدخال غير صالح",
+      "checkJsonFormat": "يرجى التحقق من تنسيق JSON والمحاولة مرة أخرى. خطأ:",
+      "categories": "الفئات",
+      "saveChanges": "حفظ التغييرات",
+      "subtitle": "إدارة إعدادات النظام والتطبيق",
+      "title": "إعدادات النظام",
+      "lang": {
+        "english": "الإنجليزية",
+        "arabic": "العربية"
+      },
+      "group": {
+        "headings": "العناوين",
+        "maintenance": "الصيانة"
+      },
+      "keyLabels": {
+        "headings": {
+          "listings_page_title_en": "عنوان صفحة العروض (بالإنجليزية)",
+          "listings_page_title_ar": "عنوان صفحة العروض (بالعربية)",
+          "investor_page_title_en": "عنوان صفحة المستثمر (بالإنجليزية)",
+          "investor_page_title_ar": "عنوان صفحة المستثمر (بالعربية)",
+          "entrepreneur_page_title_en": "عنوان صفحة رائد الأعمال (بالإنجليزية)",
+          "entrepreneur_page_title_ar": "عنوان صفحة رائد الأعمال (بالعربية)"
+        },
+        "maintenance": {
+          "enabled": "وضع الصيانة",
+          "message_en": "رسالة الصيانة (بالإنجليزية)",
+          "message_ar": "رسالة الصيانة (بالعربية)"
+        },
+        "site_description": "وصف الموقع"
+      },
+      "changePassword": "تغيير كلمة المرور"
+    },
+    "listings": {
+      "title": "إدارة القوائم",
+      "subtitle": "مراجعة وإدارة قوائم الأعمال",
+      "backToDashboard": "العودة إلى لوحة التحكم",
+      "listingDetails": "تفاصيل قائمة الأعمال",
+      "reviewListing": "مراجعة معلومات القائمة قبل الموافقة أو الرفض",
+      "englishTitle": "العنوان بالإنجليزية",
+      "arabicTitle": "العنوان بالعربية",
+      "industry": "الصناعة",
+      "location": "الموقع",
+      "price": "السعر",
+      "currentStatus": "الحالة الحالية",
+      "created": "تم الإنشاء",
+      "listingImage": "صورة القائمة",
+      "rejectionPlaceholder": "يرجى تقديم سبب رفض هذه القائمة",
+      "cancel": "إلغاء",
+      "confirmRejection": "تأكيد الرفض",
+      "close": "إغلاق",
+      "reject": "رفض",
+      "approve": "موافقة",
+      "fetchFailed": "فشل في جلب القوائم",
+      "listingApproved": "تمت موافقة القائمة",
+      "approvedSuccessfully": "تمت الموافقة على قائمة الأعمال بنجاح",
+      "approvalFailed": "فشلت الموافقة",
+      "approvalFailedMessage": "فشلت الموافقة على القائمة. يرجى المحاولة مرة أخرى",
+      "listingRejected": "تم رفض القائمة",
+      "rejectedSuccessfully": "تم رفض قائمة الأعمال",
+      "rejectionFailed": "فشل الرفض",
+      "rejectionFailedMessage": "فشل رفض القائمة. يرجى المحاولة مرة أخرى",
+      "businessListings": "قوائم الأعمال",
+      "pending": "معلق",
+      "approved": "موافق عليه",
+      "rejected": "مرفوض",
+      "all": "الكل",
+      "errorLoading": "خطأ في تحميل القوائم",
+      "pleaseRetry": "يرجى المحاولة مرة أخرى لاحقاً",
+      "askingPrice": "السعر المطلوب",
+      "status": "الحالة",
+      "actions": "الإجراءات",
+      "details": "التفاصيل",
+      "noListingsFound": "لم يتم العثور على قوائم {{status}}",
+      "unknown": "غير معروف"
+    },
+    "imageSettings": {
+      "title": "إعدادات الصور",
+      "accessDenied": "تم رفض الوصول",
+      "noPermission": "ليس لديك إذن للوصول إلى هذه الصفحة.",
+      "error": "خطأ",
+      "failedToLoad": "فشل في تحميل إعدادات الصور.",
+      "noChanges": "لا توجد تغييرات",
+      "noChangesToSave": "لا توجد تغييرات في الصور لحفظها.",
+      "success": "نجح",
+      "settingsUpdated": "تم تحديث إعدادات الصور بنجاح.",
+      "noFileSelected": "لم يتم تحديد ملف",
+      "selectImageFile": "يرجى تحديد ملف صورة للتحميل.",
+      "invalidFileType": "نوع ملف غير صالح",
+      "validImageTypes": "يرجى تحميل ملف صورة صالح (JPEG، PNG، GIF، WEBP، SVG، أو ICO).",
+      "fileTooLarge": "الملف كبير جداً",
+      "imageSizeLimit": "يجب أن تكون الصورة أقل من 5 ميجابايت.",
+      "processingImage": "معالجة الصورة",
+      "uploadInProgress": "يرجى الانتظار أثناء تحميل صورتك...",
+      "uploadSuccessful": "تم التحميل بنجاح",
+      "imageSaved": "تم تحميل وحفظ الصورة.",
+      "uploadFailed": "فشل التحميل",
+      "uploadError": "فشل في تحميل الصورة. يرجى المحاولة مرة أخرى.",
+      "saveError": "فشل في حفظ إعدادات الصور.",
+      "settingsRefreshed": "تم تحديث الإعدادات",
+      "refreshedFromServer": "تم تحديث إعدادات الواجهة الأمامية من الخادم.",
+      "refreshSettings": "تحديث الإعدادات",
+      "description": "تعيين صور للعلامة التجارية والخلفية وأيقونة الموقع",
+      "siteLogo": "شعار الموقع",
+      "uploadCompanyLogo": "تحميل شعار شركتك أو موقعك الإلكتروني",
+      "logoPreview": "معاينة الشعار",
+      "uploadLogo": "تحميل الشعار",
+      "logoRecommendation": "مستحسن: PNG أو SVG بخلفية شفافة",
+      "uploadFavicon": "رفع أيقونة الموقع",
+      "faviconRecommendation": "الحجم المستحسن: 32x32 أو 16x16 بكسل",
+      "websiteFavicon": "أيقونة الموقع المفضلة",
+      "uploadSiteLogo": "تحميل شعار الموقع",
+      "uploadBackgroundImage": "تحميل صورة الخلفية",
+      "heroBackground": "خلفية القسم الرئيسي",
+      "heroBackgroundDescription": "صورة الخلفية لقسم البطل في الصفحة الرئيسية",
+      "backgroundPreview": "معاينة الخلفية",
+      "uploadBackground": "تحميل الخلفية",
+      "backgroundRecommendation": "مستحسن: صورة أفقية عالية الجودة (1920×1080)",
+      "favicon": "أيقونة الموقع المفضلة",
+      "faviconDescription": "أيقونة صغيرة تظهر في علامات تبويب المتصفح",
+      "faviconPreview": "معاينة أيقونة الموقع"
+    },
+    "title": "لوحة تحكم المدير",
+    "subtitle": "إدارة ومراقبة المنصة",
+    "returnToDashboard": "العودة إلى لوحة التحكم",
+    "back": "رجوع",
+    "analytics": "التحليلات",
+    "stats": "الإحصائيات",
+    "kycApprovals": "موافقات التحقق من الهوية",
+    "docs": "المستندات",
+    "lists": "القوائم",
+    "userManagement": "إدارة المستخدمين",
+    "blockedUsers": "المستخدمون المحظورون",
+    "blocked": "محظور",
+    "totalUsers": "إجمالي المستخدمين",
+    "totalListings": "إجمالي القوائم",
+    "pendingKycs": "طلبات التحقق المعلقة",
+    "userAnalytics": "تحليلات المستخدمين",
+    "activeUsers": "المستخدمون النشطون",
+    "entrepreneurs": "رجال الأعمال",
+    "investors": "المستثمرون",
+    "brokers": "الوسطاء",
+    "verified": "موثق",
+    "listingStatus": "حالة القوائم",
+    "approved": "موافق عليه",
+    "pending": "معلق",
+    "rejected": "مرفوض",
+    "averageApproval": "متوسط وقت الموافقة",
+    "platformHealth": "صحة المنصة",
+    "kycApproved": "التحقق من الهوية معتمد",
+    "kycPending": "التحقق من الهوية معلق",
+    "newThisWeek": "جديد هذا الأسبوع",
+    "blockedUsersCount": "عدد المستخدمين المحظورين",
+    "kycApplications": "طلبات التحقق من الهوية",
+    "allCaughtUp": "جميع الطلبات منجزة",
+    "noPendingKycApplications": "لا توجد طلبات تحقق معلقة",
+    "kycDocuments": "مستندات التحقق من الهوية",
+    "noPendingKycDocs": "لا توجد مستندات تحقق معلقة",
+    "listingModeration": "إشراف القوائم",
+    "noPendingListings": "لا توجد قوائم معلقة",
+    "users": {
+      "backToDashboard": "العودة إلى لوحة التحكم",
+      "title": "إدارة المستخدمين",
+      "subtitle": "إدارة ومراقبة مستخدمي المنصة",
+      "users": "المستخدمون",
+      "searchUsers": "البحث في المستخدمين...",
+      "filterByRole": "تصفية حسب الدور:",
+      "allRoles": "جميع الأدوار",
+      "admins": "المسؤولون",
+      "entrepreneurs": "رواد الأعمال",
+      "investors": "المستثمرون",
+      "brokers": "الوسطاء",
+      "blockedUsers": "المستخدمون المحظورون",
+      "userDetails": "تفاصيل المستخدم",
+      "role": "الدور",
+      "verification": "التحقق",
+      "registeredOn": "تاريخ التسجيل",
+      "actions": "الإجراءات",
+      "verified": "موثق",
+      "notVerified": "غير موثق",
+      "view": "عرض",
+      "userProfile": "الملف الشخصي للمستخدم",
+      "userInfoActivity": "معلومات المستخدم الشاملة والنشاط",
+      "uploading": "جاري الرفع...",
+      "uploadPhoto": "رفع صورة",
+      "profileImageUpdated": "تم تحديث صورة الملف الشخصي",
+      "profileImageUpdatedDesc": "تم تحديث صورة الملف الشخصي للمستخدم بنجاح.",
+      "uploadFailed": "فشل الرفع",
+      "contactInformation": "معلومات الاتصال",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "company": "الشركة",
+      "position": "المنصب",
+      "location": "الموقع",
+      "bio": "النبذة",
+      "notProvided": "غير متوفر",
+      "kycStatus": "حالة التحقق من الهوية",
+      "listings": "القوائم",
+      "kycApplication": "طلب التحقق من الهوية",
+      "submissionDate": "تاريخ التقديم",
+      "idType": "نوع الهوية",
+      "rejectionReason": "سبب الرفض",
+      "applicationDocuments": "وثائق الطلب",
+      "idDocument": "وثيقة الهوية",
+      "addressProof": "إثبات العنوان",
+      "verificationDocument": "وثيقة التحقق",
+      "businessLicense": "رخصة العمل",
+      "companyDocument": "وثيقة الشركة",
+      "viewKycApplicationDetails": "عرض تفاصيل طلب التحقق من الهوية",
+      "additionalKycDocuments": "وثائق إضافية للتحقق من الهوية",
+      "viewDocument": "عرض الوثيقة",
+      "noKycApplication": "لم يتم تقديم طلب تحقق من الهوية من قبل هذا المستخدم.",
+      "userListings": "قوائم المستخدم",
+      "noCategory": "لا توجد فئة",
+      "viewListing": "عرض القائمة",
+      "noListingsFound": "لم يتم إنشاء أي قوائم من قبل هذا المستخدم.",
+      "close": "إغلاق",
+      "loadingUsers": "جاري تحميل المستخدمين...",
+      "errorLoadingUsers": "خطأ في تحميل المستخدمين.",
+      "tryAgainLater": "يرجى المحاولة مرة أخرى لاحقاً.",
+      "noUsersFound": "لم يتم العثور على مستخدمين بالمرشحات الحالية.",
+      "adjustSearchCriteria": "جرب تعديل معايير البحث الخاصة بك.",
+      "noBioAvailable": "لا توجد نبذة متاحة.",
+      "noBusinessLicenseAvailable": "لا توجد رخصة عمل متاحة لهذا الدور.",
+      "noAdditionalDocuments": "لم يتم رفع وثائق إضافية."
+    },
+    "settingsLabel": "الإعدادات",
+    "notAvailable": "غير متوفر",
+    "unknownUser": "مستخدم غير معروف",
+    "email": "البريد الإلكتروني",
+    "company": "الشركة",
+    "notSpecified": "غير محدد",
+    "submitted": "تم التقديم",
+    "approve": "موافقة",
+    "reject": "رفض",
+    "rejectKycApplication": "رفض طلب التحقق من الهوية",
+    "provideRejectionReason": "يرجى تقديم سبب الرفض",
+    "provideRejectionReasonForDoc": "يرجى تقديم سبب رفض هذا المستند",
+    "rejectKycDocument": "رفض مستند التحقق من الهوية",
+    "rejectionReason": "سبب الرفض",
+    "enterRejectionReason": "أدخل سبب الرفض...",
+    "errorLoadingKyc": "خطأ في تحميل بيانات التحقق من الهوية",
+    "errorLoadingKycDocs": "خطأ في تحميل مستندات التحقق من الهوية",
+    "user": "المستخدم",
+    "noEmail": "لا يوجد بريد إلكتروني",
+    "status": "الحالة",
+    "reason": "السبب",
+    "viewDocument": "عرض المستند",
+    "uploaded": "تم الرفع",
+    "login": {
+      "usernameRequired": "اسم المستخدم مطلوب",
+      "passwordRequired": "كلمة المرور مطلوبة",
+      "adminPortal": "بوابة المسؤول",
+      "administratorLogin": "دخول المسؤول",
+      "authenticating": "جارٍ المصادقة...",
+      "authenticationError": "خطأ في المصادقة",
+      "authorizedOnly": "يسمح للمسؤولين فقط",
+      "checkCredentials": "يرجى التحقق من بيانات الدخول",
+      "emailOrUsername": "البريد الإلكتروني أو اسم المستخدم",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني أو اسم المستخدم",
+      "enterCredentials": "أدخل بيانات الدخول الخاصة بك",
+      "loginFailed": "فشل تسجيل الدخول",
+      "loginFailedTitle": "خطأ في تسجيل الدخول",
+      "loginSuccessful": "تم تسجيل الدخول بنجاح",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "returnToSite": "العودة إلى الموقع",
+      "secureAccess": "وصول آمن",
+      "signIn": "تسجيل الدخول",
+      "welcomeBack": "مرحباً بك مجدداً"
+    },
+    "changePassword": "تغيير كلمة المرور",
+    "changePasswordDescription": "غير كلمة مرورك بانتظام",
+    "changePasswordTitle": "تغيير كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "currentPassword": "كلمة المرور الحالية",
+    "dashboard": {
+      "tabs": {
+      "kyc": "التحقق من الهوية"
+      }
+    },
+    "dashboardPage": {
+      "alert": {
+        "description": "يرجى مراجعة المعلومات المطلوبة",
+        "return": "العودة",
+        "title": "تنبيه"
+      },
+      "cards": {
+        "listings": {
+          "approved": "موافق عليه",
+          "archived": "مودعة",
+          "byStatus": "حسب الحالة",
+          "description": "إدارة القوائم",
+          "pending": "قيد الانتظار",
+          "rejected": "مرفوضة",
+          "title": "القوائم",
+          "total": "الإجمالي"
+        },
+        "stats": {
+          "activeListings": "القوائم النشطة",
+          "activeUsers": "المستخدمون النشطون",
+          "approvalRate": "معدل القبول",
+          "avgApprovalTime": "متوسط وقت الموافقة",
+          "description": "إحصائيات",
+          "kycRate": "معدل التحقق",
+          "listingActivity": "نشاط القوائم",
+          "newListings": "قوائم جديدة",
+          "newUsers": "مستخدمون جدد",
+          "notAvailable": "غير متاح",
+          "title": "الإحصائيات",
+          "userActivity": "نشاط المستخدم",
+          "verifiedUsers": "مستخدمون موثقون"
+        },
+        "tasks": {
+          "description": "المهام",
+          "pendingKycDescription": "طلبات التحقق المعلقة",
+          "pendingKycTitle": "التحقق من الهوية",
+          "pendingListingsDescription": "القوائم المعلقة",
+          "pendingListingsTitle": "القوائم",
+          "title": "المهام"
+        },
+        "users": {
+          "active": "نشط",
+          "admins": "مسؤولون",
+          "blocked": "محظورون",
+          "brokers": "وسطاء",
+          "description": "المستخدمون",
+          "entrepreneurs": "رواد الأعمال",
+          "investors": "المستثمرون",
+          "rolesTitle": "الأدوار",
+          "title": "المستخدمون",
+          "total": "الإجمالي"
+        }
+      },
+      "error": "حدث خطأ",
+      "exitButton": "خروج",
+      "subtitle": "إدارة المنصة",
+      "title": "لوحة التحكم"
+    },
+    "documentTypes": {
+      "bankStatement": "كشف حساب بنكي",
+      "businessLicense": "رخصة عمل",
+      "nationalId": "بطاقة رقم قومي",
+      "passport": "جواز",
+      "taxCertificate": "شهادة ضريبية"
+    },
+    "errorLoadingListings": "خطأ في تحميل القوائم",
+    "errorTitle": "خطأ",
+    "newPassword": "كلمة مرور جديدة",
+    "owner": "المالك",
+    "passwordChangedErrorDescription": "حدث خطأ أثناء تغيير كلمة المرور",
+    "passwordChangedErrorTitle": "فشل تغيير كلمة المرور",
+    "passwordChangedSuccessDescription": "تم تغيير كلمة المرور بنجاح",
+    "passwordChangedSuccessTitle": "لقد تم تغيير الرمز",
+    "passwordSecurityRequirements": "متطلبات الأمان لكلمة المرور",
+    "passwordUpdatedDescription": "تم تحديث كلمة المرور بنجاح",
+    "passwordUpdatedTitle": "تم تحديث كلمة المرور",
+    "provideListingRejectionReason": "يرجى تقديم سبب رفض القائمة",
+    "rejectListing": "رفض القائمة",
+    "toasts": {
+      "documentApproved": "تم قبول المستند",
+      "documentRejected": "تم رفض المستند",
+      "kycApproved": "تم قبول التحقق من الهوية",
+      "kycRejected": "تم رفض التحقق من الهوية",
+      "listingApproved": "تم قبول القائمة",
+      "listingRejected": "تم رفض القائمة",
+      "provideBlockReason": "يرجى تقديم سبب الحجب",
+      "provideRejectionReason": "يرجى تقديم سبب الرفض",
+      "userBlocked": "تم حجب المستخدم",
+      "userUnblocked": "تم إلغاء حجب المستخدم"
+    },
+    "uncategorized": "Uncategorized",
+    "updating": "Updating",
+    "uploadImage": "UploadImage",
+    "viewDetails": "ViewDetails"
+  },
+  "errors": {
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
+    "networkError": "حدث خطأ في الشبكة",
+    "unauthorized": "وصول غير مصرح به",
+    "validation": {
+      "passwordLength": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+      "passwordMatch": "كلمات المرور غير متطابقة",
+      "invalidPhone": "رقم الهاتف غير صالح"
+    }
+  },
+  "alerts": {
+    "auth": {
+      "loginSuccess": "تم تسجيل الدخول بنجاح",
+      "loginWelcome": "مرحباً بعودتك، {{name}}!",
+      "loginFailed": "فشل تسجيل الدخول",
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+      "registrationSuccess": "تم التسجيل بنجاح",
+      "registrationWelcome": "مرحباً بك في تيجارتي! يرجى إكمال عملية التحقق.",
+      "registrationFailed": "فشل التسجيل",
+      "loggedOut": "تم تسجيل الخروج",
+      "loggedOutDesc": "تم تسجيل خروجك بنجاح",
+      "logoutFailed": "فشل تسجيل الخروج"
+    },
+    "upload": {
+      "fileTooLarge": "الملف كبير جداً",
+      "fileSizeLimit": "يجب أن يكون حجم الملف أقل من 10 ميجابايت",
+      "fileSizeLimit5MB": "الحد الأقصى لحجم الملف هو 5 ميجابايت",
+      "invalidFileType": "نوع ملف غير صالح",
+      "invalidFileTypeDesc": "يرجى اختيار صورة JPEG أو PNG أو GIF أو WebP أو SVG أو ICO",
+      "validImageTypes": "يرجى رفع ملفات PDF أو DOC أو DOCX أو TXT أو صور فقط.",
+      "uploadFailed": "فشل الرفع",
+      "uploadFailedDesc": "فشل في رفع الوثيقة. يرجى المحاولة مرة أخرى.",
+      "uploadSuccess": "تم رفع الوثيقة بنجاح",
+      "uploadSuccessDesc": "تم رفع وثيقتك بنجاح.",
+      "imageUploaded": "تم رفع الصورة بنجاح",
+      "imageUploadedDesc": "تم رفع الصورة وحفظها",
+      "errorUploading": "خطأ في رفع الصورة",
+      "tooManyImages": "عدد كبير جداً من الصور",
+      "imagesUploaded": "تم رفع الصور",
+      "documentDeleted": "تم حذف الوثيقة",
+      "documentDeletedDesc": "تم حذف الوثيقة بنجاح.",
+      "deleteFailed": "فشل الحذف",
+      "downloadFailed": "فشل التحميل",
+      "downloadFailedDesc": "لا يمكن تحميل الوثيقة. يرجى المحاولة مرة أخرى."
+    },
+    "verification": {
+      "codeSent": "تم إرسال رمز التحقق! 📧",
+      "codeSentDesc": "يرجى التحقق من بريدك الإلكتروني للحصول على رمز التحقق المكون من 6 أرقام.",
+      "phoneCodeSent": "تم إرسال رمز التحقق! 📱",
+      "phoneCodeSentDesc": "يرجى التحقق من هاتفك للحصول على رمز التحقق المكون من 6 أرقام.",
+      "emailVerified": "تم التحقق من البريد الإلكتروني بنجاح! ✅",
+      "emailVerifiedDesc": "ممتاز! الآن دعنا نتحقق من رقم هاتفك.",
+      "phoneVerified": "تم التحقق من الهاتف بنجاح! ✅",
+      "phoneVerifiedDesc": "ممتاز! الآن دعنا نكمل التحقق من وثائقك.",
+      "verificationFailed": "فشل التحقق",
+      "failedToSendCode": "فشل إرسال الرمز",
+      "kycSubmitted": "تم تقديم وثائق التحقق من الهوية! 🎉",
+      "kycSubmittedDesc": "تم تقديم وثائقك للمراجعة. ستحصل على رد خلال 24-48 ساعة.",
+      "submissionFailed": "فشل التقديم",
+      "missingDocuments": "وثائق مفقودة",
+      "missingDocumentsDesc": "يرجى رفع وثيقة هوية واحدة على الأقل قبل التقديم."
+    },
+    "contact": {
+      "messageSent": "تم إرسال الرسالة بنجاح",
+      "messageSentDesc": "تم إرسال رسالتك إلى البائع.",
+      "messageFailed": "فشل إرسال الرسالة",
+      "messageFailedDesc": "يرجى المحاولة مرة أخرى لاحقاً",
+      "authRequired": "مطلوب تسجيل الدخول",
+      "authRequiredDesc": "يرجى تسجيل الدخول للتواصل مع البائع"
+    },
+    "listing": {
+      "listingCreated": "تم إنشاء القائمة",
+      "listingCreatedDesc": "تم إنشاء قائمة عملك بنجاح!",
+      "listingUpdated": "نجح",
+      "listingUpdatedDesc": "تم تحديث القائمة بنجاح!",
+      "accessDenied": "تم رفض الوصول",
+      "accessDeniedDesc": "يمكنك تعديل قوائمك فقط.",
+      "listingSaved": "تم حفظ القائمة",
+      "listingUnsaved": "تم إلغاء حفظ القائمة"
+    },
+    "admin": {
+      "keyRequired": "المفتاح مطلوب",
+      "keyRequiredDesc": "يرجى إدخال مفتاح للإعداد الجديد.",
+      "logoUpdated": "تم تحديث الشعار",
+      "logoUpdatedDesc": "تم تحديث الشعار بنجاح.",
+      "backgroundUpdated": "تم تحديث الخلفية",
+      "backgroundUpdatedDesc": "تم تحديث صورة الخلفية بنجاح.",
+      "faviconUpdated": "تم تحديث أيقونة الموقع",
+      "faviconUpdatedDesc": "تم تحديث أيقونة الموقع بنجاح."
+    },
+    "newsletter": {
+      "success": "نجح!",
+      "subscriptionFailed": "فشل الاشتراك",
+      "invalidEmail": "بريد إلكتروني غير صالح",
+      "invalidEmailDesc": "يرجى إدخال عنوان بريد إلكتروني صالح."
+    },
+    "general": {
+      "error": "خطأ",
+      "success": "نجح",
+      "warning": "تحذير",
+      "info": "معلومات"
+    }
+  },
+  "footer": {
+    "description": "المنصة الرائدة التي تربط أصحاب الأعمال والمستثمرين في عُمان ومنطقة الخليج.",
+    "quickLinks": "روابط سريعة",
+    "resources": "المصادر",
+    "terms": "الشروط والأحكام",
+    "privacy": "سياسة الخصوصية",
+    "help": "مركز المساعدة",
+    "contact": "اتصل بنا",
+    "address": "العنوان",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "newsletter": {
+      "title": "ابق على اطلاع",
+      "subtitle": "احصل على أحدث الفرص التجارية ورؤى الاستثمار في بريدك الإلكتروني.",
+      "placeholder": "أدخل بريدك الإلكتروني",
+      "subscribe": "اشترك"
+    },
+    "rights": "جميع الحقوق محفوظة.",
+    "sitemap": "خريطة الموقع",
+    "accessibility": "إمكانية الوصول",
+    "cookies": "سياسة ملفات تعريف الارتباط"
+  },
+  "terms": {
+    "title": "الشروط والأحكام",
+    "lastUpdated": "آخر تحديث: ١٠ يونيو ٢٠٢٥",
+    "back": "رجوع",
+    "acceptance": {
+      "title": "١. قبول الشروط",
+      "content": "من خلال الوصول إلى واستخدام تيجارتي (\"المنصة\")، فإنك تقبل وتوافق على الالتزام بشروط وأحكام هذه الاتفاقية. تنطبق هذه الشروط والأحكام على جميع مستخدمي المنصة، بما في ذلك رواد الأعمال والمستثمرين ووسطاء الأعمال."
+    },
+    "platform": {
+      "title": "٢. وصف المنصة",
+      "content": "تيجارتي هي منصة اكتشاف الأعمال والاستثمار التي تربط رواد الأعمال والمستثمرين عبر عُمان ومنطقة دول مجلس التعاون الخليجي. تسهل المنصة قوائم الأعمال وفرص الاستثمار والشبكات المهنية."
+    },
+    "userResponsibilities": {
+      "title": "٣. مسؤوليات المستخدم",
+      "intro": "كمستخدم للمنصة، فإنك توافق على:",
+      "items": [
+        "تقديم معلومات دقيقة وصادقة في جميع قوائم الأعمال والملفات الشخصية",
+        "الحفاظ على سرية بيانات اعتماد حسابك",
+        "الامتثال لجميع القوانين واللوائح المعمول بها في ولايتك القضائية",
+        "احترام حقوق الملكية الفكرية للآخرين",
+        "استخدام المنصة لأغراض تجارية مشروعة فقط",
+        "إكمال عملية التحقق من الهوية (اعرف عميلك) عند الطلب"
+      ]
+    },
+    "verification": {
+      "title": "٤. قوائم الأعمال والتحقق",
+      "content": "جميع قوائم الأعمال تخضع للمراجعة والتحقق من قبل فريقنا. نحتفظ بالحق في رفض أو تعديل أو إزالة أي قائمة تنتهك إرشاداتنا أو تحتوي على معلومات غير دقيقة. المستخدمون مسؤولون عن ضمان دقة وحداثة جميع المعلومات المالية والتجارية المقدمة."
+    },
+    "privacy": {
+      "title": "٥. الخصوصية وحماية البيانات",
+      "content": "نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية وفقاً لقوانين حماية البيانات المعمول بها. ستُستخدم معلوماتك الشخصية فقط للأغراض المحددة في سياسة الخصوصية الخاصة بنا ولن تُشارك مع أطراف ثالثة دون موافقتك الصريحة، إلا كما يتطلبه القانون."
+    },
+    "financialTransactions": {
+      "title": "٦. المعاملات المالية والعناية الواجبة",
+      "intro": "إخلاء مسؤولية مهم بخصوص الأنشطة المالية:",
+      "items": [
+        "تيجارتي تسهل الاتصالات ولكنها لا تقدم استشارات مالية",
+        "جميع قرارات الاستثمار تتم على مسؤوليتك الخاصة",
+        "يجب على المستخدمين إجراء العناية الواجبة الخاصة بهم قبل أي معاملات مالية",
+        "نحن لسنا مسؤولين عن دقة المعلومات المالية المقدمة من المستخدمين",
+        "جميع المعاملات تتم مباشرة بين الأطراف"
+      ]
+    },
+    "prohibited": {
+      "title": "٧. الأنشطة المحظورة",
+      "intro": "يُحظر على المستخدمين:",
+      "items": [
+        "نشر معلومات تجارية احتيالية أو مضللة أو كاذبة",
+        "استخدام المنصة لغسيل الأموال أو أنشطة غير قانونية أخرى",
+        "محاولة تجاوز عمليات التحقق الخاصة بنا",
+        "مضايقة أو الانخراط في سلوك غير لائق مع المستخدمين الآخرين",
+        "رفع برامج ضارة أو محاولة اختراق المنصة",
+        "إنشاء حسابات متعددة لخداع المستخدمين الآخرين"
+      ]
+    },
+    "liability": {
+      "title": "٨. حدود المسؤولية",
+      "content": "لن تكون تيجارتي مسؤولة عن أي أضرار مباشرة أو غير مباشرة أو عرضية أو خاصة أو تبعية ناشئة عن استخدامك للمنصة. يشمل ذلك على سبيل المثال لا الحصر الخسائر المالية أو انقطاع الأعمال أو فقدان البيانات. لن تتجاوز مسؤوليتنا الإجمالية المبلغ الذي دفعته لاستخدام خدماتنا."
+    },
+    "intellectualProperty": {
+      "title": "٩. الملكية الفكرية",
+      "content": "جميع المحتويات والعلامات التجارية والملكية الفكرية على المنصة مملوكة لتيجارتي أو مرخصة لنا. يحتفظ المستخدمون بملكية معلومات أعمالهم ولكنهم يمنحوننا ترخيصاً لعرض والترويج لقوائمهم على المنصة."
+    },
+    "termination": {
+      "title": "١٠. الإنهاء",
+      "content": "نحتفظ بالحق في إنهاء أو تعليق حسابات المستخدمين وفقاً لتقديرنا، خاصة في حالات انتهاك الشروط أو النشاط الاحتيالي أو المتطلبات القانونية. يمكن للمستخدمين أيضاً إنهاء حساباتهم في أي وقت عن طريق الاتصال بفريق الدعم الخاص بنا."
+    },
+    "governingLaw": {
+      "title": "١١. القانون الحاكم",
+      "content": "تخضع هذه الشروط والأحكام لقوانين سلطنة عُمان. أي نزاعات تنشأ من استخدام هذه المنصة ستُحل في محاكم عُمان."
+    },
+    "contact": {
+      "title": "١٢. معلومات الاتصال",
+      "intro": "للأسئلة أو الاستفسارات بخصوص هذه الشروط والأحكام، يرجى التواصل معنا:",
+      "email": "البريد الإلكتروني: legal@teejarti.com",
+      "phone": "الهاتف: +968 2XXX XXXX",
+      "address": "العنوان: مسقط، سلطنة عُمان"
+    },
+    "changes": {
+      "title": "١٣. التغييرات على الشروط",
+      "content": "نحتفظ بالحق في تعديل هذه الشروط والأحكام في أي وقت. سيتم إشعار المستخدمين بالتغييرات المهمة عبر البريد الإلكتروني أو إشعارات المنصة. الاستمرار في استخدام المنصة بعد التغييرات يشكل قبولاً للشروط المنقحة."
+    },
+    "cta": {
+      "title": "مستعد للانضمام إلى تيجارتي؟",
+      "description": "من خلال إنشاء حساب، فإنك تقر بأنك قد قرأت وفهمت ووافقت على الالتزام بهذه الشروط والأحكام.",
+      "button": "موافق والمتابعة للتسجيل"
+    }
+  },
+  "featured": "مميز",
+  "verified": "موثق",
+  "listingDetails": {
+    "breadcrumb": {
+      "home": "الرئيسية",
+      "listings": "الخدمات التجارية",
+      "businessListing": "القائمة التجارية"
+    },
+    "errors": {
+      "notFound": "لم يتم العثور على القائمة",
+      "notFoundDescription": "القائمة التي تبحث عنها غير موجودة.",
+      "backToListings": "العودة إلى القوائم"
+    },
+    "businessOverview": {
+      "title": "نظرة عامة على الأعمال",
+      "employees": "الموظفون",
+      "yearEstablished": "سنة التأسيس",
+      "monthlyRevenue": "الإيرادات الشهرية",
+      "monthlyProfit": "الربح الشهري"
+    },
+    "description": {
+      "title": "حول هذا العمل",
+      "noDescription": "لا يوجد وصف متاح لهذه القائمة."
+    },
+    "details": {
+      "title": "تفاصيل الأعمال",
+      "industry": "الصناعة",
+      "location": "الموقع",
+      "saleType": "نوع البيع",
+      "askingPrice": "السعر المطلوب",
+      "listedBy": "مدرج بواسطة",
+      "datePosted": "تاريخ النشر",
+      "businessOwner": "صاحب العمل"
+    },
+    "overview": {
+      "saleType": "نوع البيع",
+      "askingPrice": "السعر المطلوب",
+      "listedBy": "مدرج بواسطة",
+      "businessOwner": "صاحب العمل"
+    },
+    "seller": {
+      "title": "حول البائع",
+      "memberSince": "عضو منذ",
+      "contactSeller": "تواصل مع البائع",
+      "loginToContact": "تسجيل الدخول للتواصل مع البائع",
+      "verified": "متحقق",
+      "seller": "بائع",
+      "company": "الشركة",
+      "location": "الموقع",
+      "contactDescription": "تواصل مع البائعين المتحققين للحصول على مزيد من المعلومات حول قوائمهم."
+    },
+    "documents": {
+      "title": "المستندات والموارد",
+      "noDocuments": "لا توجد مستندات متاحة لهذه القائمة",
+      "contactForMore": "تواصل مع البائع للحصول على مزيد من المعلومات"
+    },
+    "similarListings": {
+      "title": "فرص مماثلة",
+      "viewAll": "عرض جميع القوائم"
+    },
+    "actions": {
+      "editListing": "تعديل القائمة",
+      "saveListing": "حفظ القائمة",
+      "contactSeller": "تواصل مع البائع"
+    }
+  },
+  "listings": {
+    "title": "قوائم الأعمال",
+    "subtitle": "اكتشف فرص الاستثمار والأعمال",
+    "filters": {
+      "search": "فلاتر",
+      "searchField": "البحث",
+      "searchPlaceholder": "البحث في القوائم...",
+      "industry": "الصناعة",
+      "allIndustries": "جميع الصناعات",
+      "location": "الموقع",
+      "allLocations": "جميع المواقع",
+      "transactionType": "نوع المعاملة",
+      "allTypes": "جميع الأنواع",
+      "allSaleTypes": "جميع أنواع البيع",
+      "priceRange": "نطاق السعر",
+      "businessAge": "عمر الأعمال",
+      "anyAge": "أي عمر",
+      "age0to2": "0-2 سنوات",
+      "age3to5": "3-5 سنوات",
+      "age6to10": "6-10 سنوات",
+      "age10plus": "10+ سنوات",
+      "verifiedOnly": "إظهار القوائم المتحققة فقط",
+      "featuredOnly": "إظهار القوائم المميزة فقط",
+      "additionalOptions": "خيارات إضافية",
+      "hasFinancials": "لديه بيانات مالية",
+      "hasDocuments": "لديه مستندات",
+      "advancedFilters": "فلاتر متقدمة",
+      "applyFilters": "تطبيق المرشحات",
+      "clearFilters": "مسح المرشحات"
+    },
+    "sort": {
+      "label": "ترتيب حسب",
+      "newest": "الأحدث أولاً",
+      "oldest": "الأقدم أولاً",
+      "priceHighToLow": "السعر: من الأعلى إلى الأقل",
+      "priceLowToHigh": "السعر: من الأقل إلى الأعلى"
+    },
+    "results": {
+      "showing": "عرض",
+      "of": "من",
+      "results": "قوائم",
+      "noResults": "لم يتم العثور على قوائم",
+      "tryDifferentFilters": "لم نتمكن من العثور على أي قوائم تطابق معايير البحث الخاصة بك."
+    },
+    "pagination": {
+      "page": "صفحة",
+      "of": "من",
+      "totalResults": "إجمالي النتائج",
+      "previousPage": "الصفحة السابقة",
+      "nextPage": "الصفحة التالية",
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "card": {
+      "viewDetails": "عرض التفاصيل",
+      "contactSeller": "تواصل مع البائع",
+      "priceOnRequest": "السعر عند الطلب"
+    }
+  },
+  "investors": {
+    "title": "المستثمرون النشطون في عُمان",
+    "subtitle": "تواصل مع المستثمرين ذوي الخبرة الذين مولوا بنجاح الأعمال عبر منطقة دول مجلس التعاون الخليجي",
+    "browseInvestors": "تصفح المستثمرين",
+    "joinNetwork": "انضم للشبكة",
+    "whyOman": {
+      "title": "لماذا الاستثمار في عُمان؟",
+      "subtitle": "تقدم عُمان مزايا فريدة للمستثمرين الباحثين عن فرص النمو في الشرق الأوسط"
+    },
+    "strategicLocation": {
+      "title": "الموقع الاستراتيجي",
+      "description": "بوابة بين آسيا وأفريقيا وأوروبا مع بنية تحتية ممتازة للنقل والاتصالات التجارية."
+    },
+    "politicalStability": {
+      "title": "الاستقرار السياسي",
+      "description": "حكومة مستقرة وسياسات صديقة للأعمال تدعم أمان الاستثمار طويل المدى."
+    },
+    "skilledWorkforce": {
+      "title": "قوة عمل ماهرة",
+      "description": "قوة عمل متعلمة متعددة اللغات مع مهارات تقنية وتجارية قوية."
+    },
+    "taxAdvantages": {
+      "title": "مزايا ضريبية",
+      "description": "معدلات ضريبية تنافسية وحوافز للمستثمرين والشركات الأجنبية."
+    },
+    "diversifiedEconomy": {
+      "title": "اقتصاد متنوع",
+      "description": "اقتصاد نامٍ يتجاوز النفط مع استثمارات في السياحة واللوجستيات والتكنولوجيا."
+    },
+    "infrastructure": {
+      "title": "بنية تحتية حديثة",
+      "description": "موانئ ومطارات واتصالات عالمية المستوى تدعم نمو الأعمال."
+    },
+    "filters": {
+      "all": "الكل",
+      "searchPlaceholder": "البحث عن المستثمرين..."
+    },
+    "categories": {
+      "Technology": "التكنولوجيا",
+      "Healthcare": "الرعاية الصحية",
+      "Real Estate": "العقارات",
+      "Energy": "الطاقة",
+      "Manufacturing": "التصنيع",
+      "Education": "التعليم",
+      "Fintech": "التكنولوجيا المالية",
+      "Sustainability": "الاستدامة",
+      "E-commerce": "التجارة الإلكترونية",
+      "Social Impact": "التأثير الاجتماعي",
+      "Hospitality": "الضيافة",
+      "Tourism": "السياحة",
+      "Infrastructure": "البنية التحتية",
+      "AI/ML": "الذكاء الاصطناعي/التعلم الآلي",
+      "Blockchain": "البلوك تشين"
+    },
+    "profile": {
+      "investmentFocus": "تركيز الاستثمار",
+      "totalInvestments": "إجمالي الاستثمارات",
+      "successfulExits": "الخروج الناجح",
+      "investmentRange": "نطاق الاستثمار",
+      "recentPortfolio": "المحفظة الحديثة",
+      "since": "منذ",
+      "contact": "اتصال",
+      "at": "في",
+      "noInvestorsFound": "لم يتم العثور على مستثمرين",
+      "tryDifferentFilters": "جرب تعديل المرشحات أو شروط البحث",
+      "managingPartner": "الشريك الإداري",
+      "angelInvestor": "مستثمر ملاك",
+      "investmentDirector": "مدير الاستثمار",
+      "independent": "مستقل",
+      "activeInvestors": "مستثمرون نشطون"
+    },
+    "titles": {
+      "Managing Partner": "الشريك الإداري",
+      "Angel Investor": "مستثمر ملائكي",
+      "Investment Director": "مدير الاستثمار",
+      "Venture Capitalist": "رأسمالي المخاطر",
+      "Private Investor": "مستثمر خاص",
+      "Impact Investor": "مستثمر التأثير"
+    },
+    "companies": {
+      "Gulf Capital Partners": "شركاء رأس المال الخليجي",
+      "Independent": "مستقل",
+      "Oman Investment Fund": "صندوق الاستثمار العماني",
+      "MENA Ventures": "مشاريع الشرق الأوسط وشمال أفريقيا",
+      "Family Office": "مكتب العائلة",
+      "Social Impact Fund": "صندوق التأثير الاجتماعي"
+    },
+    "locations": {
+      "Muscat, Oman": "مسقط، عُمان",
+      "Dubai, UAE": "دبي، الإمارات العربية المتحدة",
+      "Riyadh, Saudi Arabia": "الرياض، المملكة العربية السعودية",
+      "Kuwait City, Kuwait": "مدينة الكويت، الكويت",
+      "Sharjah, UAE": "الشارقة، الإمارات العربية المتحدة"
+    },
+    "names": {
+      "Ahmed Al-Rashid": "أحمد الراشد",
+      "Fatima Al-Zahra": "فاطمة الزهراء",
+      "Mohammed Al-Balushi": "محمد البلوشي",
+      "Sarah Al-Kindi": "سارة الكندي",
+      "Hassan Al-Maktoum": "حسن المكتوم",
+      "Layla Al-Qasimi": "ليلى القاسمي"
+    },
+    "bios": {
+      "Experienced investor with 15+ years in GCC markets, specializing in technology and healthcare ventures.": "مستثمر ذو خبرة تزيد عن 15 عامًا في أسواق دول مجلس التعاون الخليجي، متخصص في مشاريع التكنولوجيا والرعاية الصحية.",
+      "Serial entrepreneur turned angel investor, focusing on women-led startups and sustainable businesses.": "رائد أعمال متسلسل تحول إلى مستثمر ملائكي، يركز على الشركات الناشئة التي تقودها النساء والأعمال المستدامة.",
+      "Government fund representative specializing in infrastructure and manufacturing investments.": "ممثل صندوق حكومي متخصص في استثمارات البنية التحتية والتصنيع.",
+      "VC partner with expertise in early-stage technology companies across the MENA region.": "شريك رأس مال مخاطر خبير في شركات التكنولوجيا في المراحل المبكرة عبر منطقة الشرق الأوسط وشمال أفريقيا.",
+      "Private wealth investor with focus on real estate and hospitality sectors across GCC.": "مستثمر ثروات خاصة يركز على قطاعي العقارات والضيافة عبر دول مجلس التعاون الخليجي.",
+      "Dedicated to investments that create positive social and environmental impact in the region.": "مكرس للاستثمارات التي تخلق تأثيرًا اجتماعيًا وبيئيًا إيجابيًا في المنطقة."
+    },
+    "portfolioCompanies": {
+      "TechOman": "تكنولوجيا عُمان",
+      "HealthCare Plus": "الرعاية الصحية بلس",
+      "Digital Solutions": "الحلول الرقمية",
+      "EcoTech": "التكنولوجيا البيئية",
+      "LearnOman": "تعلم عُمان",
+      "GreenEnergy": "الطاقة الخضراء",
+      "Industrial Complex": "المجمع الصناعي",
+      "Solar Power Oman": "الطاقة الشمسية عُمان",
+      "Port Development": "تطوير الموانئ",
+      "AI Solutions": "حلول الذكاء الاصطناعي",
+      "BlockchainOman": "البلوك تشين عُمان",
+      "TechStartup": "الشركة التقنية الناشئة",
+      "Luxury Hotels": "الفنادق الفاخرة",
+      "Resort Development": "تطوير المنتجعات",
+      "Commercial Properties": "العقارات التجارية",
+      "Healthcare Access": "الوصول للرعاية الصحية",
+      "Education for All": "التعليم للجميع",
+      "Clean Water Project": "مشروع المياه النظيفة"
+    },
+    "noResults": {
+      "title": "لم يتم العثور على مستثمرين",
+      "description": "جرب تعديل المرشحات أو مصطلحات البحث"
+    },
+    "connect": {
+      "title": "كيفية الاتصال بالمستثمرين",
+      "subtitle": "خطوات بسيطة للتواصل مع المستثمرين المناسبين لعملك",
+      "steps": {
+        "browse": {
+          "title": "تصفح الملفات الشخصية",
+          "description": "استكشف ملفات المستثمرين للعثور على من يتطابق مع قطاع أعمالك واحتياجات التمويل."
+        },
+        "prepare": {
+          "title": "إعداد العرض التقديمي",
+          "description": "أنشئ قائمة أعمال مقنعة بمعلومات مفصلة حول فرصتك."
+        },
+        "contact": {
+          "title": "إجراء اتصال",
+          "description": "تواصل مع المستثمرين من خلال منصتنا مع اقتراح عملك."
+        },
+        "partnership": {
+          "title": "بناء الشراكة",
+          "description": "ناقش الشروط وتفاوض على الصفقات وبناء شراكات تجارية دائمة."
+        }
+      }
+    },
+    "cta": {
+      "title": "هل أنت مستعد للتواصل مع المستثمرين؟",
+      "subtitle": "انضم إلى منصتنا للتواصل مع المستثمرين ذوي الخبرة وتنمية أعمالك في عُمان",
+      "joinPlatform": "انضم للمنصة",
+      "createListing": "إنشاء قائمة"
+    },
+    "network": {
+      "title": "شبكة المستثمرين لدينا",
+      "subtitle": "تواصل مع المستثمرين ذوي الخبرة الذين مولوا أعمالاً ناجحة في قطاعات مختلفة"
+    },
+    "howToConnect": {
+      "title": "كيفية التواصل مع المستثمرين",
+      "subtitle": "خطوات بسيطة للتواصل مع المستثمرين المناسبين لعملك",
+      "step1": {
+        "title": "تصفح الملفات الشخصية",
+        "description": "اكتشف ملفات المستثمرين للعثور على من يطابق قطاع عملك واحتياجات التمويل."
+      },
+      "step2": {
+        "title": "راجع المتطلبات",
+        "description": "تحقق من معايير كل مستثمر وتركيز الاستثمار والمحفظة لضمان التوافق."
+      },
+      "step3": {
+        "title": "حضر عرضك التقديمي",
+        "description": "أنشئ عرضاً تجارياً مقنعاً مع توقعات مالية وخطط نمو."
+      },
+      "step4": {
+        "title": "قم بالتواصل",
+        "description": "تواصل من خلال منصتنا الآمنة وحدد اجتماعات مع المستثمرين المهتمين."
+      }
+    }
+  },
+  "about": {
+    "title": "حول تيجارتي",
+    "subtitle": "ربط الأعمال والرياديين والمستثمرين عبر منطقة دول مجلس التعاون الخليجي بتقنية المطابقة الذكية وخبرة السوق.",
+    "mission": {
+      "title": "مهمتنا",
+      "text1": "إضفاء الطابع الديمقراطي على الفرص التجارية عبر منطقة مجلس التعاون الخليجي من خلال إنشاء سوق شفاف وآمن وفعال حيث يمكن لرجال الأعمال والمستثمرين اكتشاف وتقييم وتنفيذ شراكات تجارية مجدية.",
+      "text2": "نحن نؤمن أن كل فكرة تجارية عظيمة تستحق الشريك الاستثماري المناسب، وكل مستثمر يستحق الوصول إلى فرص عالية الإمكانات ومتحققة."
+    },
+    "vision": {
+      "title": "رؤيتنا",
+      "text1": "أن نصبح منصة المطابقة التجارية الرائدة في منطقة دول مجلس التعاون الخليجي، معززين النمو الاقتصادي والابتكار من خلال تسهيل مليارات الدولارات في المعاملات والشراكات التجارية الناجحة.",
+      "text2": "نتصور مستقبلاً حيث لا تحد الحدود الجغرافية من إمكانات الأعمال، وحيث تجد أفضل الأفكار الموارد التي تحتاجها لتحويل الصناعات والمجتمعات."
+    },
+    "whyChoose": {
+      "title": "لماذا تختار تيجارتي؟",
+      "subtitle": "تجمع منصتنا بين التكنولوجيا المتطورة والخبرة الإقليمية العميقة لتقدم قيمة لا مثيل لها لمستخدمينا."
+    },
+    "features": {
+      "verifiedListings": {
+        "title": "قوائم متحققة",
+        "description": "كل قائمة عمل تخضع لتحقق صارم لضمان الأصالة والجودة، حماية للمشترين والمستثمرين."
+      },
+      "expertNetwork": {
+        "title": "شبكة خبراء",
+        "description": "الوصول إلى شبكة منتقاة من مستشاري الأعمال والخبراء القانونيين والمتخصصين في الصناعة عبر منطقة دول مجلس التعاون الخليجي."
+      },
+      "regionalFocus": {
+        "title": "التركيز الإقليمي",
+        "description": "فهم عميق لأسواق دول مجلس التعاون الخليجي واللوائح والثقافة التجارية لتسهيل المعاملات عبر الحدود الناجحة."
+      },
+      "secureTransactions": {
+        "title": "معاملات آمنة",
+        "description": "بروتوكولات أمان متقدمة وخدمات ضمان لضمان التعاملات التجارية الآمنة والشفافة."
+      },
+      "multilingual": {
+        "title": "دعم متعدد اللغات",
+        "description": "المنصة متاحة بالإنجليزية والعربية مع دعم اللغة الأم للتواصل السلس."
+      },
+      "analytics": {
+        "title": "تحليلات متقدمة",
+        "description": "رؤى مدفوعة بالبيانات وذكاء السوق لمساعدتك على اتخاذ قرارات استثمار وأعمال مدروسة."
+      },
+      "smartMatching": {
+        "title": "مطابقة ذكية",
+        "description": "خوارزميات مدعومة بالذكاء الاصطناعي تطابق الأعمال مع أنسب المستثمرين حسب الصناعة والحجم والتوافق الاستراتيجي."
+      },
+      "successSupport": {
+        "title": "دعم النجاح",
+        "description": "دعم شامل طوال عملية المعاملة بأكملها، من الاتصال الأولي إلى إغلاق الصفقة وما بعدها."
+      },
+      "provenResults": {
+        "title": "نتائج مثبتة",
+        "description": "سجل حافل من المعاملات التجارية الناجحة والشراكات التي خلقت قيمة كبيرة لجميع الأطراف المعنية."
+      }
+    },
+    "stats": {
+      "title": "قيادة نمو الأعمال عبر دول مجلس التعاون الخليجي",
+      "subtitle": "منصتنا سهلت اتصالات مفيدة ومعاملات ناجحة عبر المنطقة.",
+      "activeListings": "قوائم نشطة",
+      "registeredUsers": "مستخدمين مسجلين",
+      "gccCountries": "دول مجلس التعاون الخليجي",
+      "successfulMatches": "مطابقات ناجحة"
+    },
+    "team": {
+      "title": "فريق القيادة لدينا",
+      "subtitle": "بقيادة محترفين ذوي خبرة مع خبرة عميقة في الأعمال والتكنولوجيا وسوق دول مجلس التعاون الخليجي.",
+      "description1": "يجمع فريقنا عقودًا من الخبرة في الخدمات المصرفية الاستثمارية والتكنولوجيا وتطوير الأعمال الإقليمية. نحن نفهم التحديات والفرص الفريدة في سوق دول مجلس التعاون الخليجي، ونحن ملتزمون بتزويد مستخدمينا بالأدوات والدعم الذي يحتاجونه للنجاح.",
+      "description2": "من مقرنا الرئيسي في مسقط إلى مكاتبنا الإقليمية عبر الخليج، نحن نبني مستقبل التعاون التجاري في الشرق الأوسط."
+    }
+  },
+  "contact": {
+    "title": "اتصل بنا",
+    "subtitle": "مستعد لتحويل رحلة عملك؟ تواصل مع فريق الخبراء لدينا واكتشف كيف يمكننا مساعدتك في تحقيق أهدافك.",
+    "getInTouch": "تواصل معنا",
+    "description": "نحن هنا لمساعدتك في التنقل في عالم الفرص التجارية المثير في منطقة دول مجلس التعاون الخليجي. سواء كنت تتطلع لشراء أو بيع أو الاستثمار في عمل تجاري، فريق خبرائنا مستعد لإرشادك.",
+    "info": {
+      "title": "معلومات الاتصال",
+      "subtitle": "نحن هنا لمساعدتك على النجاح. تواصل معنا من خلال أي من هذه القنوات.",
+      "location": {
+        "title": "زرنا",
+        "address": "واحة المعرفة مسقط\nمبنى 1، مكتب 205\nالرسيل، مسقط 124\nسلطنة عُمان"
+      },
+      "phone": {
+        "title": "اتصل بنا",
+        "main": "الرئيسي",
+        "whatsapp": "واتساب",
+        "tollfree": "المجاني"
+      },
+      "email": {
+        "title": "راسلنا بالبريد الإلكتروني",
+        "general": "عام",
+        "support": "الدعم",
+        "partnerships": "الشراكات"
+      },
+      "hours": {
+        "title": "ساعات العمل",
+        "sunday": "الأحد - الخميس: 8:00 صباحاً - 6:00 مساءً",
+        "friday": "الجمعة: 1:00 مساءً - 6:00 مساءً",
+        "saturday": "السبت: مغلق"
+      }
+    },
+    "officeAddress": "عنوان المكتب",
+    "phoneNumbers": "أرقام الهاتف",
+    "main": "الرئيسي",
+    "whatsapp": "واتساب",
+    "businessHours": "ساعات العمل",
+    "email": "عنوان البريد الإلكتروني",
+    "generalInquiries": "استفسارات عامة",
+    "support": "الدعم",
+    "partnerships": "الشراكات",
+    "quickSupport": {
+      "title": "دعم سريع",
+      "platformSupport": "دعم المنصة",
+      "liveChat": "محادثة مباشرة",
+      "scheduleDemo": "جدولة عرض توضيحي",
+      "bookNow": "احجز الآن",
+      "downloadBrochure": "تحميل البروشور",
+      "download": "تحميل"
+    },
+    "form": {
+      "title": "أرسل لنا رسالة",
+      "description": "املأ النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن.",
+      "name": "الاسم الكامل",
+      "namePlaceholder": "أدخل اسمك الكامل",
+      "email": "عنوان البريد الإلكتروني",
+      "emailPlaceholder": "أدخل عنوان بريدك الإلكتروني",
+      "subject": "الموضوع",
+      "subjectPlaceholder": "عن ماذا يتعلق هذا؟",
+      "message": "الرسالة",
+      "messagePlaceholder": "أخبرنا كيف يمكننا مساعدتك...",
+      "send": "إرسال الرسالة",
+      "sending": "جاري الإرسال...",
+      "successTitle": "تم إرسال الرسالة بنجاح!",
+      "successDescription": "شكراً لتواصلك معنا. سنعاود الاتصال بك خلال 24 ساعة.",
+      "errorTitle": "خطأ في إرسال الرسالة",
+      "errorDescription": "يرجى المحاولة مرة أخرى لاحقاً أو التواصل معنا مباشرة.",
+      "privacyAgreement": "بإرسال هذا النموذج، أنت توافق على سياسة الخصوصية وشروط الخدمة الخاصة بنا."
+    },
+    "hours": {
+      "sunday": "الأحد - الخميس: 8:00 صباحاً - 6:00 مساءً",
+      "friday": "الجمعة: 2:00 مساءً - 6:00 مساءً",
+      "saturday": "السبت: مغلق"
+    },
+    "faq": {
+      "title": "الأسئلة الشائعة",
+      "subtitle": "اعثر على إجابات سريعة للأسئلة الشائعة حول منصتنا وخدماتنا.",
+      "questions": {
+        "howToList": {
+          "question": "كيف أدرج عملي للبيع؟",
+          "answer": "ببساطة أنشئ حساباً، أكمل عملية التحقق، وقدم إدراج عملك مع معلومات مفصلة. سيقوم فريقنا بمراجعة وموافقة الإدراجات المؤهلة خلال 24-48 ساعة."
+        },
+        "businessTypes": {
+          "question": "ما أنواع الأعمال التي يمكنني العثور عليها؟",
+          "answer": "نعرض أعمال من جميع الصناعات بما في ذلك التجارة، التصنيع، التكنولوجيا، الرعاية الصحية، الضيافة، وأكثر. من الأعمال المحلية الصغيرة إلى المؤسسات الكبيرة عبر منطقة دول مجلس التعاون الخليجي."
+        },
+        "fees": {
+          "question": "هل هناك رسوم لاستخدام المنصة؟",
+          "answer": "التصفح الأساسي مجاني. نتقاضى رسوم نجاح فقط عند إتمام المعاملة من خلال منصتنا. الميزات المميزة والإدراجات المحسنة لها مستويات تسعير منفصلة."
+        },
+        "verification": {
+          "question": "كيف تتحققون من إدراجات الأعمال؟",
+          "answer": "نقوم بإجراء فحص شامل بما في ذلك التحقق من الوثائق، المراجعة المالية، وفحوصات الامتثال القانوني. فقط الأعمال المتحقق منها يتم عرضها على منصتنا."
+        }
+      }
+    },
+    "userRoles": {
+      "entrepreneur": "Entrepreneur",
+      "investor": "Investor",
+      "admin": "Admin",
+      "broker": "Broker"
+    }
+  },
+  "userRoles": {
+    "entrepreneur": "رائد أعمال",
+    "investor": "مستثمر",
+    "admin": "مدير",
+    "broker": "وسيط"
+  },
+  "faq": {
+    "title": "الأسئلة الشائعة",
+    "subtitle": "اعثر على إجابات للأسئلة الشائعة حول تيجارتي",
+    "questionsLabel": "أسئلة",
+    "categories": {
+      "general": "أسئلة عامة",
+      "business": "إدراجات الأعمال",
+      "investors": "للمستثمرين",
+      "account": "الحساب والتحقق",
+      "technical": "الدعم التقني"
+    },
+    "general": {
+      "whatIsTeejarti": {
+        "question": "ما هو تيجارتي؟",
+        "answer": "تيجارتي هو منصة رائدة لتطوير الأعمال تربط بين أصحاب الأعمال والمستثمرين عبر سلطنة عُمان ومنطقة دول مجلس التعاون الخليجي. توفر منصتنا مبيعات الأعمال والشراكات وفرص الاستثمار."
+      },
+      "howDoesItWork": {
+        "question": "كيف يعمل تيجارتي؟",
+        "answer": "يمكن لأصحاب الأعمال إدراج أعمالهم للبيع أو فرص الشراكة. يمكن للمستثمرين والمشترين المحتملين تصفح الإدراجات والتواصل مع البائعين وترتيب الاجتماعات. توفر منصتنا خدمات تواصل آمنة والتحقق."
+      },
+      "isTeejartieFree": {
+        "question": "هل استخدام تيجارتي مجاني؟",
+        "answer": "نعم، تصفح الإدراجات وميزات الحساب الأساسية مجانية. نقدم خدمات مميزة لزيادة رؤية الإدراجات وميزات إضافية للبائعين والمستثمرين الجادين."
+      }
+    },
+    "business": {
+      "howToListBusiness": {
+        "question": "كيف أدرج عملي في تيجارتي؟",
+        "answer": "أنشئ حساباً، أكمل عملية التحقق من الهوية، ثم استخدم ميزة \"أدرج عملك\". قدم معلومات مفصلة عن عملك، بما في ذلك البيانات المالية والموقع والسعر المطلوب."
+      },
+      "whatDocumentsNeeded": {
+        "question": "ما الوثائق التي أحتاجها لإدراج عملي؟",
+        "answer": "تحتاج عادة إلى وثائق تسجيل العمل والبيانات المالية والإقرارات الضريبية وأي تراخيص ذات صلة. ستوجهك عملية التحقق من الهوية خلال المتطلبات المحددة."
+      },
+      "howLongListingActive": {
+        "question": "كم من الوقت سيبقى إدراجي نشطاً؟",
+        "answer": "تبقى الإدراجات العادية نشطة لمدة 6 أشهر ويمكن تجديدها. قد تتمتع الإدراجات المميزة بمدد ممتدة وميزات رؤية محسنة."
+      },
+      "canEditListing": {
+        "question": "هل يمكنني تعديل إدراج عملي بعد النشر؟",
+        "answer": "نعم، يمكنك تعديل إدراجك في أي وقت من خلال لوحة التحكم الخاصة بك. يتم مراجعة التغييرات وتحديثها خلال 24 ساعة للحفاظ على جودة الإدراج."
+      }
+    },
+    "investors": {
+      "howToInvest": {
+        "question": "كيف أبدأ الاستثمار من خلال تيجارتي؟",
+        "answer": "أنشئ حساب مستثمر، أكمل التحقق من الهوية، وتصفح الفرص المتاحة. يمكنك التصفية حسب الصناعة والموقع ومبلغ الاستثمار ونوع العمل للعثور على المطابقات المناسبة."
+      },
+      "minimumInvestment": {
+        "question": "هل هناك حد أدنى لمبلغ الاستثمار؟",
+        "answer": "لا، لا يوجد حد أدنى مفروض من المنصة. تختلف مبالغ الاستثمار حسب العمل ويحددها البائعون الفرديون. يمكنك العثور على فرص تتراوح من الشركات الناشئة الصغيرة إلى المؤسسات الراسخة."
+      },
+      "investorProtection": {
+        "question": "ما الحماية المتاحة للمستثمرين؟",
+        "answer": "نوفر التحقق من الهوية لجميع المستخدمين وقنوات تواصل آمنة وإرشادات حول العناية الواجبة. ومع ذلك، جميع قرارات الاستثمار مستقلة، ونوصي بالحصول على مشورة قانونية ومالية مهنية."
+      }
+    },
+    "account": {
+      "kycProcess": {
+        "question": "ما هي عملية التحقق من الهوية؟",
+        "answer": "تتضمن عملية التحقق من الهوية (KYC) تقديم وثائق الهوية وإثبات العنوان وأوراق اعتماد العمل ذات الصلة. هذا يضمن أمان المنصة ويبني الثقة بين المستخدمين."
+      },
+      "kycHowLong": {
+        "question": "كم من الوقت تستغرق عملية التحقق من الهوية؟",
+        "answer": "عادة ما تستغرق عملية التحقق من الهوية 1-3 أيام عمل. قد تؤدي الحالات المعقدة أو طلبات الوثائق الإضافية إلى إطالة هذا الإطار الزمني. ستتلقى تحديثات بالبريد الإلكتروني حول حالة التحقق."
+      },
+      "forgotPassword": {
+        "question": "نسيت كلمة المرور. كيف يمكنني إعادة تعيينها؟",
+        "answer": "انقر على \"نسيت كلمة المرور\" في صفحة تسجيل الدخول وأدخل عنوان بريدك الإلكتروني. ستتلقى رابط إعادة تعيين كلمة المرور خلال بضع دقائق. تحقق من مجلد الرسائل غير المرغوب فيها إذا لم تره."
+      }
+    },
+    "technical": {
+      "supportedBrowsers": {
+        "question": "ما المتصفحات المدعومة؟",
+        "answer": "يعمل تيجارتي بشكل أفضل على المتصفحات الحديثة بما في ذلك Chrome وFirefox وSafari وEdge. نوصي بالحفاظ على تحديث متصفحك للحصول على أفضل تجربة."
+      },
+      "mobileApp": {
+        "question": "هل يوجد تطبيق محمول؟",
+        "answer": "حالياً، تيجارتي هو منصة ويب محسنة لمتصفحات الهواتف المحمولة. تطبيق محمول مخصص قيد التطوير وسيكون متاحاً قريباً."
+      },
+      "dataSecurity": {
+        "question": "كيف يتم حماية بياناتي؟",
+        "answer": "نستخدم التشفير المعياري في الصناعة والخوادم الآمنة ونتبع بروتوكولات حماية البيانات الصارمة. لن يتم مشاركة معلوماتك الشخصية والتجارية دون موافقتك الصريحة."
+      }
+    },
+    "stillNeedHelp": "ما زلت بحاجة لمساعدة؟",
+    "contactSupport": "لا يمكنك العثور على الإجابة التي تبحث عنها؟ فريق الدعم لدينا هنا للمساعدة.",
+    "contactUs": "اتصل بالدعم",
+    "emailSupport": "دعم البريد الإلكتروني"
+  },
+  "cookies": {
+    "title": "سياسة ملفات تعريف الارتباط",
+    "subtitle": "كيف نستخدم ملفات تعريف الارتباط والتقنيات المماثلة في تيجارتي",
+    "lastUpdated": "آخر تحديث: ٢١ يناير ٢٠٢٥",
+    "what": {
+      "title": "ما هي ملفات تعريف الارتباط؟",
+      "content": "ملفات تعريف الارتباط هي ملفات نصية صغيرة توضع على جهازك (الكمبيوتر أو الهاتف الذكي أو الجهاز اللوحي) عند زيارة موقعنا الإلكتروني. تساعدنا في تقديم تجربة أفضل لك من خلال تذكر تفضيلاتك وتمكين ميزات معينة في منصتنا."
+    },
+    "types": {
+      "title": "أنواع ملفات تعريف الارتباط التي نستخدمها",
+      "essential": {
+        "title": "ملفات تعريف الارتباط الأساسية",
+        "description": "هذه ملفات تعريف الارتباط ضرورية لعمل الموقع بشكل صحيح. تمكن الميزات الأساسية مثل التنقل في الصفحات والوصول إلى المناطق الآمنة وإرسال النماذج.",
+        "examples": "أمثلة:",
+        "session": "إدارة الجلسات والمصادقة",
+        "security": "رموز الأمان وحماية CSRF",
+        "preferences": "تفضيلات اللغة وإمكانية الوصول"
+      },
+      "functional": {
+        "title": "ملفات تعريف الارتباط الوظيفية",
+        "description": "تعزز هذه ملفات تعريف الارتباط تجربتك من خلال تذكر اختياراتك وتوفير ميزات شخصية.",
+        "examples": "أمثلة:",
+        "saved": "القوائم المحفوظة وتفضيلات البحث",
+        "language": "إعدادات اللغة والمنطقة",
+        "layout": "تفضيلات واجهة المستخدم"
+      },
+      "analytics": {
+        "title": "ملفات تعريف الارتباط التحليلية",
+        "description": "تساعدنا هذه ملفات تعريف الارتباط في فهم كيفية استخدام الزوار لموقعنا، مما يسمح لنا بتحسين خدماتنا وتجربة المستخدم.",
+        "examples": "أمثلة:",
+        "usage": "عرض الصفحات وتتبع تفاعل المستخدم",
+        "performance": "مراقبة أداء الموقع",
+        "errors": "تتبع الأخطاء وإصلاحها"
+      }
+    },
+    "howWeUse": {
+      "title": "كيف نستخدم ملفات تعريف الارتباط",
+      "authentication": "للحفاظ على تسجيل دخولك وأمانك أثناء جلستك",
+      "preferences": "لتذكر تفضيلات اللغة والعرض",
+      "functionality": "لتوفير ميزات شخصية مثل القوائم المحفوظة",
+      "analytics": "لتحليل استخدام الموقع وتحسين خدماتنا",
+      "security": "للحماية من الاحتيال والحفاظ على أمان المنصة"
+    },
+    "managing": {
+      "title": "إدارة تفضيلات ملفات تعريف الارتباط",
+      "content": "لديك السيطرة على ملفات تعريف الارتباط التي تقبلها. إليك خياراتك:",
+      "browser": {
+        "title": "إعدادات المتصفح",
+        "content": "يمكنك التحكم في ملفات تعريف الارتباط من خلال إعدادات المتصفح. تسمح معظم المتصفحات بحظر ملفات تعريف الارتباط أو حذفها أو تلقي إشعارات عند تعيينها."
+      },
+      "platform": {
+        "title": "إعدادات المنصة",
+        "content": "في إعدادات حساب تيجارتي، يمكنك التحكم في ملفات تعريف الارتباط الوظيفية المتعلقة بالتخصيص والتفضيلات المحفوظة."
+      },
+      "note": {
+        "title": "ملاحظة مهمة:",
+        "content": "تعطيل ملفات تعريف الارتباط الأساسية قد يؤثر على وظائف موقعنا ويمنعك من استخدام ميزات معينة."
+      }
+    },
+    "thirdParty": {
+      "title": "خدمات الطرف الثالث",
+      "content": "قد نستخدم خدمات طرف ثالث تضع ملفات تعريف الارتباط الخاصة بها. تشمل هذه الخدمات:",
+      "analytics": "خدمات التحليل لمراقبة أداء الموقع",
+      "security": "خدمات الأمان للحماية من الاحتيال",
+      "support": "خدمات دعم العملاء والدردشة"
+    },
+    "updates": {
+      "title": "تحديثات هذه السياسة",
+      "content": "قد نحدث سياسة ملفات تعريف الارتباط هذه من وقت لآخر لتعكس التغييرات في ممارساتنا أو القوانين المعمول بها. سنخطرك بأي تغييرات مهمة عن طريق نشر السياسة المحدثة على موقعنا وتحديث تاريخ \"آخر تحديث\"."
+    },
+    "contact": {
+      "title": "أسئلة حول ملفات تعريف الارتباط",
+      "content": "إذا كان لديك أي أسئلة حول استخدامنا لملفات تعريف الارتباط، يرجى الاتصال بنا:",
+      "email": "البريد الإلكتروني:",
+      "phone": "الهاتف:",
+      "address": "العنوان:"
+    }
+  },
+  "accessibility": {
+    "title": "بيان إمكانية الوصول",
+    "subtitle": "التزامنا بجعل تيجارتي في متناول الجميع",
+    "commitment": {
+      "title": "التزامنا",
+      "content": "تلتزم تيجارتي بضمان إمكانية الوصول الرقمي للأشخاص ذوي الإعاقة. نحن نحسن باستمرار تجربة المستخدم للجميع ونطبق معايير إمكانية الوصول ذات الصلة."
+    },
+    "standards": {
+      "title": "معايير إمكانية الوصول",
+      "content": "تهدف منصتنا إلى الامتثال لإرشادات إمكانية الوصول لمحتوى الويب (WCAG) ٢.١ المستوى AA. تساعد هذه الإرشادات في جعل محتوى الويب أكثر سهولة للأشخاص ذوي الإعاقة."
+    },
+    "features": {
+      "title": "ميزات إمكانية الوصول",
+      "keyboard": {
+        "title": "التنقل بلوحة المفاتيح",
+        "description": "إمكانية وصول كاملة بلوحة المفاتيح مع ترتيب تبويب منطقي ومؤشرات تركيز مرئية."
+      },
+      "screen": {
+        "title": "دعم قارئ الشاشة",
+        "description": "HTML دلالي وتسميات ARIA لتوافق محسن مع قارئ الشاشة."
+      },
+      "contrast": {
+        "title": "التباين العالي",
+        "description": "تركيبات ألوان تلبي متطلبات نسبة التباين WCAG."
+      },
+      "text": {
+        "title": "نص قابل للتوسيع",
+        "description": "يمكن تغيير حجم النص حتى ٢٠٠٪ دون فقدان الوظائف أو المحتوى."
+      },
+      "target": {
+        "title": "أهداف لمس كبيرة",
+        "description": "العناصر التفاعلية بحجم مناسب للتفاعل السهل."
+      },
+      "images": {
+        "title": "أوصاف الصور",
+        "description": "نص بديل مقدم لجميع الصور والرسوم ذات المعنى."
+      }
+    },
+    "efforts": {
+      "title": "الجهود المستمرة",
+      "testing": "اختبار إمكانية الوصول المنتظم بأدوات آلية ومراجعة يدوية",
+      "feedback": "جمع وتطبيق ملاحظات المستخدمين حول حواجز إمكانية الوصول",
+      "training": "تدريب الفريق على أفضل ممارسات إمكانية الوصول والتصميم الشامل",
+      "updates": "تحديثات مستمرة لتحسين الامتثال لمعايير إمكانية الوصول",
+      "external": "العمل مع استشاريي إمكانية الوصول للتقييم الخبير"
+    },
+    "browsers": {
+      "title": "المتصفحات المدعومة والتقنيات المساعدة",
+      "content": "تم تصميم تيجارتي للعمل مع التقنيات المساعدة التالية:",
+      "readers": {
+        "title": "قارئات الشاشة"
+      },
+      "browsers": {
+        "title": "المتصفحات"
+      }
+    },
+    "feedback": {
+      "title": "التعليقات والدعم",
+      "content": "نرحب بملاحظاتك حول إمكانية الوصول في تيجارتي. إذا واجهت أي حواجز في إمكانية الوصول أو لديك اقتراحات للتحسين، يرجى الاتصال بنا:",
+      "email": {
+        "title": "البريد الإلكتروني"
+      },
+      "phone": {
+        "title": "الهاتف"
+      },
+      "response": "نهدف إلى الرد على ملاحظات إمكانية الوصول خلال ٤٨ ساعة وسنعمل معك لتوفير المعلومات أو الميزة التي تحتاجها."
+    },
+    "assessment": {
+      "title": "تقييم إمكانية الوصول",
+      "content": "تمت مراجعة بيان إمكانية الوصول هذا آخر مرة في ٢١ يناير ٢٠٢٥. نجري تقييمات مستمرة لإمكانية الوصول ونحدث هذا البيان مع إجراء تحسينات على منصتنا."
+    }
+  },
+  "sitemap": {
+    "title": "خريطة الموقع",
+    "subtitle": "تصفح جميع صفحات وميزات منصة تيجارتي",
+    "main": {
+      "title": "الصفحات الرئيسية"
+    },
+    "company": {
+      "title": "الشركة",
+      "howItWorks": "كيف تعمل"
+    },
+    "account": {
+      "title": "حساب المستخدم",
+      "login": "تسجيل الدخول / التسجيل",
+      "dashboard": "لوحة التحكم",
+      "profile": "الملف الشخصي",
+      "saved": "القوائم المحفوظة"
+    },
+    "support": {
+      "title": "الدعم والموارد",
+      "faq": "الأسئلة الشائعة"
+    },
+    "legal": {
+      "title": "القانونية والسياسات"
+    },
+    "other": {
+      "title": "أخرى"
+    },
+    "stats": {
+      "title": "نظرة عامة على المنصة",
+      "pages": "إجمالي الصفحات",
+      "categories": "الفئات الرئيسية",
+      "languages": "اللغات المدعومة",
+      "mobile": "متجاوب مع الهاتف المحمول"
+    },
+    "contact": {
+      "title": "تحتاج مساعدة في العثور على شيء؟",
+      "description": "إذا لم تتمكن من العثور على ما تبحث عنه، فريق الدعم لدينا هنا للمساعدة.",
+      "button": "اتصل بالدعم"
+    },
+    "help": {
+      "button": "زيارة مركز المساعدة"
+    }
+  },
+  "createListing": {
+    "page": {
+      "title": "إنشاء قائمة أعمال",
+      "subtitle": "اعرض عملك للبيع أو الاستثمار أو الشراكة"
+    },
+    "form": {
+      "titles": {
+        "listingInformation": "معلومات القائمة",
+        "additionalDetails": "تفاصيل إضافية للأعمال (اختيارية)"
+      },
+      "descriptions": {
+        "provideDetails": "قدم تفاصيل حول فرصتك التجارية"
+      },
+      "labels": {
+        "listingTitle": "عنوان القائمة*",
+        "industry": "الصناعة*",
+        "location": "الموقع*",
+        "transactionType": "نوع المعاملة*",
+        "currency": "العملة",
+        "askingPrice": "السعر المطلوب*",
+        "businessDescription": "وصف العمل*",
+        "businessImages": "صور العمل",
+        "currentPriceRevenue": "السعر/الإيراد الحالي (اختياري)",
+        "businessEstablished": "تأسيس العمل (اختياري)",
+        "numberOfEmployees": "عدد الموظفين",
+        "yearEstablished": "سنة التأسيس",
+        "saleTimeframe": "الجدول الزمني للبيع",
+        "monthlyRevenue": "الإيراد الشهري",
+        "monthlyProfit": "الربح الشهري",
+        "reasonForSelling": "سبب البيع",
+        "assetsIncluded": "الأصول المشمولة",
+        "liabilities": "الالتزامات",
+        "trainingSupport": "التدريب والدعم",
+        "postSaleSupport": "الدعم بعد البيع",
+        "businessPlan": "خطة العمل (اختيارية)",
+        "financialInformation": "المعلومات المالية (اختيارية)"
+      },
+      "placeholders": {
+        "titleExample": "مثال: مطعم راسخ في مسقط",
+        "titleExampleAr": "مثال: مطعم راسخ في مسقط",
+        "selectIndustry": "اختر فئة الصناعة",
+        "selectLocation": "اختر الموقع",
+        "selectTransactionType": "اختر نوع المعاملة",
+        "currencyDefault": "ريال عماني",
+        "priceDefault": "0",
+        "descriptionExample": "قدم وصفاً مفصلاً لعملك التجاري...",
+        "descriptionExampleAr": "قدم وصفاً مفصلاً لعملك التجاري...",
+        "establishedExample": "مثال: 2018 أو يناير 2018",
+        "timeframeExample": "مثال: 3-6 أشهر",
+        "reasonExample": "التقاعد، الانتقال، مشاريع جديدة...",
+        "assetsExample": "المعدات، المخزون، العقارات، المركبات...",
+        "liabilitiesExample": "الديون، القروض، الالتزامات...",
+        "trainingExample": "فترة التدريب، الدعم المستمر المقدم...",
+        "supportExample": "الاستشارة، مساعدة الانتقال، الضمانات...",
+        "businessPlanExample": "قدم تفاصيل حول خطة عملك، استراتيجية النمو، تحليل السوق...",
+        "financialsExample": "شارك النقاط المالية المهمة، الإيرادات، هوامش الربح، الأصول...",
+        "yearExample": "2020"
+      },
+      "helpText": {
+        "titleHelp": "أنشئ عنوانًا وصفيًا لقائمة عملك",
+        "autoTranslateToArabic": " (سيتم ترجمته للعربية تلقائيًا)",
+        "autoTranslateToEnglish": " (سيتم ترجمته للإنجليزية تلقائيًا)",
+        "descriptionHelp": "أدرج معلومات أساسية مثل تاريخ الأعمال والإيرادات والأصول وسبب البيع، إلخ.",
+        "descriptionHelpAr": "أدرج معلومات أساسية مثل تاريخ الأعمال والإيرادات والأصول وسبب البيع ، إلخ.",
+        "imagesHelp": "ارفع حتى 6 صور عالية الجودة لعملك. الصورة الأولى ستُستخدم كصورة مميزة.",
+        "currentPriceHelp": "سعر العمل الحالي أو الإيراد السنوي",
+        "establishedHelp": "متى تم تأسيس عملك؟",
+        "timeframeHelp": "متى تريد إكمال البيع",
+        "monthlyRevenueHelp": "متوسط الإيراد الشهري (اختياري)",
+        "monthlyProfitHelp": "متوسط الربح الشهري (اختياري)",
+        "reasonHelp": "ساعد المشترين على فهم دافعك",
+        "assetsHelp": "الأصول المادية والرقمية المشمولة في البيع",
+        "liabilitiesHelp": "الديون أو الالتزامات المستحقة",
+        "trainingHelp": "ما التدريب والدعم الذي ستقدمه؟",
+        "supportHelp": "الدعم الإضافي بعد البيع",
+        "businessPlanHelp": "أدرج نموذج العمل، السوق المستهدف، المزايا التنافسية، توقعات النمو",
+        "financialsHelp": "أدرج المقاييس المالية الرئيسية، اتجاهات الإيرادات، الأصول، الالتزامات. احتفظ بالتفاصيل السرية خاصة."
+      }
+    },
+    "guidelines": {
+      "title": "إرشادات القائمة",
+      "items": {
+        "honest": "كن صادقًا وشفافًا حول تفاصيل عملك",
+        "includeFinancials": "أدرج معلومات مالية أساسية يحتاجها المشترون/المستثمرون",
+        "highlightUSP": "سلط الضوء على نقاط البيع الفريدة لعملك",
+        "provideContact": "قدم معلومات اتصال واضحة للاستفسارات",
+        "noConfidential": "لا تدرج معلومات سرية في القائمة العامة"
+      }
+    },
+    "nextSteps": {
+      "title": "الخطوات التالية",
+      "steps": {
+        "create": {
+          "title": "أنشئ قائمتك",
+          "description": "املأ جميع المعلومات المطلوبة حول عملك"
+        },
+        "verification": {
+          "title": "عملية التحقق",
+          "description": "سيراجع فريقنا قائمتك"
+        },
+        "connect": {
+          "title": "تواصل مع المشترين",
+          "description": "رد على الاستفسارات من الأطراف المهتمة"
+        },
+        "close": {
+          "title": "أغلق صفقتك",
+          "description": "اكمل معاملة عملك"
+        }
+      }
+    },
+    "actions": {
+      "cancel": "إلغاء",
+      "create": "إنشاء قائمة",
+      "creating": "جاري الإنشاء..."
+    },
+    "messages": {
+      "success": {
+        "title": "تم إنشاء القائمة",
+        "description": "تم إنشاء وترجمة قائمة عملك بنجاح."
+      },
+      "error": {
+        "title": "خطأ",
+        "description": "فشل في إنشاء القائمة"
+      }
+    }
+  },
+  "messages": {
+    "title": "الرسائل",
+    "subtitle": "تواصل مع المشترين والبائعين",
+    "searchPlaceholder": "البحث في المحادثات...",
+    "noConversations": "لا توجد محادثات بعد",
+    "startConversation": "تواصل مع بائع لبدء المحادثة",
+    "selectConversation": "اختر محادثة",
+    "selectConversationDesc": "اختر محادثة من القائمة لبدء الدردشة",
+    "noMessages": "لا توجد رسائل بعد",
+    "typePlaceholder": "اكتب رسالة..."
+  }
+}

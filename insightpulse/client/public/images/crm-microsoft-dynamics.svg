@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Symbol.svg" clip-path="url(#clip0_0_170)">
+<path id="Vector" d="M11.4057 11.4038H0V0H11.4057V11.4038Z" fill="var(--fill-0, #F1511B)"/>
+<path id="Vector_2" d="M24.0004 11.4038H12.5938V0H23.9994V11.4038H24.0004Z" fill="var(--fill-0, #80CC28)"/>
+<path id="Vector_3" d="M11.4057 23.9995H0V12.5957H11.4057V23.9995Z" fill="var(--fill-0, #00ADEF)"/>
+<path id="Vector_4" d="M24.0004 23.9995H12.5938V12.5957H23.9994V23.9995H24.0004Z" fill="var(--fill-0, #FBBC09)"/>
+</g>
+<defs>
+<clipPath id="clip0_0_170">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

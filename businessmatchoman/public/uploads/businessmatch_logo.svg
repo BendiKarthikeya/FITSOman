@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle representing unity/connection -->
+  <circle cx="30" cy="30" r="25" fill="#1e4d72" opacity="0.1"/>
+  
+  <!-- Main connecting elements - representing business matching -->
+  <g transform="translate(8, 8)">
+    <!-- Left business building icon -->
+    <rect x="2" y="20" width="14" height="22" fill="#1e4d72" rx="2"/>
+    <rect x="4" y="24" width="3" height="3" fill="white"/>
+    <rect x="9" y="24" width="3" height="3" fill="white"/>
+    <rect x="4" y="30" width="3" height="3" fill="white"/>
+    <rect x="9" y="30" width="3" height="3" fill="white"/>
+    <rect x="4" y="36" width="3" height="3" fill="white"/>
+    <rect x="9" y="36" width="3" height="3" fill="white"/>
+    
+    <!-- Right business building icon -->
+    <rect x="30" y="18" width="16" height="24" fill="#2563eb" rx="2"/>
+    <rect x="32" y="22" width="3" height="3" fill="white"/>
+    <rect x="37" y="22" width="3" height="3" fill="white"/>
+    <rect x="42" y="22" width="3" height="3" fill="white"/>
+    <rect x="32" y="28" width="3" height="3" fill="white"/>
+    <rect x="37" y="28" width="3" height="3" fill="white"/>
+    <rect x="42" y="28" width="3" height="3" fill="white"/>
+    <rect x="32" y="34" width="3" height="3" fill="white"/>
+    <rect x="37" y="34" width="3" height="3" fill="white"/>
+    <rect x="42" y="34" width="3" height="3" fill="white"/>
+    
+    <!-- Connecting bridge/handshake symbol -->
+    <path d="M16 30 L30 30" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="23" cy="30" r="3" fill="#d97706"/>
+    
+    <!-- Growth arrows -->
+    <path d="M10 15 L10 10 M7 13 L10 10 L13 13" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M38 12 L38 7 M35 10 L38 7 L41 10" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Company name -->
+  <g transform="translate(70, 0)">
+    <!-- BusinessMatch text -->
+    <text x="0" y="25" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#1e4d72">Business</text>
+    <text x="75" y="25" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#2563eb">Match</text>
+    
+    <!-- Oman text -->
+    <text x="20" y="45" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#6b7280" letter-spacing="2px">OMAN</text>
+    
+    <!-- Decorative underline -->
+    <line x1="0" y1="50" x2="90" y2="50" stroke="#d97706" stroke-width="2"/>
+  </g>
+  
+  <!-- Arabic text (BusinessMatch in Arabic) -->
+  <g transform="translate(70, 0)">
+    <text x="95" y="25" font-family="Noto Kufi Arabic, sans-serif" font-weight="600" font-size="14" fill="#1e4d72" direction="rtl">الأعمال</text>
+  </g>
+</svg>

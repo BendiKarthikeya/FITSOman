@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Python environments
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+
+# Secrets / local environment (templates like .env.example are kept)
+.env
+.env.local
+.env.test
+.env.*.local
+secrets/
+dburl.txt
+
+# Databases
+*.sqlite3
+*.sqlite3-journal
+
+# Build output
+dist/
+build/
+
+# Caches
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+*.log

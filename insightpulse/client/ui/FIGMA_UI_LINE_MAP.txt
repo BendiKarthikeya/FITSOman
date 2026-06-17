@@ -1,0 +1,66 @@
+Figma → UI Coverage Map
+Generated from content.txt and ui source files
+
+A) Top-level Figma frames (line x-y in content.txt)
+- content.txt:2-21 | Group 1 (4:1169) | NO DIRECT PAGE
+- content.txt:22-74 | Login (4:1185) -> LoginPage | IMPLEMENTED
+- content.txt:75-440 | landing page (4:1219) -> LandingPage | IMPLEMENTED
+- content.txt:441-1029 | Dashboard (4:1441) -> DashboardPage | IMPLEMENTED
+- content.txt:1030-1606 | Analytics (4:1804) -> AnalyticsPage | IMPLEMENTED
+- content.txt:1607-2345 | Surveys (4:2175) -> SurveysPage | IMPLEMENTED
+- content.txt:2346-2488 | Surveys/New  (4:2619) -> SurveyBuilderPage | IMPLEMENTED
+- content.txt:2489-2602 | KPI Cards (4:2720) -> KpiCardsPage | IMPLEMENTED
+- content.txt:2603-2905 | Design InsightPulse Landing Page (4:2791) -> LandingPage | IMPLEMENTED
+- content.txt:2906-3451 | Design InsightPulse Landing Page (4:3024) -> LandingPage | IMPLEMENTED
+- content.txt:3452-4151 | Landing Image (4:3461) -> LandingPage | IMPLEMENTED
+- content.txt:4152-4287 | Container (4:4051) | NO DIRECT PAGE
+- content.txt:4288-4373 | Action Planning (4:4135) -> ActionPlanningPage | IMPLEMENTED
+- content.txt:4374-4626 | Reports (4:4192) -> ReportsPage | IMPLEMENTED
+- content.txt:4627-5193 | Team Insights (4:4346) -> TeamInsightsPage | IMPLEMENTED
+- content.txt:5194-5233 | Survey Desktop view (4:4712) -> SurveyDesktopViewPage | IMPLEMENTED
+- content.txt:5234-5306 | Settings (4:4739) -> SettingsPage | IMPLEMENTED
+- content.txt:5307-5379 | Settings/CRM (4:4783) -> SettingsCrmPage | IMPLEMENTED
+- content.txt:5380-5510 | Settings/Security (4:4827) -> SettingsSecurityPage | IMPLEMENTED
+- content.txt:5511-5784 | Profile (4:4906) -> ProfilePage | IMPLEMENTED
+
+B) Implemented UI pages (symbol line x-y)
+- ui/pages/LoginPage.tsx:6-136 | LoginPage
+- ui/pages/LandingPage.tsx:45-161 | LandingPage
+- ui/pages/DashboardPage.tsx:31-238 | DashboardPage
+- ui/pages/AnalyticsPage.tsx:32-149 | AnalyticsPage
+- ui/pages/SurveysPage.tsx:43-133 | SurveysPage
+- ui/pages/SurveyBuilderPage.tsx:19-126 | SurveyBuilderPage
+- ui/pages/KpiCardsPage.tsx:5-66 | KpiCardsPage
+- ui/pages/ActionPlanningPage.tsx:29-77 | ActionPlanningPage
+- ui/pages/ReportsPage.tsx:22-102 | ReportsPage
+- ui/pages/TeamInsightsPage.tsx:23-82 | TeamInsightsPage
+- ui/pages/SurveyDesktopViewPage.tsx:22-74 | SurveyDesktopViewPage
+- ui/pages/SettingsPage.tsx:17-57 | SettingsPage
+- ui/pages/SettingsCrmPage.tsx:17-51 | SettingsCrmPage
+- ui/pages/SettingsSecurityPage.tsx:17-62 | SettingsSecurityPage
+- ui/pages/ProfilePage.tsx:17-50 | ProfilePage
+
+C) Implemented reusable UI components (symbol line x-y)
+- ui/components/Badge.tsx:10-27 | Badge
+- ui/components/Button.tsx:9-39 | Button
+- ui/components/Card.tsx:7-21 | Card
+- ui/components/Card.tsx:22-33 | CardHeader
+- ui/components/Card.tsx:34-45 | CardTitle
+- ui/components/Card.tsx:46-52 | CardContent
+- ui/components/Checkbox.tsx:10-29 | Checkbox
+- ui/components/DateRangePicker.tsx:11-30 | DateRangePicker
+- ui/components/Input.tsx:9-35 | Input
+- ui/components/KanbanCard.tsx:12-35 | KanbanCard
+- ui/components/MetricCard.tsx:17-48 | MetricCard
+- ui/components/Select.tsx:16-52 | Select
+- ui/components/Table.tsx:3-6 | Table
+- ui/components/Table.tsx:7-10 | TableHeader
+- ui/components/Table.tsx:11-14 | TableBody
+- ui/components/Table.tsx:15-18 | TableRow
+- ui/components/Table.tsx:19-22 | TableHead
+- ui/components/Table.tsx:23-25 | TableCell
+- ui/components/Tabs.tsx:10-32 | Tabs
+
+D) Coverage notes
+- Group 1 and Container are treated as asset/structure frames, not app pages.
+- Two Design InsightPulse Landing Page frames and Landing Image are consolidated into LandingPage implementation.

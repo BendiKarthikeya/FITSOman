@@ -1,0 +1,77 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sandGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4E4BC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#skyGradient)"/>
+  <rect y="200" width="400" height="100" fill="url(#sandGradient)"/>
+  
+  <!-- Mountains in background -->
+  <polygon points="0,180 80,120 160,180" fill="#8B7355" opacity="0.6"/>
+  <polygon points="120,180 220,100 320,180" fill="#A0826D" opacity="0.7"/>
+  
+  <!-- Date palm trees -->
+  <g transform="translate(80,120)">
+    <!-- Palm trunk -->
+    <rect x="18" y="40" width="14" height="80" fill="#8B4513" rx="7"/>
+    <!-- Palm fronds -->
+    <ellipse cx="25" cy="45" rx="30" ry="8" fill="#228B22" transform="rotate(-20 25 45)"/>
+    <ellipse cx="25" cy="45" rx="30" ry="8" fill="#32CD32" transform="rotate(20 25 45)"/>
+    <ellipse cx="25" cy="45" rx="30" ry="8" fill="#228B22" transform="rotate(0 25 45)"/>
+    <ellipse cx="25" cy="45" rx="30" ry="8" fill="#32CD32" transform="rotate(40 25 45)"/>
+    <ellipse cx="25" cy="45" rx="30" ry="8" fill="#228B22" transform="rotate(-40 25 45)"/>
+    <!-- Dates -->
+    <circle cx="15" cy="55" r="2" fill="#8B4513"/>
+    <circle cx="35" cy="50" r="2" fill="#A0522D"/>
+    <circle cx="20" cy="48" r="2" fill="#8B4513"/>
+    <circle cx="30" cy="52" r="2" fill="#A0522D"/>
+  </g>
+  
+  <g transform="translate(200,110)">
+    <rect x="18" y="40" width="14" height="90" fill="#8B4513" rx="7"/>
+    <ellipse cx="25" cy="45" rx="35" ry="10" fill="#228B22" transform="rotate(-15 25 45)"/>
+    <ellipse cx="25" cy="45" rx="35" ry="10" fill="#32CD32" transform="rotate(25 25 45)"/>
+    <ellipse cx="25" cy="45" rx="35" ry="10" fill="#228B22" transform="rotate(5 25 45)"/>
+    <ellipse cx="25" cy="45" rx="35" ry="10" fill="#32CD32" transform="rotate(45 25 45)"/>
+    <ellipse cx="25" cy="45" rx="35" ry="10" fill="#228B22" transform="rotate(-35 25 45)"/>
+    <circle cx="12" cy="58" r="2" fill="#8B4513"/>
+    <circle cx="38" cy="52" r="2" fill="#A0522D"/>
+    <circle cx="18" cy="50" r="2" fill="#8B4513"/>
+    <circle cx="32" cy="55" r="2" fill="#A0522D"/>
+  </g>
+  
+  <g transform="translate(320,125)">
+    <rect x="18" y="40" width="14" height="75" fill="#8B4513" rx="7"/>
+    <ellipse cx="25" cy="45" rx="28" ry="9" fill="#228B22" transform="rotate(-25 25 45)"/>
+    <ellipse cx="25" cy="45" rx="28" ry="9" fill="#32CD32" transform="rotate(15 25 45)"/>
+    <ellipse cx="25" cy="45" rx="28" ry="9" fill="#228B22" transform="rotate(-5 25 45)"/>
+    <ellipse cx="25" cy="45" rx="28" ry="9" fill="#32CD32" transform="rotate(35 25 45)"/>
+    <circle cx="17" cy="52" r="2" fill="#8B4513"/>
+    <circle cx="33" cy="48" r="2" fill="#A0522D"/>
+  </g>
+  
+  <!-- Traditional Omani building -->
+  <rect x="30" y="230" width="60" height="40" fill="#D2B48C"/>
+  <polygon points="25,230 95,230 85,210 35,210" fill="#8B4513"/>
+  <rect x="45" y="245" width="12" height="25" fill="#654321"/>
+  <rect x="65" y="240" width="8" height="8" fill="#4169E1"/>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="50" r="25" fill="#FFD700"/>
+  <line x1="330" y1="30" x2="320" y2="20" stroke="#FFD700" stroke-width="3"/>
+  <line x1="370" y1="30" x2="380" y2="20" stroke="#FFD700" stroke-width="3"/>
+  <line x1="375" y1="50" x2="385" y2="50" stroke="#FFD700" stroke-width="3"/>
+  
+  <!-- Text overlay -->
+  <rect x="10" y="10" width="180" height="30" fill="rgba(255,255,255,0.9)" rx="5"/>
+  <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#8B4513">Premium Date Farm - Nizwa</text>
+</svg>

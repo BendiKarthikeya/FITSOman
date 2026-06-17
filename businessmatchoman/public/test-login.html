@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Admin Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      white-space: pre-wrap;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test Admin Login</h1>
+  
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" value="admin">
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" value="Admin@BusinessMatch2024">
+    
+    <button onclick="testDirectLogin()">Test Direct API Login</button>
+    <button onclick="testWithAuthUtils()">Test With AuthUtils</button>
+    <button onclick="logStoredToken()">Log Stored Token</button>
+    <button onclick="clearToken()">Clear Token</button>
+    <button onclick="testProtectedRoute()">Test Check Directories</button>
+    <button onclick="testImageSettings()">Test Image Settings</button>
+    <button onclick="testCreateTestImage()">Create Test Image</button>
+  </div>
+  
+  <div class="result" id="result">Results will appear here</div>
+  
+  <script>
+    // Function to test direct API login
+    async function testDirectLogin() {
+      try {
+        const response = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value
+          })
+        });
+        
+        const data = await response.json();
+        document.getElementById('result').textContent = 'Direct API Response:\n' + JSON.stringify(data, null, 2);
+        
+        // Store token directly for testing
+        if (data.token) {
+          localStorage.setItem('authToken', data.token);
+          document.getElementById('result').textContent += '\n\nToken stored in localStorage.';
+        }
+      } catch (error) {
+        document.getElementById('result').textContent = 'Direct API Error:\n' + error.message;
+      }
+    }
+    
+    // Function to test with auth utilities
+    async function testWithAuthUtils() {
+      try {
+        // First, clear any existing token
+        localStorage.removeItem('authToken');
+        
+        const response = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value
+          })
+        });
+        
+        const data = await response.json();
+        
+        // Import auth utilities dynamically
+        const script = document.createElement('script');
+        script.src = '/src/lib/authUtils.js';
+        script.type = 'module';
+        script.onload = () => {
+          // This won't work directly due to module imports, but we'll show the issue
+          document.getElementById('result').textContent = 'Auth Utils Test: Script loaded but cannot access module functions directly in browser.';
+        };
+        script.onerror = (e) => {
+          document.getElementById('result').textContent = 'Auth Utils Test Error: ' + e.message + '\n\nCannot access module directly from HTML.';
+        };
+        document.head.appendChild(script);
+        
+        document.getElementById('result').textContent = 'Auth Utils API Response:\n' + JSON.stringify(data, null, 2) + 
+          '\n\nNote: Cannot directly use authUtils from HTML due to module system.';
+      } catch (error) {
+        document.getElementById('result').textContent = 'Auth Utils API Error:\n' + error.message;
+      }
+    }
+    
+    // Function to log the stored token
+    function logStoredToken() {
+      const token = localStorage.getItem('authToken');
+      document.getElementById('result').textContent = token 
+        ? 'Stored Token:\n' + token 
+        : 'No token found in localStorage';
+    }
+    
+    // Function to clear the token
+    function clearToken() {
+      localStorage.removeItem('authToken');
+      document.getElementById('result').textContent = 'Token cleared from localStorage';
+    }
+    
+    // Function to test a protected admin route
+    async function testProtectedRoute() {
+      try {
+        const token = localStorage.getItem('authToken');
+        
+        if (!token) {
+          document.getElementById('result').textContent = 'Error: No auth token found. Please login first.';
+          return;
+        }
+        
+        const response = await fetch('/api/admin/check-directories', {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          document.getElementById('result').textContent = 'Check Directories Response:\n' + JSON.stringify(data, null, 2);
+        } else {
+          const error = await response.json();
+          document.getElementById('result').textContent = 'Check Directories Error:\n' + JSON.stringify(error, null, 2);
+        }
+      } catch (error) {
+        document.getElementById('result').textContent = 'Check Directories Error:\n' + error.message;
+      }
+    }
+    
+    // Function to test image settings
+    async function testImageSettings() {
+      try {
+        const token = localStorage.getItem('authToken');
+        
+        if (!token) {
+          document.getElementById('result').textContent = 'Error: No auth token found. Please login first.';
+          return;
+        }
+        
+        // Get all image settings
+        const response = await fetch('/api/settings?type=image', {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          document.getElementById('result').textContent = 'Image Settings Response:\n' + JSON.stringify(data, null, 2);
+        } else {
+          const error = await response.json();
+          document.getElementById('result').textContent = 'Image Settings Error:\n' + JSON.stringify(error, null, 2);
+        }
+      } catch (error) {
+        document.getElementById('result').textContent = 'Image Settings Error:\n' + error.message;
+      }
+    }
+    
+    // Function to create a test image
+    async function testCreateTestImage() {
+      try {
+        const token = localStorage.getItem('authToken');
+        
+        if (!token) {
+          document.getElementById('result').textContent = 'Error: No auth token found. Please login first.';
+          return;
+        }
+        
+        const response = await fetch('/api/admin/create-test-image', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            filename: 'test-logo.svg'
+          })
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          document.getElementById('result').textContent = 'Create Test Image Response:\n' + JSON.stringify(data, null, 2);
+        } else {
+          const error = await response.json();
+          document.getElementById('result').textContent = 'Create Test Image Error:\n' + JSON.stringify(error, null, 2);
+        }
+      } catch (error) {
+        document.getElementById('result').textContent = 'Create Test Image Error:\n' + error.message;
+      }
+    }
+  </script>
+</body>
+</html>

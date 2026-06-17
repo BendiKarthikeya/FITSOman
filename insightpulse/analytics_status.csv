@@ -1,0 +1,41 @@
+Page,Section / Feature,Status,Detail
+Overview (AnalyticsPage),4 KPI cards (EVI / Response Rate / Active Surveys / NPS),Done,Each card has its own period selector (30d/60d/90d) and trend delta
+Overview (AnalyticsPage),Engagement Trend card,Done,EngagementTrendCard component
+Overview (AnalyticsPage),Sentiment Analysis card,Done,SentimentalAnalysisCard component
+Overview (AnalyticsPage),Overall NPS card,Done,OverallNpsCard component
+Overview (AnalyticsPage),Surveys list with View Analytics links,Done,Inline table next to Engagement Trend card
+Overview (AnalyticsPage),Top Insights panel,Done,Shows topInsights with urgency breakdown (High/Medium/Low); hides entire panel if no data
+Overview (AnalyticsPage),Top Recommendations panel,Done,Shows topRecommendations; hides entire panel if no data
+Overview (AnalyticsPage),Themes / TrendsTable,Done,Rendered from metrics.themes with View All link
+Overview (AnalyticsPage),Empty state when zero surveys,Missing,Surveys list renders nothing (no rows) with no message — needs "No surveys yet" state
+Overview (AnalyticsPage),Empty state when metrics = null / loading,Missing,KPI cards show "—" but no skeleton loaders or loading indicator
+CSAT/NPS (AnalyticsOverviewPage),Total Responses KPI card,Done,Shows totalFeedback30d with responseRate trend delta
+CSAT/NPS (AnalyticsOverviewPage),Customer Satisfaction Score KPI card,Done,Shows csatScore with current/last month labels and trend delta
+CSAT/NPS (AnalyticsOverviewPage),Promoters KPI card,Done,Shows promotersPercent
+CSAT/NPS (AnalyticsOverviewPage),Satisfaction score mini legend card,Done,Shows Positive % and Neutral % from satisfactionDistribution
+CSAT/NPS (AnalyticsOverviewPage),Customer Effort Score (CES) gauge,Done,Half-donut SVG gauge; color-coded by score band; "—" when cesScore = 0
+CSAT/NPS (AnalyticsOverviewPage),Overall NPS card (right column),Done,Reuses OverallNpsCard component
+CSAT/NPS (AnalyticsOverviewPage),Empty state when no data,Missing,All cards render with 0/"—" silently — no "no responses yet" message
+Customer Journey (CustomerJourneyPage),Tabs + filter bar,Done,Consistent with other tabs
+Customer Journey (CustomerJourneyPage),Section heading + description,Done,Static "Track customer interactions..." subtitle
+Customer Journey (CustomerJourneyPage),Feedback Theme cards (grid),Done,Shows theme name, example, sentiment badge, mentions, share %, volume bar
+Customer Journey (CustomerJourneyPage),Empty state for zero themes,Done,White card: "No feedback themes yet. Submit surveys to see customer journey insights."
+Customer Journey (CustomerJourneyPage),Theme Flow visualization,Done,Numbered circles + connecting lines; only shown when themes.length > 0
+Customer Journey (CustomerJourneyPage),Key Metrics row (4 cards),Done,Total Responses / Avg Satisfaction / Positive Responses / Response Rate
+Customer Journey (CustomerJourneyPage),TrendingUp icon always green on theme cards,Pending,Icon is always green regardless of sentiment — should reflect Negative/Neutral themes too
+Customer Journey (CustomerJourneyPage),Empty state for Key Metrics when no data,Missing,Cards show 0 / "—" silently with no context message
+Trends (AnalyticsTrendsPage),EVI card with progress bar + trend delta,Done,On Track / Needs Improvement label based on score threshold
+Trends (AnalyticsTrendsPage),NPS card with Promoters/Passives/Detractors breakdown,Done,Values from metrics; uses teal/slate/rose colors
+Trends (AnalyticsTrendsPage),Customer Satisfaction card with progress bar + trend delta,Done,On Track / Needs Work label
+Trends (AnalyticsTrendsPage),Survey Engagement 2x2 grid,Done,Total Response / Daily Average / Happy Customers / Per Survey — each with trend arrow
+Trends (AnalyticsTrendsPage),Satisfaction Breakdown bar chart,Done,5-category horizontal bars (Very Satisfied → Very Dissatisfied) with colored badges
+Trends (AnalyticsTrendsPage),Survey Performance Comparison table,Done,Only rendered when surveyComparison.length > 0; shows EVI/NPS/CSAT/Composite/vs Best
+Trends (AnalyticsTrendsPage),Empty state when no Survey Comparison data,Missing,Section is hidden silently — should show "No survey data to compare yet"
+Trends (AnalyticsTrendsPage),Empty state when all metric scores are 0,Missing,Cards show "0/100" with "Needs Improvement" label even when no data exists at all
+Insights (InsightsPage),NPS donut chart,Done,Shows promotersPercent as filled arc; dynamic subtitle from live metrics
+Insights (InsightsPage),Customer Satisfaction Trend area chart,Done,Built from eviTrends; EVI (teal) + NPS-derived (amber) area lines across 12 months
+Insights (InsightsPage),Weekly Response Volume bar chart,Done,Derived from totalFeedback30d split across 4 weeks; custom Y-axis ticks
+Insights (InsightsPage),Emotional Engagement Score line chart,Done,Last 8 EVI data points; shows "No EVI data yet" in subtitle when empty
+Insights (InsightsPage),Recommended Actions list,Done,Dynamic: uses topInsights + topRecommendations from LLM; falls back to 4 static items
+Insights (InsightsPage),Response Volume chart uses estimated weekly split,Pending,barData is derived (totalFeedback / 4 * multiplier) — not real per-week DB data
+Insights (InsightsPage),Empty state when promotersPercent = 0,Missing,Donut chart renders with full grey ring — no "no NPS data" message

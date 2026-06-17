@@ -1,0 +1,57 @@
+substitutions:
+  _REGION: asia-southeast1
+  _SERVICE: insightpulse
+  _REPO: insightpulse
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+steps:
+  # Ensure Artifact Registry repo exists (safe to re-run)
+  - name: gcr.io/cloud-builders/gcloud
+    id: ensure-repo
+    entrypoint: bash
+    args:
+      - -lc
+      - |
+        gcloud artifacts repositories describe "${_REPO}" --location "${_REGION}" \
+        || gcloud artifacts repositories create "${_REPO}" --repository-format=docker --location "${_REGION}"
+
+  # Build container image using Dockerfile
+  - name: gcr.io/cloud-builders/docker
+    id: build
+    args:
+      - build
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:$SHORT_SHA
+      - .
+
+  # Push image
+  - name: gcr.io/cloud-builders/docker
+    id: push
+    args:
+      - push
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:$SHORT_SHA
+
+  # Deploy to Cloud Run using Secret Manager for sensitive env
+  - name: gcr.io/cloud-builders/gcloud
+    id: deploy
+    args:
+      - run
+      - deploy
+      - ${_SERVICE}
+      - --image
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:$SHORT_SHA
+      - --region
+      - ${_REGION}
+      - --platform
+      - managed
+      - --allow-unauthenticated
+      - --update-secrets
+      - DATABASE_URL=INSIGHTPULSE_DATABASE_URL:latest,JWT_SECRET=JWT_SECRET:latest,VAPI_KEY=VAPI_KEY:latest,AGENT_ID=AGENT_ID:latest,PHONE_NUMBER_ID=PHONE_NUMBER_ID:latest,VOICE_WEBHOOK_URL=VOICE_WEBHOOK_URL:latest,VOICE_WEBHOOK_SECRET=VOICE_WEBHOOK_SECRET:latest
+      - --set-env-vars
+      - NODE_ENV=production
+
+images:
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:$SHORT_SHA
+

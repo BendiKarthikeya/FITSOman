@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log*
+.DS_Store
+.git
+.gitignore
+.env
+.env.local
+migrations
+dist
+.vscode
+.idea
+attached_assets
