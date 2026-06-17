@@ -21,6 +21,7 @@ dburl.txt
 # Databases
 *.sqlite3
 *.sqlite3-journal
+*.sqlite3-*
 
 # Build output
 dist/
@@ -30,7 +31,10 @@ build/
 .ruff_cache/
 .pytest_cache/
 .mypy_cache/
+.playwright-mcp/
 
 # OS / editor
 .DS_Store
+**/.DS_Store
 *.log
+*.tar.gz
