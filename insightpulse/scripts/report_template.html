@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InsightPulse: DA 378 Internship-II Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 10pt;
+            line-height: 1.25;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        .header-container {
+            text-align: center;
+            margin-bottom: 6mm;
+        }
+        h1 {
+            font-size: 16pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 2mm 0;
+            line-height: 1.1;
+        }
+        .author-name {
+            font-size: 11pt;
+            font-style: italic;
+            margin-bottom: 1mm;
+        }
+        .author-details {
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+        
+        /* Two column layout for the main body */
+        .main-content {
+            column-count: 2;
+            column-gap: 8mm;
+            text-align: justify;
+        }
+        
+        .abstract-container {
+            margin-bottom: 4mm;
+        }
+        .abstract-title {
+            font-size: 10pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 0 2mm 0;
+        }
+        .abstract-text {
+            font-size: 9.5pt;
+            text-indent: 0;
+            margin-bottom: 2mm;
+        }
+        .index-terms {
+            font-size: 9.5pt;
+            margin-top: 2mm;
+            margin-bottom: 4mm;
+        }
+        .index-terms-label {
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        h2.section-title {
+            font-size: 10pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 5mm 0 2.5mm 0;
+            page-break-after: avoid;
+        }
+        h3.subsection-title {
+            font-size: 10pt;
+            font-weight: bold;
+            margin: 4mm 0 2mm 0;
+            page-break-after: avoid;
+        }
+        p {
+            margin: 0 0 3mm 0;
+            text-indent: 1.5em;
+        }
+        p.no-indent {
+            text-indent: 0;
+        }
+        
+        ol, ul {
+            margin: 0 0 3mm 0;
+            padding-left: 5mm;
+        }
+        li {
+            margin-bottom: 1.5mm;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin: 4mm 0;
+            page-break-inside: avoid;
+        }
+        table, th, td {
+            border: 0.5px solid #000;
+        }
+        th, td {
+            padding: 4px 6px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-align: center;
+        }
+        .table-caption {
+            font-size: 8pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 2mm 0;
+            page-break-after: avoid;
+        }
+        
+        .box-highlight {
+            border: 0.5px solid #000;
+            background-color: #f9f9f9;
+            padding: 6px 10px;
+            font-size: 9pt;
+            margin: 3mm 0;
+            page-break-inside: avoid;
+        }
+        .box-highlight p {
+            margin: 0;
+            text-indent: 0;
+        }
+        
+        .references {
+            font-size: 8.5pt;
+            padding-left: 5mm;
+            text-indent: -5mm;
+            margin-top: 4mm;
+        }
+        .references li {
+            list-style-type: none;
+            margin-bottom: 2mm;
+            text-align: left;
+        }
+        
+        .avoid-break {
+            page-break-inside: avoid;
+        }
+        
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-container">
+    <h1>InsightPulse: An AI-Powered, Multi-Channel Customer Feedback and Unified Analytics Platform</h1>
+    <div class="author-name">Bendi Karthikeya (Roll Number: 23035010310)</div>
+    <div class="author-details">
+        Internship-II Report<br>
+        Trimester 9<br>
+        B.Sc. (Honours) Data Science and Artificial Intelligence<br>
+        Indian Institute of Technology Guwahati, India<br>
+        k.bendi@op.iitg.ac.in
+    </div>
+</div>
+
+<hr style="border: 0.25px solid #000; margin-bottom: 5mm;">
+
+<div class="main-content">
+
+    <div class="abstract-container">
+        <div class="abstract-title">Abstract</div>
+        <div class="abstract-text">
+            This report presents the work carried out during a six-month internship at FIT - FIRST Information Technology, Muscat, Oman on customer feedback automation, where this platform represents the second delivered client project. The objective was to design, implement, and deploy InsightPulse, a multi-channel survey platform. A unified relational schema was developed to consolidate customer submissions across Web forms, WhatsApp (Meta Cloud API), and automated outbound Voice AI calls (VAPI). The backend is constructed in Node.js/Express with a fallback LLM analysis pipeline (DeepSeek-Chat/Gemini-2.0-Flash on OpenRouter) that normalizes raw feedback comments into structured Plutchik emotion ratings and categorizes themes. A React 18 dashboard polls the PostgreSQL Neon database every 30 seconds using TanStack Query. Operational trials indicate that web responses are ingested under 3 seconds, WhatsApp questions dispatch within 1.5 seconds, and VAPI webhooks process within 1 second, validating that structured LLM parsing can successfully replace manual customer experience review.
+        </div>
+        <div class="index-terms">
+            <span class="index-terms-label">Index Terms:</span> Customer Experience, Voice AI, WhatsApp Business API, Sentiment Analysis, Plutchik Emotions, Large Language Models.
+        </div>
+    </div>
+
+    <h2 class="section-title">1. Introduction</h2>
+    <p>Modern businesses rely heavily on customer feedback metrics, such as Customer Satisfaction (CSAT), Net Promoter Score (NPS), and Customer Effort Score (CES), to evaluate operational performance. However, traditional systems are plagued by fragmented collection channels, slow manual reviews, and an inability to process voice and chat messages efficiently. Customer experience data is frequently siloed, leaving organizations without a single source of truth.</p>
+    <p>This report describes <i>InsightPulse</i>, a unified, AI-powered customer feedback platform built as the second client project during my six-month Internship-II (DA 378) at FIT - FIRST Information Technology, Muscat, Oman. InsightPulse automates feedback collection across Web, WhatsApp, and outbound phone lines, translating raw customer conversations into structured, operational database records. The remainder of this report describes the problem formulation, system workflow, implementation parameters, and validation metrics.</p>
+
+    <h2 class="section-title">2. PROBLEM STATEMENT AND OBJECTIVES</h2>
+    
+    <h3 class="subsection-title">2.1. Problem Statement</h3>
+    <p>Gathering customer sentiment across multiple channels creates data silos. Voice transcripts and chat messages are complex and subjective, making them difficult to quantify at scale. Furthermore, manual sentiment classification suffers from high latency and human bias, which prevents organizations from quickly resolving issues. The challenge is to construct a system that can ingest voice, chat, and web submissions, store them in a unified relational schema, and automatically extract structured sentiment metrics and recommended action items in real-time.</p>
+
+    <h3 class="subsection-title">2.2. Objectives</h3>
+    <p>The specific goals of this project are:
+    <ol>
+        <li>To design and implement a unified relational database schema that connects submissions across Web forms, WhatsApp chat sessions, and Voice calls.</li>
+        <li>To build a state-machine-driven Meta WhatsApp engine to sequentially deliver localized questions and check customer inputs.</li>
+        <li>To integrate an outbound Voice AI dialer (VAPI) that conducts telephone surveys and passes structured ratings directly back to the database.</li>
+        <li>To establish a resilient LLM analysis pipeline via OpenRouter that maps comments to Plutchik's 8 basic emotions and generates operational recommendations.</li>
+    </ol>
+    </p>
+
+    <h2 class="section-title">3. METHODOLOGY / APPROACH</h2>
+    
+    <h3 class="subsection-title">3.1. Overall Workflow</h2>
+    <p>The InsightPulse data pipeline operates through five sequential stages: (1) <i>Campaign Trigger</i>: Admins dispatch surveys from the React interface or pull contacts from Zoho CRM via OAuth. (2) <i>Channel Execution</i>: Surveys are active on Web pages, sent as interactive WhatsApp messages, or run via an automated outbound VAPI phone call. (3) <i>Ingestion & Parsing</i>: Web and WhatsApp text comments are sent to the backend API; VAPI directly parses ratings via a webhook. (4) <i>Asynchronous LLM Analysis</i>: The LLM analyzes customer comments, categorizes themes, scores emotions, and saves the outputs to PostgreSQL. (5) <i>Dynamic Dashboard Updates</i>: The React client pulls these metrics to update visual analytics in real-time.</p>
+
+    <h3 class="subsection-title">3.2. Technical Details</h3>
+    <p>The backend is built in Node.js, Express, and TypeScript, utilizing Drizzle ORM to connect to a Neon serverless PostgreSQL database. The AI analysis engine is defined in the backend services. The server compiles customer comments and sends them to OpenRouter with a structured JSON prompt:
+    <div class="box-highlight">
+        <p><i>Prompt constraint:</i> Set system role to survey analyst; enforce JSON mode with <code>response_format = {"type": "json_object"}</code>; set temperature to 0.3 to ensure consistent scoring.</p>
+    </div>
+    To prevent downtime, the server implements a model failover chain:
+    <div class="center-text" style="font-size: 9.5pt; margin: 2mm 0; font-weight: bold;">
+        Primary: DeepSeek-Chat &rarr; Fallback: Gemini-2.0-Flash
+    </div>
+    If the primary model times out or returns malformed text, the catch block transparently retries the analysis using the secondary model. A regular expression matches the JSON block in the output, which is then validated using a Zod schema.</p>
+
+    <h3 class="subsection-title">3.3. LLM Orchestration Scope</h3>
+    <p>The Large Language Model (LLM) is utilized across six distinct operational domains in the platform backend to automate text evaluation and content generation:
+    <ul>
+        <li><b>Survey Response Analysis:</b> Analyzes incoming feedback text to classify positive/neutral/negative sentiment, score 8 Plutchik emotions, estimate CSAT/NPS/CES/EVI, extract themes, and recommend actions.</li>
+        <li><b>Dynamic Survey Generation:</b> Creates complete survey question arrays from an admin's title and criteria prompt.</li>
+        <li><b>Real-Time Risk Detection:</b> Asynchronously scans feedback using streaming LLM queries to identify high-priority operational risks or compliance threats.</li>
+        <li><b>Executive Leadership Insights:</b> Periodically aggregates and digests historic customer feedback data to generate high-level trends for company leadership.</li>
+        <li><b>Employee Retention Analysis:</b> Evaluates exit interview surveys to flag employee retention issues and construct mitigation recommendations.</li>
+        <li><b>Task-Oriented Action Plans:</b> Automatically generates operational checklists for customer support teams when critical feedback is received.</li>
+    </ul>
+    </p>
+
+    <h2 class="section-title">4. EXPERIMENTS AND RESULTS</h2>
+    
+    <h3 class="subsection-title">4.1. Experimental Setup</h3>
+    <p>The system was evaluated inside a sandbox environment using mock survey campaigns. Outbound voice calls were tested using VAPI endpoints with local test phone numbers. WhatsApp messaging was verified using the Meta Graph API v21.0 in developer mode. The local development environment was set up on a macOS platform running Node v22.19, Vite, and a serverless Neon database instance. Integration tests verified that survey responses correctly triggered LLM API calls and successfully updated the database tables.</p>
+
+    <h3 class="subsection-title">4.2. Results</h3>
+    <p>Testing showed that the system processed survey entries quickly and reliably. Under sandbox conditions, web submissions (including LLM analysis) took less than 3 seconds to update the dashboard. WhatsApp responses proceeded to the next question within 1.5 seconds, and VAPI webhook calls processed in under 1 second. The TanStack Query client correctly updated the dashboard tabs every 30 seconds, demonstrating that the unified database schema can handle multi-channel inputs without data loss or pipeline blockages.</p>
+
+    <h2 class="section-title">5. DISCUSSION</h2>
+    <p>A key trade-off in the system design was choosing between LLM accuracy, latency, and cost. While DeepSeek-Chat provides deep sentiment analysis, it occasionally suffers from API latency. Using Gemini-2.0-Flash as a fallback resolved this, keeping the average analysis time under 3 seconds. Additionally, VAPI’s direct structured output webhook bypassed the LLM pipeline entirely, reducing costs and latency for voice interactions. A limitation of the current setup is that voice calls are strictly single-turn, which prevents the assistant from asking custom follow-up questions based on the customer's live responses.</p>
+
+    <h2 class="section-title">6. CONCLUSION AND FUTURE WORK</h2>
+    <p>During my Internship-II (DA 378), I developed InsightPulse, demonstrating that multi-channel survey collection and automated AI analytics can be delivered in a single platform. The project applied key concepts from the <i>Large Language Model Application Engineering</i> course (DA 3022), such as prompt anatomy, JSON-constrained decoding, and failover architectures. Future work will focus on integrating LangGraph to build conversational multi-turn voice agents and applying semantic clustering to group customer comments automatically.</p>
+
+    <h2 class="section-title">7. ARTIFACTS AND DEMONSTRATIONS</h2>
+    <p>The source code and running applications are available through the following resources:
+    <ul>
+        <li><b>Code Repository:</b> <a href="https://github.com/BendiKarthikeya/FITSOman/tree/main/insightpulse">github.com/BendiKarthikeya/FITSOman/tree/main/insightpulse</a></li>
+        <li><b>Project Demo:</b> <a href="https://skill-pulse.io">skill-pulse.io</a></li>
+        <li><b>Video Demonstration:</b> A detailed screen walkthrough is available at the provided submission link.</li>
+    </ul>
+    </p>
+
+    <h2 class="section-title">8. REFERENCES</h2>
+    <ul class="references">
+        <li>[1] George D. Gopen and Judith A. Swan, "The science of scientific writing," <i>American Scientist</i>, vol. 78, no. 6, pp. 550–558, 1990.</li>
+        <li>[2] R. Plutchik, "A general psychosemantic theory of emotions," <i>Emotion: Theory, research, and experience</i>, vol. 1, pp. 3–33, 1980.</li>
+        <li>[3] DeepSeek-AI, "DeepSeek-V3 Technical Report," <i>arXiv:2412.19437</i>, 2024.</li>
+        <li>[4] Meta Platforms Inc., "WhatsApp Cloud API Developer Documentation," <i>developers.facebook.com/docs/whatsapp</i>, 2024.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
